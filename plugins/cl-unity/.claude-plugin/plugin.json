@@ -1,0 +1,16 @@
+{
+  "name": "cl-unity",
+  "version": "0.15.0",
+  "description": "Free edition of cl-unity: unity-project-audit. Builder and Studio add 25 more members.",
+  "author": {
+    "name": "crunchless"
+  },
+  "keywords": [
+    "game-development",
+    "unity",
+    "csharp",
+    "webgl",
+    "profiling",
+    "editor-tooling"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "cl-platforms",
+  "version": "0.15.0",
+  "description": "Free edition of cl-platforms: itch-io. Builder and Studio add 18 more members.",
+  "author": {
+    "name": "crunchless"
+  },
+  "keywords": [
+    "game-development",
+    "steam",
+    "google-play",
+    "app-store",
+    "web-portals"
+  ]
+}

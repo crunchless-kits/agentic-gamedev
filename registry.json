@@ -1,0 +1,519 @@
+{
+  "name": "crunchless",
+  "version": "0.15.0",
+  "counts": {
+    "agents": 3,
+    "skills": 22,
+    "commands": 7,
+    "total": 32,
+    "free": 32,
+    "builder": 0,
+    "studio": 0
+  },
+  "plugins": [
+    {
+      "name": "cl-core",
+      "description": "Free edition of cl-core: cl-builder, cl-scout, calibrated-review, cl-router, project-profile, scope-check, scope-guard, slop-check, /cl-audit, /cl-doctor, /cl-help, /cl-ship, and /cl-start. Builder and Studio add 6 more members."
+    },
+    {
+      "name": "cl-assistant",
+      "description": "The kit's own guide: FAQ, tier and member knowledge generated from the registry, usage paths for Claude Code, vendored repos, Claude Projects, Cowork, and CI, troubleshooting, and the /cl-ask command. Optional; leave it out to turn it off."
+    },
+    {
+      "name": "cl-web",
+      "description": "Free edition of cl-web: web-game-architecture and web-game-audit. Builder and Studio add 24 more members."
+    },
+    {
+      "name": "cl-unity",
+      "description": "Free edition of cl-unity: unity-project-audit. Builder and Studio add 25 more members."
+    },
+    {
+      "name": "cl-godot",
+      "description": "Free edition of cl-godot: godot-project-audit. Builder and Studio add 24 more members."
+    },
+    {
+      "name": "cl-design",
+      "description": "Free edition of cl-design: competitor-snapshot, core-loop-design, game-brainstorm, game-naming, mechanic-critique, and /cl-brainstorm. Builder and Studio add 20 more members."
+    },
+    {
+      "name": "cl-gameplay",
+      "description": "Free edition of cl-gameplay: genre-blueprints. Builder and Studio add 6 more members."
+    },
+    {
+      "name": "cl-release",
+      "description": "Free edition of cl-release: ship-check-lite. Builder and Studio add 7 more members."
+    },
+    {
+      "name": "cl-roblox",
+      "description": "Free edition of cl-roblox: roblox-project-audit. Builder and Studio add 20 more members."
+    },
+    {
+      "name": "cl-unreal",
+      "description": "Free edition of cl-unreal: unreal-project-audit. Builder and Studio add 18 more members."
+    },
+    {
+      "name": "cl-cocos",
+      "description": "Free edition of cl-cocos: cocos-project-audit. Builder and Studio add 18 more members."
+    },
+    {
+      "name": "cl-platforms",
+      "description": "Free edition of cl-platforms: itch-io. Builder and Studio add 18 more members."
+    }
+  ],
+  "members": [
+    {
+      "id": "agent:cl-builder",
+      "type": "agent",
+      "plugin": "cl-core",
+      "name": "cl-builder",
+      "description": "Bounded implementer. Use to execute one named Crunchless skill procedure on clearly specified files once design decisions are made: adapters, packaging, plumbing, settings, fixes with tests. Follows the skill exactly, reports a handoff, and escalates design questions instead of guessing.",
+      "tier": "free",
+      "path": "plugins/cl-core/agents/cl-builder.md",
+      "tags": [
+        "production",
+        "gameplay"
+      ]
+    },
+    {
+      "id": "agent:cl-scout",
+      "type": "agent",
+      "plugin": "cl-core",
+      "name": "cl-scout",
+      "description": "Cheap read-only evidence gatherer. Use for inventories, greps, counts, file maps, running bundled scripts, filling test results, and re-verifying reference snapshots. Returns structured facts only; never changes files and never decides.",
+      "tier": "free",
+      "path": "plugins/cl-core/agents/cl-scout.md",
+      "tags": [
+        "production",
+        "docs"
+      ]
+    },
+    {
+      "id": "skill:calibrated-review",
+      "type": "skill",
+      "plugin": "cl-core",
+      "name": "calibrated-review",
+      "description": "Scope-calibrated code review: failure path per finding, \"No findings.\" is valid, two rounds max. Use for any code review, especially ever-growing ones.",
+      "tier": "free",
+      "path": "plugins/cl-core/skills/calibrated-review/SKILL.md",
+      "tags": [
+        "qa",
+        "production"
+      ]
+    },
+    {
+      "id": "skill:cl-router",
+      "type": "skill",
+      "plugin": "cl-core",
+      "name": "cl-router",
+      "description": "Routing table and shared rules for game work. Use at the start of any game task (build, debug, design, test, ship) or when asked what the kit can do.",
+      "tier": "free",
+      "path": "plugins/cl-core/skills/cl-router/SKILL.md",
+      "tags": [
+        "production",
+        "docs"
+      ],
+      "role": "hub"
+    },
+    {
+      "id": "skill:project-profile",
+      "type": "skill",
+      "plugin": "cl-core",
+      "name": "project-profile",
+      "description": "Create or update the project profile every skill reads first: engine, audience, devices, test gate. Use at project start or when skills repeat questions.",
+      "tier": "free",
+      "path": "plugins/cl-core/skills/project-profile/SKILL.md",
+      "tags": [
+        "production",
+        "docs"
+      ]
+    },
+    {
+      "id": "skill:scope-check",
+      "type": "skill",
+      "plugin": "cl-core",
+      "name": "scope-check",
+      "description": "Check the change set against the scope line and line budget: what grew, what to cut. Use before a review or commit, or when a task keeps growing.",
+      "tier": "free",
+      "path": "plugins/cl-core/skills/scope-check/SKILL.md",
+      "tags": [
+        "production",
+        "qa"
+      ]
+    },
+    {
+      "id": "skill:scope-guard",
+      "type": "skill",
+      "plugin": "cl-core",
+      "name": "scope-guard",
+      "description": "Seed a repo with guardrails against agent over-building: scope line, line budget, hooks. Use at the start of any agent coding task.",
+      "tier": "free",
+      "path": "plugins/cl-core/skills/scope-guard/SKILL.md",
+      "tags": [
+        "production",
+        "qa"
+      ]
+    },
+    {
+      "id": "skill:slop-check",
+      "type": "skill",
+      "plugin": "cl-core",
+      "name": "slop-check",
+      "description": "Find and remove AI-generated design and writing tells in pages, UI, docs, and copy. Use before any visual or written output ships or when it looks generated.",
+      "tier": "free",
+      "path": "plugins/cl-core/skills/slop-check/SKILL.md",
+      "tags": [
+        "writing",
+        "ui",
+        "design",
+        "qa"
+      ]
+    },
+    {
+      "id": "command:cl-audit",
+      "type": "command",
+      "plugin": "cl-core",
+      "name": "cl-audit",
+      "description": "Audit this game project with parallel scouts and route ranked findings to specialists. Use on an existing or unfamiliar game project.",
+      "tier": "free",
+      "path": "plugins/cl-core/commands/cl-audit.md",
+      "tags": [
+        "qa",
+        "production"
+      ]
+    },
+    {
+      "id": "command:cl-doctor",
+      "type": "command",
+      "plugin": "cl-core",
+      "name": "cl-doctor",
+      "description": "Check the first-run environment: Node, Claude Code, hooks, kit version, description load, engine. Use after install or when the kit misbehaves.",
+      "tier": "free",
+      "path": "plugins/cl-core/commands/cl-doctor.md",
+      "tags": [
+        "production",
+        "docs"
+      ]
+    },
+    {
+      "id": "command:cl-help",
+      "type": "command",
+      "plugin": "cl-core",
+      "name": "cl-help",
+      "description": "Say what the kit can do for a goal, engine, platform, or service, and the next command. Use when unsure which member fits or what is installed.",
+      "tier": "free",
+      "path": "plugins/cl-core/commands/cl-help.md",
+      "tags": [
+        "help",
+        "onboarding"
+      ]
+    },
+    {
+      "id": "command:cl-ship",
+      "type": "command",
+      "plugin": "cl-core",
+      "name": "cl-ship",
+      "description": "One documented ship or no-ship decision from gate evidence gathered in parallel. Use before any release or store or portal submission.",
+      "tier": "free",
+      "path": "plugins/cl-core/commands/cl-ship.md",
+      "tags": [
+        "release",
+        "qa"
+      ]
+    },
+    {
+      "id": "command:cl-start",
+      "type": "command",
+      "plugin": "cl-core",
+      "name": "cl-start",
+      "description": "First-hour onboarding: detect engine and stage, recommend plugins, run the audit script, name next commands. Use when new to the kit or a project.",
+      "tier": "free",
+      "path": "plugins/cl-core/commands/cl-start.md",
+      "tags": [
+        "production",
+        "design"
+      ]
+    },
+    {
+      "id": "agent:cl-guide",
+      "type": "agent",
+      "plugin": "cl-assistant",
+      "name": "cl-guide",
+      "description": "The Crunchless assistant. Use for questions about the kit: what Free, Builder, and Studio include, install and update, which plugin or command fits a task, running it in Claude Code, Projects, Cowork, or CI, licensing, and troubleshooting. Answers from the kit's files and names each member's tier.",
+      "tier": "free",
+      "path": "plugins/cl-assistant/agents/cl-guide.md",
+      "tags": [
+        "docs",
+        "production"
+      ]
+    },
+    {
+      "id": "skill:kit-guide",
+      "type": "skill",
+      "plugin": "cl-assistant",
+      "name": "kit-guide",
+      "description": "Crunchless product knowledge: tiers, FAQ, install and usage paths, troubleshooting. Use when asked what the kit includes, how to run it, or why it failed.",
+      "tier": "free",
+      "path": "plugins/cl-assistant/skills/kit-guide/SKILL.md",
+      "tags": [
+        "docs",
+        "production"
+      ]
+    },
+    {
+      "id": "command:cl-ask",
+      "type": "command",
+      "plugin": "cl-assistant",
+      "name": "cl-ask",
+      "description": "Ask the Crunchless guide about the kit: install, tiers, which member fits, troubleshooting. Use for any question about Crunchless itself.",
+      "tier": "free",
+      "path": "plugins/cl-assistant/commands/cl-ask.md",
+      "tags": [
+        "docs",
+        "production"
+      ]
+    },
+    {
+      "id": "skill:web-game-architecture",
+      "type": "skill",
+      "plugin": "cl-web",
+      "name": "web-game-architecture",
+      "description": "Plan or restructure a TypeScript game: fixed-step loop, state, entities, events. Use for new games, outgrown prototypes, or before multiplayer.",
+      "tier": "free",
+      "path": "plugins/cl-web/skills/web-game-architecture/SKILL.md",
+      "tags": [
+        "web",
+        "typescript",
+        "phaser",
+        "pixijs",
+        "threejs",
+        "production"
+      ]
+    },
+    {
+      "id": "skill:web-game-audit",
+      "type": "skill",
+      "plugin": "cl-web",
+      "name": "web-game-audit",
+      "description": "Read-only ranked audit of a browser game repo (Phaser, PixiJS, Three.js, WebGL). Use for unfamiliar web projects, /cl-audit, and before refactors or releases.",
+      "tier": "free",
+      "path": "plugins/cl-web/skills/web-game-audit/SKILL.md",
+      "tags": [
+        "web",
+        "typescript",
+        "phaser",
+        "pixijs",
+        "threejs",
+        "qa"
+      ],
+      "surface": "project-audit"
+    },
+    {
+      "id": "skill:unity-project-audit",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "name": "unity-project-audit",
+      "description": "Read-only ranked audit of a Unity project. Use for unfamiliar Unity repos, /cl-audit, and before refactors, ports, or releases.",
+      "tier": "free",
+      "path": "plugins/cl-unity/skills/unity-project-audit/SKILL.md",
+      "tags": [
+        "unity",
+        "qa"
+      ]
+    },
+    {
+      "id": "skill:godot-project-audit",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "name": "godot-project-audit",
+      "description": "Read-only ranked audit of a Godot 4 project. Use for unfamiliar Godot repos, /cl-audit, and before refactors, exports, or releases.",
+      "tier": "free",
+      "path": "plugins/cl-godot/skills/godot-project-audit/SKILL.md",
+      "tags": [
+        "godot",
+        "gdscript",
+        "csharp",
+        "qa"
+      ],
+      "surface": "project-audit"
+    },
+    {
+      "id": "skill:competitor-snapshot",
+      "type": "skill",
+      "plugin": "cl-design",
+      "name": "competitor-snapshot",
+      "description": "Free first market look: the closest game, its public numbers, review likes and dislikes, one gap. Use right after brainstorming, before committing to an idea.",
+      "tier": "free",
+      "path": "plugins/cl-design/skills/competitor-snapshot/SKILL.md",
+      "tags": [
+        "design",
+        "market-research",
+        "steam",
+        "google-play",
+        "app-store",
+        "web-portals"
+      ]
+    },
+    {
+      "id": "skill:core-loop-design",
+      "type": "skill",
+      "plugin": "cl-design",
+      "name": "core-loop-design",
+      "description": "Define or repair a core loop: verb, goals, rewards, session shape, first minute, return hooks. Use when a prototype isn't fun or retention is weak.",
+      "tier": "free",
+      "path": "plugins/cl-design/skills/core-loop-design/SKILL.md",
+      "tags": [
+        "design"
+      ]
+    },
+    {
+      "id": "skill:game-brainstorm",
+      "type": "skill",
+      "plugin": "cl-design",
+      "name": "game-brainstorm",
+      "description": "Constraint-first ideation: ranked, mechanically distinct concepts with risks. Use for a new game, a stalled prototype, a jam, or when asked for options.",
+      "tier": "free",
+      "path": "plugins/cl-design/skills/game-brainstorm/SKILL.md",
+      "tags": [
+        "design"
+      ]
+    },
+    {
+      "id": "skill:game-naming",
+      "type": "skill",
+      "plugin": "cl-design",
+      "name": "game-naming",
+      "description": "Name a game, studio, or feature: brief, rubric, collision and trademark checks, handles. Use when asked for a name or to check one before registering.",
+      "tier": "free",
+      "path": "plugins/cl-design/skills/game-naming/SKILL.md",
+      "tags": [
+        "design",
+        "production"
+      ]
+    },
+    {
+      "id": "skill:mechanic-critique",
+      "type": "skill",
+      "plugin": "cl-design",
+      "name": "mechanic-critique",
+      "description": "Critique a mechanic on readability, stakes, agency, payoff, identity, with fixes. Use when a mechanic feels boring, clunky, or wrong, or before building one.",
+      "tier": "free",
+      "path": "plugins/cl-design/skills/mechanic-critique/SKILL.md",
+      "tags": [
+        "design"
+      ]
+    },
+    {
+      "id": "command:cl-brainstorm",
+      "type": "command",
+      "plugin": "cl-design",
+      "name": "cl-brainstorm",
+      "description": "Constraint-first brainstorm returning ranked, mechanically distinct options. Use for a new game idea, a jam, or a stalled prototype.",
+      "tier": "free",
+      "path": "plugins/cl-design/commands/cl-brainstorm.md",
+      "tags": [
+        "design",
+        "gameplay"
+      ]
+    },
+    {
+      "id": "skill:genre-blueprints",
+      "type": "skill",
+      "plugin": "cl-gameplay",
+      "name": "genre-blueprints",
+      "description": "Starting blueprints per genre (platformer, roguelike, RPG, tower defense, idle, and more). Use when starting a genre game or when an expected system is missing.",
+      "tier": "free",
+      "path": "plugins/cl-gameplay/skills/genre-blueprints/SKILL.md",
+      "tags": [
+        "gameplay",
+        "design"
+      ]
+    },
+    {
+      "id": "skill:ship-check-lite",
+      "type": "skill",
+      "plugin": "cl-release",
+      "name": "ship-check-lite",
+      "description": "Free engine-agnostic release gate: four floor sections, evidence per line, READY or NOT READY. Use before publishing any build without ship-readiness.",
+      "tier": "free",
+      "path": "plugins/cl-release/skills/ship-check-lite/SKILL.md",
+      "tags": [
+        "release",
+        "qa"
+      ]
+    },
+    {
+      "id": "skill:roblox-project-audit",
+      "type": "skill",
+      "plugin": "cl-roblox",
+      "name": "roblox-project-audit",
+      "description": "Read-only scored Roblox audit: structure, remote security, data, receipts, performance, UI. Use for unfamiliar Roblox projects, /cl-audit, and before releases.",
+      "tier": "free",
+      "path": "plugins/cl-roblox/skills/roblox-project-audit/SKILL.md",
+      "tags": [
+        "roblox",
+        "luau",
+        "rojo",
+        "qa",
+        "monetization",
+        "ui",
+        "compliance"
+      ],
+      "surface": "project-audit"
+    },
+    {
+      "id": "skill:unreal-project-audit",
+      "type": "skill",
+      "plugin": "cl-unreal",
+      "name": "unreal-project-audit",
+      "description": "Read-only scored audit of an Unreal project, ranked. Use for unfamiliar Unreal repos, /cl-audit, and before refactors, ports, upgrades, or releases.",
+      "tier": "free",
+      "path": "plugins/cl-unreal/skills/unreal-project-audit/SKILL.md",
+      "tags": [
+        "unreal",
+        "qa",
+        "windows",
+        "macos",
+        "linux",
+        "android",
+        "ios"
+      ]
+    },
+    {
+      "id": "skill:cocos-project-audit",
+      "type": "skill",
+      "plugin": "cl-cocos",
+      "name": "cocos-project-audit",
+      "description": "Read-only scored audit of a Cocos Creator 3.x project, ranked. Use for unfamiliar Cocos repos, /cl-audit, and before refactors or releases.",
+      "tier": "free",
+      "path": "plugins/cl-cocos/skills/cocos-project-audit/SKILL.md",
+      "tags": [
+        "cocos-creator",
+        "typescript",
+        "qa",
+        "web",
+        "android",
+        "ios"
+      ],
+      "surface": "project-audit"
+    },
+    {
+      "id": "skill:itch-io",
+      "type": "skill",
+      "plugin": "cl-platforms",
+      "name": "itch-io",
+      "description": "Publish on itch.io: page, HTML5 zip limits, builds per OS, butler channels, jam entries. Use when itch.io, a jam page, or a first public build comes up.",
+      "tier": "free",
+      "path": "plugins/cl-platforms/skills/itch-io/SKILL.md",
+      "tags": [
+        "itch-io",
+        "web",
+        "html5",
+        "windows",
+        "macos",
+        "linux",
+        "game-jam",
+        "release"
+      ]
+    }
+  ]
+}

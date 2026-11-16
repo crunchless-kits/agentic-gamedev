@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Crunchless: All-in-One Game Development Harness &amp; Studio Assistant</title>
+<meta name="description" content="Skills, agents, and scripts that give Claude Code, Codex, Copilot, Cursor, and Antigravity a full game development harness for Unity, web, Roblox, Unreal, Godot, and Cocos. Free core under MIT.">
+<link rel="canonical" href="https://crunchless-kits.github.io/agentic-gamedev/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="alternate icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<meta name="theme-color" content="#0f1115">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Crunchless: All-in-One Game Development Harness &amp; Studio Assistant">
+<meta property="og:description" content="A full game development harness for your coding agent, on six engines. Free core under MIT.">
+<meta property="og:url" content="https://crunchless-kits.github.io/agentic-gamedev/">
+<meta property="og:image" content="https://crunchless-kits.github.io/agentic-gamedev/assets/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<style>
+:root{--ink:#0f1115;--panel:#13161c;--raised:#1f242d;--line:#2a303b;--text:#e8eaee;--muted:#b7bcc6;--subtle:#7b8292;--mint:#6ee7a8;--code:#161a21;--gray:#6b7383;--m1:#2f7a57;--m2:#4cb583}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--text);font:16px/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);overflow-x:hidden}
+a{color:var(--text);text-decoration:none}a:hover{color:#fff}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;margin:0;text-wrap:balance}
+p,li,.agents{margin:0;text-wrap:pretty}
+li,.card p,.area p,.faq p,.fine,.lede,.agents,.cap p,.cap small,.step p,figcaption p{text-wrap:balance}
+code{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.band{background:var(--panel)}
+section{padding:72px 0}
+.h2{font-size:36px;line-height:1.15}
+.lede{font-size:17px;color:var(--muted);max-width:740px;margin-top:12px}
+.grid{display:flex;flex-wrap:wrap;gap:20px;margin-top:32px}
+.card{flex:1 1 300px;display:flex;flex-direction:column;gap:10px;padding:26px;border-radius:14px;background:var(--panel)}
+.band .card{background:var(--ink)}
+.card h3{font-size:20px}
+.card p,.card li{color:var(--muted);font-size:15px}
+.kicker{font-size:15px;font-weight:500;color:var(--mint)}
+.ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(110,231,168,.1);color:var(--mint);flex:none}
+.ico svg{width:24px;height:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:10px;font-weight:600;font-size:16px}
+.btn.primary{background:var(--mint);color:var(--ink)}.btn.primary:hover{color:var(--ink);filter:brightness(1.06)}
+.btn.secondary{background:var(--raised);color:var(--text)}
+.term{display:flex;flex-direction:column;gap:6px;padding:18px 20px;border-radius:12px;background:var(--code);font-size:14px;color:#c9ced8;overflow-x:auto;text-align:left}
+.band .term{background:var(--ink)}
+.term .label{color:var(--subtle);font-family:Inter,sans-serif}
+.tabrow{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.tabrow button{font:600 13px Inter,sans-serif;padding:5px 11px;border-radius:999px;border:1px solid #39404d;background:transparent;color:#c9ced8;cursor:pointer;min-height:32px}
+.tabrow button[aria-selected="true"]{background:var(--mint);border-color:var(--mint);color:var(--ink)}
+.tabrow button:focus-visible{outline:2px solid var(--mint);outline-offset:2px}
+.term .note{color:var(--subtle);font-family:Inter,sans-serif;font-size:13px;margin-top:4px;text-wrap:balance}
+.dlist li{text-wrap:balance}
+.dlist{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.dlist li{position:relative;padding-left:20px}
+.dlist li::before{content:"";position:absolute;left:3px;top:.62em;width:6px;height:6px;background:var(--mint);transform:rotate(45deg)}
+.c{color:var(--mint);font-size:13px}
+
+/* header */
+header{position:relative;z-index:2;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-top:20px;padding-bottom:20px}
+header nav{display:flex;flex-wrap:wrap;gap:24px;font-size:15px}
+header nav a{color:var(--muted);padding:8px 0}
+.logo img{display:block;height:30px;width:auto}
+
+/* hero and its game backdrop */
+.top{position:relative;overflow:hidden}
+.backdrop{position:absolute;inset:0;pointer-events:none;z-index:0}
+.backdrop .dots{position:absolute;inset:0;background-image:radial-gradient(rgba(183,188,198,.16) 1px,transparent 1.6px);background-size:28px 28px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,#000 30%,transparent 80%);mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,#000 30%,transparent 80%)}
+.backdrop .glow{position:absolute;left:50%;top:30%;width:900px;height:600px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(110,231,168,.13),transparent)}
+.gem{position:absolute;width:var(--s);height:var(--s);background:var(--mint);opacity:var(--o);transform:rotate(45deg);animation:drift var(--d) ease-in-out infinite alternate}
+.gem.hollow{background:none;border:2px solid var(--mint)}
+@keyframes drift{from{transform:translateY(0) rotate(45deg)}to{transform:translateY(-34px) rotate(135deg)}}
+@keyframes bob{from{transform:translateY(0) rotate(-6deg)}to{transform:translateY(-22px) rotate(6deg)}}
+.stage{position:absolute;left:0;right:0;bottom:0;height:150px}
+.ground{position:absolute;left:0;right:0;bottom:0;height:44px;background:repeating-linear-gradient(90deg,#1f242d 0 26px,var(--ink) 26px 28px);border-top:2px solid #2a303b}
+.ground::after{content:"";position:absolute;left:0;right:0;top:20px;height:2px;background:var(--ink)}
+.plat{position:absolute;height:14px;background:repeating-linear-gradient(90deg,#2a303b 0 18px,var(--ink) 18px 20px);border-radius:2px}
+.coin{position:absolute;width:10px;height:14px;background:var(--mint);border-radius:2px;animation:coin 1.6s ease-in-out infinite alternate}
+.coin:nth-child(odd){animation-delay:.4s}
+@keyframes coin{from{transform:translateY(0)}to{transform:translateY(-6px)}}
+.runner{position:absolute;bottom:44px;left:-40px;width:30px;height:30px;animation:run 16s linear infinite}
+.runner svg{width:30px;height:30px;display:block;animation:hop 1.6s cubic-bezier(.3,0,.7,1) infinite}
+@keyframes run{to{transform:translateX(calc(100vw + 80px))}}
+@keyframes hop{0%,100%{transform:translateY(0)}45%{transform:translateY(-46px)}}
+.flag{position:absolute;bottom:44px;right:7%;width:4px;height:70px;background:#b7bcc6}
+.flag::after{content:"";position:absolute;left:4px;top:2px;border-left:26px solid var(--mint);border-top:9px solid transparent;border-bottom:9px solid transparent}
+@media (prefers-reduced-motion:reduce){.gem,.coin,.runner,.runner svg{animation:none}.runner{left:12%}}
+
+.hero{position:relative;z-index:1;padding:48px 24px 190px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:26px}
+.hero .word{width:min(100%,720px);height:auto}
+.hero h1{font-family:Inter,sans-serif;font-weight:500;font-size:30px;line-height:1.25}
+.engines{display:flex;flex-wrap:wrap;justify-content:center}
+.gems{display:flex;flex-wrap:wrap;justify-content:center;padding:0;margin:0;list-style:none;color:var(--muted);font-size:20px}
+.gems li{display:flex;align-items:center}
+.gems li+li::before,.engines .gems+.gems::before{content:"";width:7px;height:7px;margin:0 14px;align-self:center;background:var(--mint);transform:rotate(45deg)}
+.agents{display:inline-block;background:#1a2a22;color:var(--text);border:1px solid #2c4a3a;font-weight:500;font-size:17px;padding:10px 20px;border-radius:4px}
+.ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+
+/* stat capsules: asymmetric 2x2, every capsule the same height */
+.bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:1fr;gap:18px;padding-top:8px;padding-bottom:80px}
+.cap{position:relative;overflow:hidden;border-radius:22px;background:var(--panel);border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;gap:10px;min-height:280px}
+.cap .num{font-family:"Space Grotesk",Inter,sans-serif;line-height:1;color:var(--text)}
+.cap p{color:var(--muted);font-size:15px}
+.cap .row{display:flex;align-items:center;gap:14px}
+.cap.k1{grid-column:1/8;flex-direction:row;justify-content:space-between;gap:20px}
+.cap.k2{grid-column:8/13}
+.cap.k3{grid-column:1/6}
+.cap.k4{grid-column:6/13;flex-direction:row;gap:24px}
+.cap.k1::after{content:"";position:absolute;left:-70px;bottom:-70px;width:220px;height:220px;background:var(--mint);opacity:.07;transform:rotate(45deg);border-radius:18px}
+.kmain{display:flex;flex-direction:column;gap:10px;min-width:0}
+.cap.k1 .num{font-size:164px;letter-spacing:-5px;margin-top:auto;margin-bottom:-18px}
+.split{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;justify-content:space-between;position:relative;z-index:1}
+.split li{display:flex;align-items:center;gap:12px}
+.split b{font:700 44px/1 "Space Grotesk",Inter,sans-serif;color:var(--text)}
+.split span{font-size:18px;color:var(--muted)}
+.cap.k1 .split{align-items:flex-end;text-align:right}
+.cap.k1 .split li{justify-content:flex-end}
+.cap.k1 .split li::after{content:"";width:12px;height:12px;border-radius:2px;transform:rotate(45deg);background:var(--d);flex:none}
+.cap.k2 .split{flex:1;justify-content:space-around}
+.cap.k2 .split b{font-size:40px;min-width:52px}
+.g{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;background:rgba(110,231,168,.1);color:var(--mint);flex:none}
+.g svg{width:22px;height:22px}
+.bench-big{display:flex;flex-direction:column;gap:6px;margin-top:auto}
+.bench-big .num{font-size:64px;white-space:nowrap}
+.bench-big span{font-size:16px;color:var(--muted)}
+.bench-vs{display:flex;flex-wrap:wrap;gap:8px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{font-size:13px;padding:4px 10px;border-radius:999px;background:var(--raised);color:var(--muted)}
+.pill strong{font:600 13px Inter,sans-serif;color:var(--text)}
+.cap.k4 .num{font-size:96px;margin-top:auto}
+.plugs{display:grid;grid-template-columns:repeat(11,14px);gap:8px}
+.plugs i{width:12px;height:12px;transform:rotate(45deg);background:var(--line);border-radius:2px}
+.plugs i.on{background:var(--mint)}
+.cap small{color:var(--subtle);font-size:13px}
+.cats{list-style:none;margin:0;padding:0;flex:1 1 0;display:flex;flex-wrap:wrap;align-content:center;justify-content:flex-end;gap:8px}
+.cats li{font-size:14px;font-weight:500;padding:6px 12px;border-radius:999px;background:var(--raised);color:var(--text);border:1px solid var(--line)}
+
+.sub{font-size:26px;margin-top:72px}
+.sub+.lede{margin-top:8px}
+
+/* one-command flow */
+.start-grid{display:flex;flex-wrap:wrap;gap:28px;align-items:center}
+.start-grid>div{flex:1 1 380px}
+.flow{display:flex;margin-top:36px;align-items:stretch}
+.step{flex:1 1 0;display:flex;flex-direction:column;gap:10px;padding:20px;border-radius:14px;background:var(--ink);border:1px solid var(--line)}
+.step h3{font-size:16px}
+.step p{font-size:14px;color:var(--muted)}
+.chip{align-self:flex-start;font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--raised);color:var(--muted)}
+.chip.h{background:var(--m1);color:#fff}.chip.s{background:var(--m2);color:var(--ink)}.chip.o{background:var(--mint);color:var(--ink)}
+.arrow{flex:0 0 28px;display:grid;place-items:center;color:var(--mint)}
+.arrow svg{width:20px;height:20px}
+.scouts{display:flex;gap:6px}.scouts i{width:12px;height:12px;transform:rotate(45deg);background:var(--m1);border-radius:2px}
+
+/* charts */
+.charts{display:grid;grid-template-columns:1.25fr 1fr;gap:20px;margin-top:32px}
+figure{margin:0;padding:24px;border-radius:16px;background:var(--panel);display:flex;flex-direction:column;gap:16px;min-width:0}
+.band figure{background:var(--ink)}
+figcaption h3{font-size:20px}
+figcaption p{color:var(--muted);font-size:14px;margin-top:6px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:12px;height:12px;border-radius:3px;display:inline-block}
+.sw.before{background:var(--gray)}.sw.after{background:var(--mint)}
+.sw.budget{box-sizing:content-box;width:0;height:14px;border-radius:0;background:none;border-left:2px dashed var(--text)}
+.bars{position:relative;display:flex;flex-direction:column;gap:12px;--lab:88px}
+.brow{display:grid;grid-template-columns:var(--lab) 1fr;align-items:center;outline:none;border-radius:6px}
+.brow:hover .lab,.brow:focus-visible .lab{color:var(--text)}
+.brow:focus-visible{box-shadow:0 0 0 2px var(--mint)}
+.lab{font-size:13px;color:var(--muted)}
+.plot{display:flex;flex-direction:column;gap:2px}
+.b{height:10px;width:calc(var(--v) / 6000 * 100%);border-radius:0 4px 4px 0;position:relative}
+.b.before{background:var(--gray)}
+.b.after{background:var(--mint)}
+.b em{position:absolute;left:100%;top:50%;transform:translateY(-50%);padding-left:6px;font:500 12px Inter,sans-serif;color:var(--text);white-space:nowrap}
+.budget{position:absolute;top:-6px;bottom:22px;left:calc(var(--lab) + (100% - var(--lab)) * 2000 / 6000);border-left:2px dashed rgba(232,234,238,.7)}
+.axis{display:grid;grid-template-columns:var(--lab) 1fr;font-size:11px;color:var(--subtle)}
+.axis div{display:flex;justify-content:space-between}
+.stack{display:flex;gap:2px;height:30px}
+.seg{height:100%;outline:none}
+.seg:first-child{border-radius:4px 0 0 4px}.seg:last-child{border-radius:0 4px 4px 0}
+.seg:hover,.seg:focus-visible{filter:brightness(1.15);box-shadow:0 0 0 2px var(--text)}
+.mlegend{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;font-size:13px;color:var(--muted)}
+.mlegend li{display:flex;gap:8px;align-items:flex-start}
+.mlegend b{color:var(--text);font-weight:600}
+.mlegend .sw{margin-top:3px;flex:none}
+.hero-num{font-family:"Space Grotesk",Inter,sans-serif;font-size:56px;font-weight:700;line-height:1}
+.hero-num span{font-size:20px;color:var(--muted);font-weight:500}
+details{font-size:13px;color:var(--muted)}
+summary{cursor:pointer;color:var(--subtle)}
+table{border-collapse:collapse;margin-top:8px;width:100%}
+th,td{text-align:right;padding:4px 8px;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left}
+.tiles{display:flex;flex-wrap:wrap;gap:16px;margin-top:20px}
+.tile{flex:1 1 220px;padding:18px 20px;border-radius:14px;background:var(--panel);display:flex;gap:14px;align-items:center}
+.band .tile{background:var(--ink)}
+.tile b{font-family:"Space Grotesk",Inter,sans-serif;font-size:28px;line-height:1}
+.tile span{display:block;font-size:13px;color:var(--muted);margin-top:4px}
+#tip{position:fixed;z-index:20;pointer-events:none;max-width:260px;padding:8px 10px;border-radius:8px;background:#eef0f3;color:var(--ink);font-size:13px;line-height:1.4;box-shadow:0 6px 24px rgba(0,0,0,.4);opacity:0;transition:opacity .12s}
+
+.cmp table{font-size:15px;margin-top:0}
+.cmp th{color:var(--muted);font-weight:600;font-size:13px}
+.cmp td,.cmp th{padding:12px 10px}
+.cmp td:first-child{color:var(--text);text-wrap:balance}
+.cmp td b{color:var(--mint)}
+@media (max-width:640px){.cmp table{font-size:13px}.cmp td,.cmp th{padding:10px 6px}}
+
+/* areas */
+.areas{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:28px}
+.area{padding:18px;border-radius:12px;background:var(--panel);display:flex;flex-direction:column;gap:6px}
+.band .area{background:var(--ink)}
+.area .ico{width:38px;height:38px;border-radius:10px;margin-bottom:4px}.area .ico svg{width:20px;height:20px}
+.area h3{font-size:17px}
+.area code{font-size:12.5px;color:var(--mint)}
+.area p{font-size:14px;color:var(--muted)}
+
+/* tags */
+.tag-tools{display:flex;margin-top:24px}
+.tag-tools input{flex:1 1 260px;min-height:44px;padding:0 14px;border-radius:10px;border:1px solid var(--line);background:var(--ink);color:var(--text);font:15px Inter,sans-serif}
+.tag-tools input:focus{outline:2px solid var(--mint);outline-offset:1px}
+.tag-panel{margin-top:16px;padding:18px 20px;border-radius:14px;background:var(--ink);border:1px solid var(--line);min-height:64px;font-size:14px;color:var(--muted)}
+.tag-panel h3{font-size:17px;color:var(--text);margin-bottom:10px}
+.mem{display:flex;flex-wrap:wrap;gap:6px}
+.mem code{font-size:12.5px;padding:3px 8px;border-radius:6px;background:var(--raised);color:var(--text)}
+.mem code.free{box-shadow:inset 0 0 0 1px var(--mint)}
+.mem code.studio{background:#1a2a22}
+.tag-legend{margin-top:10px;font-size:12px;color:var(--subtle)}
+.tag-cols{columns:2 420px;column-gap:28px;margin-top:24px}
+.tag-group{break-inside:avoid;margin-bottom:24px}
+.tag-group h3{font-size:15px;color:var(--muted);font-family:Inter,sans-serif;font-weight:600;margin-bottom:10px}
+.tag-group h3 small{color:var(--subtle);font-weight:500}
+.tag-list{display:flex;flex-wrap:wrap;gap:6px}
+.tag{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--ink);color:var(--text);border-radius:999px;padding:4px 10px;font:500 13px Inter,sans-serif;cursor:pointer}
+.tag span{font-size:11px;color:var(--subtle)}
+.tag.m{font-size:14px;padding:5px 11px}
+.tag.l{font-size:15px;padding:6px 13px;border-color:#3a414e}
+.tag.xl{font-size:17px;padding:7px 15px;border-color:var(--m1);color:#fff}
+.tag:hover{border-color:var(--mint)}
+.tag[aria-pressed="true"]{background:var(--mint);border-color:var(--mint);color:var(--ink)}
+.tag[aria-pressed="true"] span{color:var(--ink)}
+.tag[hidden],.tag-group[hidden]{display:none}
+
+/* pricing, and the audience cards that share its palette */
+.tiers .card{gap:14px}
+.tiers .card h3{font-size:36px}
+.card .price{color:var(--text);font-family:"Space Grotesk",Inter,sans-serif;font-size:28px;font-weight:700}
+.card .price span{display:block;font:500 15px Inter,sans-serif;color:var(--muted)}
+.card.t-builder{background:#1a2a22}
+.tiers .dlist li{color:var(--text)}
+.tiers .btn{margin-top:auto}
+.card.inverse{background:var(--mint);color:var(--ink)}
+.card.inverse h3,.card.inverse .price,.card.inverse p,.card.inverse .dlist li{color:var(--ink)}
+.card.inverse .price span,.card.inverse .kicker{color:#1e3a2d}
+.card.inverse .dlist li::before{background:var(--ink)}
+.card.inverse .ico{background:rgba(15,17,21,.1);color:var(--ink)}
+.card.inverse .c{color:var(--ink);font-weight:500}
+.card.inverse .btn{background:var(--ink);color:var(--mint)}
+.fit{margin-top:auto;padding-top:6px;font-size:14px;font-weight:600;color:var(--mint)}
+.card.inverse .fit{color:var(--ink)}
+.fine{font-size:14px;color:var(--subtle);max-width:760px;margin-top:20px}
+
+.faq{display:flex;flex-wrap:wrap;gap:24px;margin-top:24px}
+.faq div{flex:1 1 300px;display:flex;flex-direction:column;gap:6px}
+.faq h3{font-size:17px}.faq p{font-size:15px;color:var(--muted)}
+
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding-top:32px;padding-bottom:48px;font-size:14px;color:var(--subtle);border-top:1px solid var(--line)}
+footer img{height:22px;width:auto;display:block}
+
+@media (max-width:900px){
+  .bento{grid-template-columns:1fr}
+  .cap.k1,.cap.k2,.cap.k3,.cap.k4{grid-column:1/-1;min-height:0}
+  .charts{grid-template-columns:1fr}
+  .flow{flex-direction:column}
+  .arrow{flex-basis:28px;transform:rotate(90deg)}
+}
+@media (max-width:640px){
+  section{padding:56px 0}
+  .h2{font-size:28px}
+  .hero{padding-top:32px;padding-bottom:170px}
+  .hero h1{font-size:22px}
+  .gems{font-size:17px}
+  .engines{flex-direction:column;gap:6px}
+  .engines .gems+.gems::before{display:none}
+  .gems li+li::before{margin:0 10px}
+  .agents{font-size:15px;padding:10px 14px}
+  header nav{gap:18px;font-size:14px}
+  .wide{display:none}
+  .bento{gap:12px}
+  .cap{padding:20px;border-radius:18px}
+  .cap.k1{flex-direction:column}
+  .cap.k1 .num{font-size:120px;letter-spacing:-3px;margin-bottom:0}
+  .cap.k1 .split{flex-direction:row;justify-content:space-between;align-items:flex-start;text-align:left;gap:8px}
+  .cap.k1 .split li{flex-direction:column;align-items:flex-start;gap:2px}
+  .cap.k1 .split li::after{display:none}
+  .split b{font-size:34px}.split span{font-size:16px}
+  .cap.k4{flex-direction:column}.cap.k4 .num{font-size:72px}
+  .cats{justify-content:flex-start}
+  .bench-big .num{font-size:56px}
+  .tiers .card h3{font-size:30px}
+  .h2.sub{font-size:22px;margin-top:56px}
+  .bars{--lab:76px}
+  .mlegend{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/><path d="M3 17.5l9 5 9-5"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l8 4.6v9.2l-8 4.6-8-4.6V7.4z"/><path d="M4 7.4l8 4.6 8-4.6M12 12v9.2"/></symbol>
+    <symbol id="i-term" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7 9l3 3-3 3M13 15h4"/></symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v5M15 3v5M6 8h12v3a6 6 0 0 1-12 0zM12 17v4"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18h5M4 12h9M4 6h16"/><circle cx="18" cy="16" r="3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/><rect x="3" y="3" width="18" height="18" rx="4"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17" cy="9" r="2.8"/><path d="M17.5 14c2.4.3 4 2.3 4 5"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/><path d="M10 10h4v4h-4z"/></symbol>
+    <symbol id="i-pad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 8h11a4.5 4.5 0 0 1 4.4 5.4l-.7 3.4a2.4 2.4 0 0 1-4.2 1L15 16H9l-2 1.8a2.4 2.4 0 0 1-4.2-1l-.7-3.4A4.5 4.5 0 0 1 6.5 8z"/><path d="M8 10.5v3M6.5 12h3M15.5 11h.01M17.5 13h.01"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 7l3 3"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></symbol>
+    <symbol id="i-mega" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4h3l8 4V6l-8 4z"/><path d="M18 9a4 4 0 0 1 0 6M6 14l1 5h3l-1-4"/></symbol>
+    <symbol id="i-devices" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="14" height="10" rx="2"/><path d="M6 19h6M9 15v4"/><rect x="17.5" y="8" width="4.5" height="11" rx="1.5"/></symbol>
+    <symbol id="i-coins" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="9" cy="7" rx="6" ry="3"/><path d="M3 7v5c0 1.7 2.7 3 6 3s6-1.3 6-3V7"/><path d="M9 15v2c0 1.7 2.7 3 6 3s6-1.3 6-3v-5c0-1.7-2.7-3-6-3"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M3 20h18"/></symbol>
+    <symbol id="i-bug" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="8" width="10" height="12" rx="5"/><path d="M12 8v12M9 5l1.5 2M15 5l-1.5 2M3 13h4M17 13h4M4 19l3-2M20 19l-3-2M4 7l3 2.5M20 7l-3 2.5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 13H6z"/><path d="M9 8a3 3 0 0 1 6 0"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></symbol>
+    <symbol id="i-laptop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 19h20"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  </defs>
+</svg>
+
+<div class="top">
+  <div class="backdrop" aria-hidden="true">
+    <div class="dots"></div>
+    <div class="glow"></div>
+    <i class="gem" style="left:6%;top:18%;--s:14px;--o:.5;--d:7s"></i>
+    <i class="gem hollow wide" style="left:14%;top:46%;--s:18px;--o:.35;--d:9s"></i>
+    <i class="gem" style="left:22%;top:72%;--s:8px;--o:.45;--d:6s"></i>
+    <i class="gem wide" style="left:31%;top:8%;--s:9px;--o:.3;--d:8s"></i>
+    <i class="gem hollow wide" style="left:72%;top:12%;--s:12px;--o:.4;--d:7.5s"></i>
+    <i class="gem wide" style="left:88%;top:46%;--s:16px;--o:.45;--d:10s"></i>
+    <i class="gem" style="left:90%;top:22%;--s:10px;--o:.5;--d:6.5s"></i>
+    <i class="gem hollow wide" style="left:86%;top:66%;--s:10px;--o:.35;--d:8.5s"></i>
+    <i class="gem wide" style="left:63%;top:70%;--s:7px;--o:.35;--d:7s"></i>
+    <div class="stage">
+      <div class="plat" style="left:12%;bottom:96px;width:120px"></div>
+      <div class="plat wide" style="left:58%;bottom:104px;width:100px"></div>
+      <div class="plat" style="left:78%;bottom:76px;width:80px"></div>
+      <i class="coin" style="left:calc(12% + 20px);bottom:120px"></i><i class="coin" style="left:calc(12% + 52px);bottom:120px"></i><i class="coin" style="left:calc(12% + 84px);bottom:120px"></i>
+      <i class="coin wide" style="left:calc(58% + 30px);bottom:128px"></i><i class="coin wide" style="left:calc(58% + 62px);bottom:128px"></i>
+      <i class="coin" style="left:40%;bottom:70px"></i>
+      <div class="runner"><svg viewBox="0 0 10 10" shape-rendering="crispEdges"><path fill="#e8eaee" d="M3 1h4v1h1v3H2V2h1zM2 5h6v3H2zM2 8h2v2H2zM6 8h2v2H6z"/><path fill="#0f1115" d="M4 3h1v1H4zM6 3h1v1H6z"/><path fill="#6ee7a8" d="M4 6h2v1H4z"/></svg></div>
+      <div class="flag"></div>
+      <div class="ground"></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <header>
+      <a class="logo" href="#top" aria-label="Crunchless home"><img src="assets/logo-horizontal-dark.svg" alt="Crunchless" width="210" height="30"></a>
+      <nav aria-label="Primary">
+        <a href="#who">Who It’s For</a>
+        <a href="#bench">Benchmark</a>
+        <a href="#pricing">Pricing</a>
+        <a href="https://github.com/crunchless-kits/agentic-gamedev">GitHub</a>
+      </nav>
+    </header>
+  </div>
+
+  <div class="wrap hero" id="top">
+    <img class="word" src="assets/logo-horizontal-dark.svg" alt="Crunchless" width="1009" height="149">
+    <h1>All-in-One Game Development Harness &amp; Studio Assistant</h1>
+    <div class="engines" aria-label="Engines">
+      <ul class="gems"><li>Unity</li><li>Web</li><li>Roblox</li></ul>
+      <ul class="gems"><li>Unreal</li><li>Godot</li><li>Cocos</li></ul>
+    </div>
+    <span class="agents">Works with Claude Code, Codex, Copilot, Cursor, and Antigravity</span>
+    <div class="ctas">
+      <a class="btn primary" href="#start">Install the free core</a>
+      <a class="btn secondary" href="#pricing">See Builder and Studio</a>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="wrap bento" aria-label="The kit in numbers">
+    <div class="cap k1">
+      <div class="kmain">
+        <div class="row"><span class="ico"><svg><use href="#i-layers"/></svg></span><p>members in the kit</p></div>
+        <b class="num">339</b>
+      </div>
+      <ul class="split">
+        <li style="--d:var(--m1)"><b>296</b><span>skills</span></li>
+        <li style="--d:var(--m2)"><b>30</b><span>agents</span></li>
+        <li style="--d:var(--mint)"><b>13</b><span>commands</span></li>
+      </ul>
+    </div>
+    <div class="cap k2">
+      <div class="row"><span class="ico"><svg><use href="#i-route"/></svg></span><p>one harness per engine, every target covered</p></div>
+      <ul class="split">
+        <li><i class="g"><svg><use href="#i-cube"/></svg></i><b>6</b><span>engines</span></li>
+        <li><i class="g"><svg><use href="#i-bag"/></svg></i><b>13</b><span>stores and portals</span></li>
+        <li><i class="g"><svg><use href="#i-laptop"/></svg></i><b>8</b><span>operating systems</span></li>
+      </ul>
+    </div>
+    <div class="cap k3">
+      <div class="row"><span class="ico"><svg><use href="#i-chart"/></svg></span><p>benchmark in Claude Code, same model with and without the kit</p></div>
+      <div class="bench-big"><b class="num">3 of 3</b><span>kit runs gave every finding evidence, an owner, and a check</span></div>
+      <div class="bench-vs"><span class="pill">Without the kit: <strong>0 of 3</strong></span><span class="pill">Planted bugs found: <strong>6 of 6</strong> both ways</span></div>
+      <small><a href="#bench" style="color:var(--mint)">See the full benchmark</a></small>
+    </div>
+    <div class="cap k4">
+      <div class="kmain">
+        <div class="row"><span class="ico"><svg><use href="#i-plug"/></svg></span><p>plugins, install only what you need</p></div>
+        <b class="num">21</b>
+        <div class="plugs" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <small>The Unity bundle loads 8 of the 21.</small>
+      </div>
+      <ul class="cats" aria-label="Some of the plugins">
+        <li>Unity</li><li>Unreal</li><li>Godot</li><li>Web</li><li>Design</li><li>QA</li><li>CI/CD</li><li>Monetization</li><li>Analytics and live ops</li><li>Multiplayer</li><li>Marketing</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="band" id="who">
+    <div class="wrap">
+      <h2 class="h2">Built for Three Kinds of Developer</h2>
+      <p class="lede">Same kit, different entry points. The router sends each task to the narrowest member that covers it.</p>
+      <div class="grid">
+        <article class="card">
+          <span class="ico"><svg><use href="#i-spark"/></svg></span>
+          <span class="kicker">New to game development</span>
+          <h3>The First-Time Builder</h3>
+          <p>You have an idea and a coding agent, and no game dev background. The kit supplies the design thinking and the guardrails.</p>
+          <ul class="dlist">
+            <li><code class="c">/cl-brainstorm</code> returns directions that differ in mechanics, scored against your constraints.</li>
+            <li>A competitor snapshot checks the closest game before you build.</li>
+            <li>The scope guard stops the agent from building what you didn’t ask for.</li>
+            <li>The lite ship check gets the game onto itch.io.</li>
+          </ul>
+          <span class="fit">Starts on Free</span>
+        </article>
+        <article class="card t-builder">
+          <span class="ico"><svg><use href="#i-user"/></svg></span>
+          <span class="kicker">One person, every role</span>
+          <h3>The Solo Developer</h3>
+          <p>You can build. You can’t be the designer, QA lead, publishing engineer, and producer at once. The kit fills those seats.</p>
+          <ul class="dlist">
+            <li><code class="c">/cl-audit</code> sends scouts through the project and ranks what matters.</li>
+            <li>Six design pillars check whether the game is fun, deep, and worth returning to.</li>
+            <li>Release gates for Steam, Google Play, the App Store, and web portals.</li>
+            <li><code class="c">/cl-market</code> turns the week’s work into posts.</li>
+          </ul>
+          <span class="fit">Fits Builder</span>
+        </article>
+        <article class="card inverse">
+          <span class="ico"><svg><use href="#i-users"/></svg></span>
+          <span class="kicker">Agentic teams</span>
+          <h3>The Team With a Process</h3>
+          <p>You already have a process. The kit makes it hold across people, agents, and cloud sessions.</p>
+          <ul class="dlist">
+            <li>Vendor or export the kit into the repo, so every session and every agent works to the same rules.</li>
+            <li><code class="c">/cl-learn</code> saves your house style, and every member reads it from then on.</li>
+            <li>The producer tracks milestones, token usage, expenses, and tickets.</li>
+          </ul>
+          <span class="fit">Fits Studio</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="bench">
+    <div class="wrap">
+      <h2 class="h2">The Benchmark, With and Without the Kit</h2>
+      <p class="lede">Claude Code audited the same small canvas game six times on the same model, Sonnet: three runs with the web bundle and three without. The game has six planted bugs. Measured on 16 November 2026, medians of three runs.</p>
+      <figure class="cmp" style="margin-top:28px">
+        <table>
+          <thead><tr><th>Measure</th><th>Without the kit</th><th>With the kit</th></tr></thead>
+          <tbody>
+            <tr><td>Planted bugs found</td><td>6 of 6</td><td>6 of 6</td></tr>
+            <tr><td>Runs where every finding has evidence, an owner, and a check</td><td>0 of 3</td><td><b>3 of 3</b></td></tr>
+            <tr><td>Runs that flagged the missing portal SDK layer</td><td>0 of 3</td><td><b>3 of 3</b></td></tr>
+            <tr><td>Runs that ended with a handoff the next session can act on</td><td>0 of 3</td><td><b>3 of 3</b></td></tr>
+            <tr><td>Tokens per run</td><td>76,246</td><td>117,774</td></tr>
+            <tr><td>Time per run</td><td>19 seconds</td><td>23 seconds</td></tr>
+          </tbody>
+        </table>
+        <p class="fine" style="margin-top:0">Each run got the same brief: audit the game before it goes to web portals and rank the problems with file paths. Findings were scored against a rubric written before any run.</p>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band" id="start">
+    <div class="wrap">
+      <div class="start-grid">
+        <div>
+          <h2 class="h2">One Command in Any Coding Agent</h2>
+          <p class="lede">Run <code>/cl-audit</code> in your game project and get a ranked list of what to fix, with file paths. That’s the first thing Crunchless does, and the rest works the same way, from the first idea to the store page.</p>
+        </div>
+        <div class="term" id="install">
+          <div class="tabrow" role="tablist" aria-label="Your coding agent">
+            <button type="button" role="tab" aria-selected="true" data-agent="claude">Claude Code</button>
+            <button type="button" role="tab" aria-selected="false" data-agent="codex">Codex</button>
+            <button type="button" role="tab" aria-selected="false" data-agent="copilot">Copilot</button>
+            <button type="button" role="tab" aria-selected="false" data-agent="cursor">Cursor</button>
+            <button type="button" role="tab" aria-selected="false" data-agent="antigravity">Antigravity</button>
+          </div>
+          <div role="tabpanel" data-panel="claude" style="display:contents">
+            <code>/plugin marketplace add crunchless-kits/agentic-gamedev</code>
+            <code>/plugin install cl-core@crunchless</code>
+            <code>/cl-core:cl-audit</code>
+          </div>
+          <div role="tabpanel" data-panel="export" style="display:none">
+            <code>git clone https://github.com/crunchless-kits/agentic-gamedev ~/crunchless</code>
+            <code>node ~/crunchless/scripts/export_agents.mjs --target <span data-target>codex</span> --bundle unity --out .</code>
+            <code data-run>$cl-audit</code>
+            <span class="note">Run it in your game’s folder. Swap unity for web, roblox, unreal, godot, or cocos.</span>
+          </div>
+        </div>
+      </div>
+      <div class="flow" aria-label="What happens when you run cl-audit">
+        <div class="step"><span class="chip">No model</span><h3>Detect the Engine</h3><p>A script reads the project and picks the matching audit.</p></div>
+        <div class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></div>
+        <div class="step"><span class="chip h">Small model</span><h3>Scouts Gather Facts</h3><div class="scouts" aria-hidden="true"><i></i><i></i><i></i></div><p>Up to three read-only scouts work in parallel.</p></div>
+        <div class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></div>
+        <div class="step"><span class="chip o">Top model</span><h3>One Ranker Decides</h3><p>The top model ranks the facts at medium effort.</p></div>
+        <div class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></div>
+        <div class="step"><span class="chip s">You</span><h3>Ten Findings at Most</h3><p>Each with evidence, file paths, and the member that fixes it.</p></div>
+      </div>
+      <h3 class="h2 sub">How the Kit Stays Light</h3>
+      <p class="lede">These figures come from the kit’s own scripts and checks, and they hold for every coding agent.</p>
+      <div class="charts">
+        <figure>
+          <figcaption>
+            <h3>Hubs Shrink the Skill Menu by Up to 72 Percent</h3>
+            <p>Each plugin lists one hub that reaches the rest, so your agent’s skill list stays short.</p>
+          </figcaption>
+          <div class="legend"><span><i class="sw before"></i>Every description listed</span><span><i class="sw after"></i>With hubs</span><span><i class="sw budget"></i>Listing budget</span></div>
+          <div class="bars" role="img" aria-label="Estimated skill listing tokens per bundle, before and after hubs, against a 2,000 token budget. Unity 4,004 to 1,300. Web 4,009 to 1,341. Roblox 2,898 to 1,153. Unreal 3,727 to 1,297. Godot 3,947 to 1,294. Cocos 3,539 to 1,250. Web portals 5,313 to 1,501.">
+            <div class="budget" aria-hidden="true"></div>
+            <div class="brow" tabindex="0" data-tip="Unity bundle: 4,004 tokens with every description listed, 1,300 with hubs. 68 percent less."><span class="lab">Unity</span><div class="plot"><div class="b before" style="--v:4004"></div><div class="b after" style="--v:1300"><em>1,300</em></div></div></div>
+            <div class="brow" tabindex="0" data-tip="Web bundle: 4,009 tokens before, 1,341 with hubs. 67 percent less."><span class="lab">Web</span><div class="plot"><div class="b before" style="--v:4009"></div><div class="b after" style="--v:1341"><em>1,341</em></div></div></div>
+            <div class="brow" tabindex="0" data-tip="Roblox bundle: 2,898 tokens before, 1,153 with hubs. 60 percent less."><span class="lab">Roblox</span><div class="plot"><div class="b before" style="--v:2898"></div><div class="b after" style="--v:1153"><em>1,153</em></div></div></div>
+            <div class="brow" tabindex="0" data-tip="Unreal bundle: 3,727 tokens before, 1,297 with hubs. 65 percent less."><span class="lab">Unreal</span><div class="plot"><div class="b before" style="--v:3727"></div><div class="b after" style="--v:1297"><em>1,297</em></div></div></div>
+            <div class="brow" tabindex="0" data-tip="Godot bundle: 3,947 tokens before, 1,294 with hubs. 67 percent less."><span class="lab">Godot</span><div class="plot"><div class="b before" style="--v:3947"></div><div class="b after" style="--v:1294"><em>1,294</em></div></div></div>
+            <div class="brow" tabindex="0" data-tip="Cocos bundle: 3,539 tokens before, 1,250 with hubs. 65 percent less."><span class="lab">Cocos</span><div class="plot"><div class="b before" style="--v:3539"></div><div class="b after" style="--v:1250"><em>1,250</em></div></div></div>
+            <div class="brow" tabindex="0" data-tip="Web portals bundle: 5,313 tokens before, 1,501 with hubs. 72 percent less."><span class="lab">Web portals</span><div class="plot"><div class="b before" style="--v:5313"></div><div class="b after" style="--v:1501"><em>1,501</em></div></div></div>
+            <div class="axis" aria-hidden="true"><span></span><div><span>0</span><span>2,000</span><span>4,000</span><span>6,000 tokens</span></div></div>
+          </div>
+          <details><summary>Show as a table</summary>
+            <table><thead><tr><th>Bundle</th><th>Before</th><th>With hubs</th><th>Change</th></tr></thead><tbody>
+              <tr><td>Unity</td><td>4,004</td><td>1,300</td><td>−68%</td></tr><tr><td>Web</td><td>4,009</td><td>1,341</td><td>−67%</td></tr><tr><td>Roblox</td><td>2,898</td><td>1,153</td><td>−60%</td></tr><tr><td>Unreal</td><td>3,727</td><td>1,297</td><td>−65%</td></tr><tr><td>Godot</td><td>3,947</td><td>1,294</td><td>−67%</td></tr><tr><td>Cocos</td><td>3,539</td><td>1,250</td><td>−65%</td></tr><tr><td>Web portals</td><td>5,313</td><td>1,501</td><td>−72%</td></tr>
+            </tbody></table>
+            <p style="margin-top:8px">Estimated at four characters per token, from <code>npm run budget</code>.</p>
+          </details>
+        </figure>
+
+        <figure>
+          <figcaption>
+            <h3>Only 16 of 339 Members Run on the Top Model</h3>
+            <p>Most skills run on the model you already chose. The rest use the smallest model that does the job.</p>
+          </figcaption>
+          <div class="hero-num">16 <span>of 339 on the top model</span></div>
+          <div class="stack" role="img" aria-label="Where members run: 220 in your session, 5 on the small model, 98 on the mid model, 16 on the top model.">
+            <div class="seg" tabindex="0" style="flex:220;background:var(--gray)" data-tip="220 skills run inside your session, on the model you picked."></div>
+            <div class="seg" tabindex="0" style="flex:5;background:var(--m1)" data-tip="5 members on the small model: the scout, the guide, and quick commands."></div>
+            <div class="seg" tabindex="0" style="flex:98;background:var(--m2)" data-tip="98 members on the mid model: builders, diagnostics, and forked skills."></div>
+            <div class="seg" tabindex="0" style="flex:16;background:var(--mint)" data-tip="16 members on the top model: the specialists that design, rank, and review."></div>
+          </div>
+          <ul class="mlegend">
+            <li><i class="sw" style="background:var(--gray)"></i><span><b>220</b> in your session, on your model</span></li>
+            <li><i class="sw" style="background:var(--m1)"></i><span><b>5</b> on the small model, scout and guide</span></li>
+            <li><i class="sw" style="background:var(--m2)"></i><span><b>98</b> on the mid model, builders and diagnostics</span></li>
+            <li><i class="sw" style="background:var(--mint)"></i><span><b>16</b> on the top model, design and review</span></li>
+          </ul>
+        </figure>
+      </div>
+      <div class="tiles">
+        <div class="tile"><span class="ico"><svg><use href="#i-check"/></svg></span><div><b>14 of 14</b><span>install bundles fit the skill menu</span></div></div>
+        <div class="tile"><span class="ico"><svg><use href="#i-layers"/></svg></span><div><b>339</b><span>members validated on every push</span></div></div>
+        <div class="tile"><span class="ico"><svg><use href="#i-shield"/></svg></span><div><b>115</b><span>guard hook tests run on every push</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="inside">
+    <div class="wrap">
+      <h2 class="h2">What’s Inside</h2>
+      <p class="lede">Every engine gets the same harness: setup, audit, feature playbook, scenes as data, input, UI, audio, animation, physics, world, data, performance, builds, test hooks, diagnostics, and services. Official CLIs, MCP servers, and libraries install as pinned dependencies from upstream.</p>
+      <div class="areas">
+        <div class="area"><span class="ico"><svg><use href="#i-cpu"/></svg></span><h3>Core</h3><code>cl-core, cl-assistant</code><p>Router, scouts and builders, guard hook, the learner, the code reviewer, and help from a full manifest.</p></div>
+        <div class="area"><span class="ico"><svg><use href="#i-pad"/></svg></span><h3>Engines</h3><code>cl-unity, cl-web, cl-roblox, cl-unreal, cl-godot, cl-cocos</code><p>The full harness per engine, written against current versions.</p></div>
+        <div class="area"><span class="ico"><svg><use href="#i-pen"/></svg></span><h3>Design</h3><code>cl-design, cl-gameplay</code><p>Brainstorming, the six design pillars, competitor research, business models, GDDs, balance, and economy.</p></div>
+        <div class="area"><span class="ico"><svg><use href="#i-image"/></svg></span><h3>Content</h3><code>cl-content</code><p>CC0 and CC-BY asset sources, opt-in gen AI services, script fit, localization, and accessibility.</p></div>
+        <div class="area"><span class="ico"><svg><use href="#i-mega"/></svg></span><h3>Marketing</h3><code>cl-marketing</code><p>A posting calendar, post ideas from the week’s work, store pages, trailers, UA creatives, and press kits.</p></div>
+        <div class="area"><span class="ico"><svg><use href="#i-devices"/></svg></span><h3>Platforms</h3><code>cl-platforms</code><p>Stores, portals, OS targets, tablets, ChromeOS, and console readiness.</p></div>
+        <div class="area"><span class="ico"><svg><use href="#i-coins"/></svg></span><h3>Money</h3><code>cl-monetize</code><p>IAP per engine, web payments, ad networks, playable ad previews, and Nakama.</p></div>
+        <div class="area"><span class="ico"><svg><use href="#i-chart"/></svg></span><h3>Analytics</h3><code>cl-analytics</code><p>Event plans, analytics SDKs, MMPs, and insights on why a game is or isn’t working.</p></div>
+        <div class="area"><span class="ico"><svg><use href="#i-users"/></svg></span><h3>Multiplayer</h3><code>cl-multiplayer</code><p>Netcode choice per engine, FishNet, Netcode for GameObjects, WebRTC, relays, and lobbies.</p></div>
+        <div class="area"><span class="ico"><svg><use href="#i-bug"/></svg></span><h3>QA and Release</h3><code>cl-qa, cl-release, cl-ci</code><p>Testability hooks, agent playtests, adversarial QA, device matrices, release gates, and CI.</p></div>
+        <div class="area"><span class="ico"><svg><use href="#i-shield"/></svg></span><h3>Compliance</h3><code>cl-compliance</code><p>Privacy policies, consent, kids’ rules, age ratings, and store data forms. Not legal advice.</p></div>
+        <div class="area"><span class="ico"><svg><use href="#i-cal"/></svg></span><h3>Production</h3><code>cl-studio</code><p>The producer, proto-scoping, and a docs writer for GDDs, one-pagers, and reports.</p></div>
+      </div>
+      <div class="grid" style="margin-top:72px;align-items:center">
+        <div style="flex:1 1 320px;display:flex;flex-direction:column;gap:8px">
+          <h3 class="h2 sub" style="margin-top:0">A Guide That Knows the Kit</h3>
+          <p class="lede">Ask it anything and it answers from the kit’s own files: which plugins your project needs, which member fits the task, what each tier includes, and why something didn’t work. It says plainly when a member isn’t installed.</p>
+        </div>
+        <div class="term" style="flex:1 1 320px;align-self:center">
+          <code>/cl-help make my game run on iPad</code>
+          <code>/cl-ask which plugins do I need for a Phaser game going to Poki</code>
+          <code>/cl-ask why did my audit run on the expensive model</code>
+        </div>
+      </div>
+      <h3 class="h2 sub">Straight Answers</h3>
+      <div class="faq">
+        <div><h3>Does it write my game for me?</h3><p>Your coding agent writes the code. Crunchless gives it the procedures, the audits, the guardrails, and the shipping steps, and checks the work with file paths.</p></div>
+        <div><h3>Which coding agents does it support?</h3><p>Claude Code installs it as plugins. An exporter writes native layouts for Codex, GitHub Copilot, Cursor, and Antigravity, plus an AGENTS.md layout for the rest. All four ran the kit’s compatibility test in November 2026 with no failed checks.</p></div>
+        <div><h3>Do I have to use generative AI?</h3><p>Never. The asset skills point to CC0 and CC-BY libraries and record provenance. Gen AI services connect only if you choose one.</p></div>
+        <div><h3>What happens when an SDK changes?</h3><p>Every platform note carries a verified date. A monthly job re-reads the sources and opens a reviewed update, and anything older than 90 days is re-verified before code is written.</p></div>
+        <div><h3>What do I need?</h3><p>A coding agent, Node.js 22 or newer, Git, and your engine installed for anything that builds or runs.</p></div>
+        <div><h3>Where do I get help?</h3><p>GitHub Discussions, answered within three business days. Every version is tagged with release notes.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="ship">
+    <div class="wrap">
+      <h2 class="h2">Where Your Game Ships</h2>
+      <div class="grid">
+        <article class="card"><span class="ico"><svg><use href="#i-bag"/></svg></span><h3>Stores</h3><ul class="dlist"><li>Steam, GOG, and the Epic Games Store</li><li>Google Play and the App Store</li><li>Consoles: a readiness check for porting partners</li></ul></article>
+        <article class="card"><span class="ico"><svg><use href="#i-globe"/></svg></span><h3>Web Portals</h3><ul class="dlist"><li>Poki, CrazyGames, GameDistribution, and their SDKs</li><li>YouTube Playables, Wavedash, and Coolmath Games</li><li>itch.io, Newgrounds, and a directory of the rest</li></ul></article>
+        <article class="card"><span class="ico"><svg><use href="#i-laptop"/></svg></span><h3>Operating Systems</h3><ul class="dlist"><li>Windows, macOS, Linux, and Steam Deck</li><li>Android, iOS, and iPadOS</li><li>Tablets and ChromeOS</li></ul></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap tiers">
+      <h2 class="h2">Start Free, Pay Once</h2>
+      <p class="lede">Free takes you from an idea to a game on itch.io, and every audit names the member that fixes each finding. Builder adds everything you need to make the game. Studio adds everything around it, from money to marketing. Pay once, and you own what you build.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>Free</h3>
+          <p class="price">$0 <span>MIT, public repository</span></p>
+          <ul class="dlist">
+            <li>Brainstorm, competitor snapshot, core loop, and mechanic critique</li>
+            <li>Scope guard, calibrated review, and web architecture</li>
+            <li>Project audits for all six engines</li>
+            <li>Lite ship check and shipping on itch.io</li>
+          </ul>
+          <a class="btn secondary" href="https://github.com/crunchless-kits/agentic-gamedev">Get it on GitHub</a>
+        </article>
+        <article class="card t-builder">
+          <h3>Builder</h3>
+          <p class="price">$10 <span>one-time, through GitHub Sponsors</span></p>
+          <ul class="dlist">
+            <li>Every engine harness and gameplay system</li>
+            <li>Design pillars, GDDs, balance, and economy</li>
+            <li>Adversarial QA, agent playtests, and testability hooks</li>
+            <li>Release gates for PC stores, mobile stores, and web portals, plus CI</li>
+          </ul>
+          <a class="btn primary" href="https://github.com/sponsors/crunchless-kits">Get Builder</a>
+        </article>
+        <article class="card inverse">
+          <h3>Studio</h3>
+          <p class="price">$100 <span>one-time, Builder included</span></p>
+          <ul class="dlist">
+            <li>Monetization, analytics, live ops, and compliance</li>
+            <li>Marketing, store pages, trailers, and UA creatives</li>
+            <li>Competitor research on five games, and business models</li>
+            <li>The producer and the docs writer</li>
+          </ul>
+          <a class="btn" href="https://github.com/sponsors/crunchless-kits">Get Studio</a>
+        </article>
+      </div>
+      <p class="fine">Early access prices. Pay once through GitHub Sponsors, accept the repository invitation, and install or export the kit. A one-time sponsorship of any amount adds your name to the README as a thank-you.</p>
+    </div>
+  </section>
+
+  <section class="band" id="tags">
+    <div class="wrap">
+      <h2 class="h2">Every Tag in the Kit</h2>
+      <p class="lede"><span class="tag-total">247</span> tags across engines, stores, services, and disciplines. Bigger chips cover more of the kit. Pick one to see the members behind it.</p>
+      <div class="tag-tools">
+        <input type="search" id="tag-search" placeholder="Filter tags, such as steam, admob, or gdpr" aria-label="Filter tags">
+      </div>
+      <div class="tag-panel" id="tag-panel" aria-live="polite">Pick a tag to list its members.</div>
+      <div class="tag-cols" data-tag-count="247">
+<!-- tags:start (generated by scripts/site_tags.mjs, do not edit) -->
+<div class="tag-group"><h3>Engines and Tools <small>42</small></h3><div class="tag-list"><button type="button" class="tag xl" data-tag="web">Web<span>118</span></button><button type="button" class="tag xl" data-tag="unity">Unity<span>72</span></button><button type="button" class="tag xl" data-tag="typescript">TypeScript<span>61</span></button><button type="button" class="tag xl" data-tag="godot">Godot<span>60</span></button><button type="button" class="tag xl" data-tag="unreal">Unreal<span>45</span></button><button type="button" class="tag l" data-tag="roblox">Roblox<span>39</span></button><button type="button" class="tag l" data-tag="cocos-creator">Cocos Creator<span>29</span></button><button type="button" class="tag l" data-tag="gdscript">GDScript<span>22</span></button><button type="button" class="tag l" data-tag="luau">Luau<span>20</span></button><button type="button" class="tag l" data-tag="capacitor">Capacitor<span>19</span></button><button type="button" class="tag l" data-tag="phaser">Phaser<span>10</span></button><button type="button" class="tag m" data-tag="csharp">C#<span>9</span></button><button type="button" class="tag m" data-tag="html5">HTML5<span>9</span></button><button type="button" class="tag m" data-tag="mcp">MCP<span>9</span></button><button type="button" class="tag m" data-tag="pixijs">PixiJS<span>9</span></button><button type="button" class="tag m" data-tag="rojo">Rojo<span>9</span></button><button type="button" class="tag m" data-tag="threejs">Three.js<span>9</span></button><button type="button" class="tag m" data-tag="electron">Electron<span>6</span></button><button type="button" class="tag m" data-tag="open-cloud">Open Cloud<span>5</span></button><button type="button" class="tag m" data-tag="2d">2D<span>3</span></button><button type="button" class="tag m" data-tag="playwright">Playwright<span>3</span></button><button type="button" class="tag m" data-tag="vr">VR<span>3</span></button><button type="button" class="tag s" data-tag="babylonjs">Babylon.js<span>2</span></button><button type="button" class="tag s" data-tag="defold">Defold<span>2</span></button><button type="button" class="tag s" data-tag="vite">Vite<span>2</span></button><button type="button" class="tag s" data-tag="wally">Wally<span>2</span></button><button type="button" class="tag s" data-tag="webgl">WebGL<span>2</span></button><button type="button" class="tag s" data-tag="cli">CLI<span>1</span></button><button type="button" class="tag s" data-tag="cocos">Cocos<span>1</span></button><button type="button" class="tag s" data-tag="cpp">C++<span>1</span></button><button type="button" class="tag s" data-tag="docker">Docker<span>1</span></button><button type="button" class="tag s" data-tag="jest-lua">Jest Lua<span>1</span></button><button type="button" class="tag s" data-tag="ldtk">LDtk<span>1</span></button><button type="button" class="tag s" data-tag="matter-js">Matter.js<span>1</span></button><button type="button" class="tag s" data-tag="rapier">Rapier<span>1</span></button><button type="button" class="tag s" data-tag="react-lua">React Lua<span>1</span></button><button type="button" class="tag s" data-tag="rokit">Rokit<span>1</span></button><button type="button" class="tag s" data-tag="tauri">Tauri<span>1</span></button><button type="button" class="tag s" data-tag="tiled">Tiled<span>1</span></button><button type="button" class="tag s" data-tag="vitest">Vitest<span>1</span></button><button type="button" class="tag s" data-tag="webassembly">WebAssembly<span>1</span></button><button type="button" class="tag s" data-tag="webgpu">WebGPU<span>1</span></button></div></div>
+<div class="tag-group"><h3>Coding Agents <small>5</small></h3><div class="tag-list"><button type="button" class="tag s" data-tag="claude-code">Claude Code<span>1</span></button><button type="button" class="tag s" data-tag="codex">Codex<span>1</span></button><button type="button" class="tag s" data-tag="gemini-cli">Gemini CLI<span>1</span></button><button type="button" class="tag s" data-tag="github">GitHub<span>1</span></button><button type="button" class="tag s" data-tag="github-copilot">GitHub Copilot<span>1</span></button></div></div>
+<div class="tag-group"><h3>Stores and Portals <small>29</small></h3><div class="tag-list"><button type="button" class="tag xl" data-tag="steam">Steam<span>45</span></button><button type="button" class="tag xl" data-tag="app-store">App Store<span>41</span></button><button type="button" class="tag xl" data-tag="google-play">Google Play<span>41</span></button><button type="button" class="tag l" data-tag="crazygames">CrazyGames<span>15</span></button><button type="button" class="tag l" data-tag="poki">Poki<span>15</span></button><button type="button" class="tag l" data-tag="itch-io">itch.io<span>10</span></button><button type="button" class="tag m" data-tag="epic-games-store">Epic Games Store<span>7</span></button><button type="button" class="tag m" data-tag="youtube-playables">YouTube Playables<span>5</span></button><button type="button" class="tag m" data-tag="gamedistribution">GameDistribution<span>4</span></button><button type="button" class="tag m" data-tag="steamworks">Steamworks<span>3</span></button><button type="button" class="tag s" data-tag="coolmath-games">Coolmath Games<span>2</span></button><button type="button" class="tag s" data-tag="discord-activities">Discord Activities<span>2</span></button><button type="button" class="tag s" data-tag="facebook-instant-games">Facebook Instant Games<span>2</span></button><button type="button" class="tag s" data-tag="gog">GOG<span>2</span></button><button type="button" class="tag s" data-tag="newgrounds">Newgrounds<span>2</span></button><button type="button" class="tag s" data-tag="telegram-mini-apps">Telegram Mini Apps<span>2</span></button><button type="button" class="tag s" data-tag="wavedash">Wavedash<span>2</span></button><button type="button" class="tag s" data-tag="yandex-games">Yandex Games<span>2</span></button><button type="button" class="tag s" data-tag="amazon-appstore">Amazon Appstore<span>1</span></button><button type="button" class="tag s" data-tag="armor-games">Armor Games<span>1</span></button><button type="button" class="tag s" data-tag="game-center">Game Center<span>1</span></button><button type="button" class="tag s" data-tag="gog-galaxy">GOG Galaxy<span>1</span></button><button type="button" class="tag s" data-tag="kongregate">Kongregate<span>1</span></button><button type="button" class="tag s" data-tag="microsoft-store">Microsoft Store<span>1</span></button><button type="button" class="tag s" data-tag="platforms">Platforms<span>1</span></button><button type="button" class="tag s" data-tag="samsung-galaxy-store">Samsung Galaxy Store<span>1</span></button><button type="button" class="tag s" data-tag="testflight">TestFlight<span>1</span></button><button type="button" class="tag s" data-tag="web-portals">Web Portals<span>1</span></button><button type="button" class="tag s" data-tag="y8">Y8<span>1</span></button></div></div>
+<div class="tag-group"><h3>OS and Devices <small>17</small></h3><div class="tag-list"><button type="button" class="tag xl" data-tag="android">Android<span>99</span></button><button type="button" class="tag xl" data-tag="ios">iOS<span>97</span></button><button type="button" class="tag xl" data-tag="windows">Windows<span>55</span></button><button type="button" class="tag l" data-tag="macos">macOS<span>36</span></button><button type="button" class="tag l" data-tag="linux">Linux<span>22</span></button><button type="button" class="tag l" data-tag="steam-deck">Steam Deck<span>18</span></button><button type="button" class="tag m" data-tag="chromeos">ChromeOS<span>5</span></button><button type="button" class="tag m" data-tag="ipados">iPadOS<span>5</span></button><button type="button" class="tag m" data-tag="playstation">PlayStation<span>5</span></button><button type="button" class="tag m" data-tag="xbox">Xbox<span>5</span></button><button type="button" class="tag s" data-tag="nintendo-switch">Nintendo Switch<span>2</span></button><button type="button" class="tag s" data-tag="playstation-5">PlayStation 5<span>2</span></button><button type="button" class="tag s" data-tag="xbox-series">Xbox Series<span>2</span></button><button type="button" class="tag s" data-tag="id-at-xbox">ID@Xbox<span>1</span></button><button type="button" class="tag s" data-tag="nintendo-switch-2">Nintendo Switch 2<span>1</span></button><button type="button" class="tag s" data-tag="proton">Proton<span>1</span></button><button type="button" class="tag s" data-tag="w4-games">W4 Games<span>1</span></button></div></div>
+<div class="tag-group"><h3>Ads and Payments <small>29</small></h3><div class="tag-list"><button type="button" class="tag xl" data-tag="monetization">Monetization<span>43</span></button><button type="button" class="tag l" data-tag="ads">Ads<span>15</span></button><button type="button" class="tag m" data-tag="admob">AdMob<span>8</span></button><button type="button" class="tag m" data-tag="iap">IAP<span>8</span></button><button type="button" class="tag m" data-tag="applovin-max">AppLovin MAX<span>6</span></button><button type="button" class="tag m" data-tag="levelplay">LevelPlay<span>5</span></button><button type="button" class="tag m" data-tag="revenuecat">RevenueCat<span>4</span></button><button type="button" class="tag m" data-tag="storekit">StoreKit<span>4</span></button><button type="button" class="tag m" data-tag="play-billing">Play Billing<span>3</span></button><button type="button" class="tag m" data-tag="unity-ads">Unity Ads<span>3</span></button><button type="button" class="tag s" data-tag="applovin">AppLovin<span>2</span></button><button type="button" class="tag s" data-tag="mintegral">Mintegral<span>2</span></button><button type="button" class="tag s" data-tag="playable-ads">Playable Ads<span>2</span></button><button type="button" class="tag s" data-tag="ump">UMP<span>2</span></button><button type="button" class="tag s" data-tag="adsense">AdSense<span>1</span></button><button type="button" class="tag s" data-tag="h5-games-ads">H5 Games Ads<span>1</span></button><button type="button" class="tag s" data-tag="iab-tcf">IAB TCF<span>1</span></button><button type="button" class="tag s" data-tag="immersive-ads">Immersive Ads<span>1</span></button><button type="button" class="tag s" data-tag="inmobi">InMobi<span>1</span></button><button type="button" class="tag s" data-tag="liftoff">Liftoff<span>1</span></button><button type="button" class="tag s" data-tag="meta-audience-network">Meta Audience Network<span>1</span></button><button type="button" class="tag s" data-tag="moloco">Moloco<span>1</span></button><button type="button" class="tag s" data-tag="mraid">MRAID<span>1</span></button><button type="button" class="tag s" data-tag="pangle">Pangle<span>1</span></button><button type="button" class="tag s" data-tag="payments">Payments<span>1</span></button><button type="button" class="tag s" data-tag="rewarded-ads">Rewarded Ads<span>1</span></button><button type="button" class="tag s" data-tag="stripe">Stripe<span>1</span></button><button type="button" class="tag s" data-tag="virtual-currency">Virtual Currency<span>1</span></button><button type="button" class="tag s" data-tag="xsolla">Xsolla<span>1</span></button></div></div>
+<div class="tag-group"><h3>Analytics and Live Ops <small>25</small></h3><div class="tag-list"><button type="button" class="tag l" data-tag="analytics">Analytics<span>35</span></button><button type="button" class="tag m" data-tag="firebase">Firebase<span>9</span></button><button type="button" class="tag m" data-tag="amplitude">Amplitude<span>4</span></button><button type="button" class="tag m" data-tag="kpi">KPI<span>4</span></button><button type="button" class="tag m" data-tag="gameanalytics">GameAnalytics<span>3</span></button><button type="button" class="tag m" data-tag="live-ops">Live Ops<span>3</span></button><button type="button" class="tag s" data-tag="att">ATT<span>2</span></button><button type="button" class="tag s" data-tag="posthog">PostHog<span>2</span></button><button type="button" class="tag s" data-tag="adattributionkit">AdAttributionKit<span>1</span></button><button type="button" class="tag s" data-tag="adjust">Adjust<span>1</span></button><button type="button" class="tag s" data-tag="airbridge">Airbridge<span>1</span></button><button type="button" class="tag s" data-tag="appmetrica">AppMetrica<span>1</span></button><button type="button" class="tag s" data-tag="appsflyer">AppsFlyer<span>1</span></button><button type="button" class="tag s" data-tag="attribution">Attribution<span>1</span></button><button type="button" class="tag s" data-tag="branch">Branch<span>1</span></button><button type="button" class="tag s" data-tag="devtodev">devtodev<span>1</span></button><button type="button" class="tag s" data-tag="experiments">Experiments<span>1</span></button><button type="button" class="tag s" data-tag="google-analytics">Google Analytics<span>1</span></button><button type="button" class="tag s" data-tag="kochava">Kochava<span>1</span></button><button type="button" class="tag s" data-tag="mixpanel">Mixpanel<span>1</span></button><button type="button" class="tag s" data-tag="mmp">MMP<span>1</span></button><button type="button" class="tag s" data-tag="remote-config">Remote Config<span>1</span></button><button type="button" class="tag s" data-tag="singular">Singular<span>1</span></button><button type="button" class="tag s" data-tag="skadnetwork">SKAdNetwork<span>1</span></button><button type="button" class="tag s" data-tag="tenjin">Tenjin<span>1</span></button></div></div>
+<div class="tag-group"><h3>Multiplayer and Backends <small>18</small></h3><div class="tag-list"><button type="button" class="tag l" data-tag="multiplayer">Multiplayer<span>21</span></button><button type="button" class="tag m" data-tag="cloudflare">Cloudflare<span>6</span></button><button type="button" class="tag m" data-tag="nakama">Nakama<span>6</span></button><button type="button" class="tag m" data-tag="epic-online-services">Epic Online Services<span>5</span></button><button type="button" class="tag m" data-tag="webrtc">WebRTC<span>5</span></button><button type="button" class="tag m" data-tag="ugs">UGS<span>4</span></button><button type="button" class="tag m" data-tag="unity-gaming-services">Unity Gaming Services<span>4</span></button><button type="button" class="tag m" data-tag="backend">Backend<span>3</span></button><button type="button" class="tag m" data-tag="colyseus">Colyseus<span>3</span></button><button type="button" class="tag s" data-tag="durable-objects">Durable Objects<span>2</span></button><button type="button" class="tag s" data-tag="fishnet">FishNet<span>2</span></button><button type="button" class="tag s" data-tag="netcode-for-gameobjects">Netcode for GameObjects<span>2</span></button><button type="button" class="tag s" data-tag="accelbyte">AccelByte<span>1</span></button><button type="button" class="tag s" data-tag="beamable">Beamable<span>1</span></button><button type="button" class="tag s" data-tag="lootlocker">LootLocker<span>1</span></button><button type="button" class="tag s" data-tag="networking">Networking<span>1</span></button><button type="button" class="tag s" data-tag="playfab">PlayFab<span>1</span></button><button type="button" class="tag s" data-tag="supabase">Supabase<span>1</span></button></div></div>
+<div class="tag-group"><h3>Compliance and Ratings <small>23</small></h3><div class="tag-list"><button type="button" class="tag l" data-tag="compliance">Compliance<span>39</span></button><button type="button" class="tag m" data-tag="privacy">Privacy<span>5</span></button><button type="button" class="tag m" data-tag="kids">Kids<span>3</span></button><button type="button" class="tag s" data-tag="ccpa">CCPA<span>2</span></button><button type="button" class="tag s" data-tag="gdpr">GDPR<span>2</span></button><button type="button" class="tag s" data-tag="pegi">PEGI<span>2</span></button><button type="button" class="tag s" data-tag="uk-gdpr">UK GDPR<span>2</span></button><button type="button" class="tag s" data-tag="acb">ACB<span>1</span></button><button type="button" class="tag s" data-tag="age-ratings">Age Ratings<span>1</span></button><button type="button" class="tag s" data-tag="classind">ClassInd<span>1</span></button><button type="button" class="tag s" data-tag="coppa">COPPA<span>1</span></button><button type="button" class="tag s" data-tag="cpra">CPRA<span>1</span></button><button type="button" class="tag s" data-tag="data-safety">Data Safety<span>1</span></button><button type="button" class="tag s" data-tag="esrb">ESRB<span>1</span></button><button type="button" class="tag s" data-tag="ftc">FTC<span>1</span></button><button type="button" class="tag s" data-tag="gacha">Gacha<span>1</span></button><button type="button" class="tag s" data-tag="gdpr-k">GDPR-K<span>1</span></button><button type="button" class="tag s" data-tag="grac">GRAC<span>1</span></button><button type="button" class="tag s" data-tag="iarc">IARC<span>1</span></button><button type="button" class="tag s" data-tag="loot-boxes">Loot Boxes<span>1</span></button><button type="button" class="tag s" data-tag="privacy-labels">Privacy Labels<span>1</span></button><button type="button" class="tag s" data-tag="uk-aadc">UK AADC<span>1</span></button><button type="button" class="tag s" data-tag="usk">USK<span>1</span></button></div></div>
+<div class="tag-group"><h3>Marketing and Community <small>26</small></h3><div class="tag-list"><button type="button" class="tag l" data-tag="marketing">Marketing<span>18</span></button><button type="button" class="tag m" data-tag="discord">Discord<span>6</span></button><button type="button" class="tag m" data-tag="social-media">Social Media<span>6</span></button><button type="button" class="tag m" data-tag="devlog">Devlog<span>4</span></button><button type="button" class="tag m" data-tag="reddit">Reddit<span>4</span></button><button type="button" class="tag m" data-tag="tiktok">TikTok<span>4</span></button><button type="button" class="tag m" data-tag="bluesky">Bluesky<span>3</span></button><button type="button" class="tag m" data-tag="x-twitter">X (Twitter)<span>3</span></button><button type="button" class="tag m" data-tag="youtube-shorts">YouTube Shorts<span>3</span></button><button type="button" class="tag s" data-tag="instagram">Instagram<span>2</span></button><button type="button" class="tag s" data-tag="linkedin">LinkedIn<span>2</span></button><button type="button" class="tag s" data-tag="press">Press<span>2</span></button><button type="button" class="tag s" data-tag="threads">Threads<span>2</span></button><button type="button" class="tag s" data-tag="ua">UA<span>2</span></button><button type="button" class="tag s" data-tag="wishlists">Wishlists<span>2</span></button><button type="button" class="tag s" data-tag="youtube">YouTube<span>2</span></button><button type="button" class="tag s" data-tag="community">Community<span>1</span></button><button type="button" class="tag s" data-tag="festivals">Festivals<span>1</span></button><button type="button" class="tag s" data-tag="game-jam">Game Jam<span>1</span></button><button type="button" class="tag s" data-tag="google-ads">Google Ads<span>1</span></button><button type="button" class="tag s" data-tag="influencers">Influencers<span>1</span></button><button type="button" class="tag s" data-tag="keymailer">Keymailer<span>1</span></button><button type="button" class="tag s" data-tag="market-research">Market Research<span>1</span></button><button type="button" class="tag s" data-tag="meta">Meta<span>1</span></button><button type="button" class="tag s" data-tag="reviews">Reviews<span>1</span></button><button type="button" class="tag s" data-tag="twitch">Twitch<span>1</span></button></div></div>
+<div class="tag-group"><h3>Craft and Production <small>33</small></h3><div class="tag-list"><button type="button" class="tag xl" data-tag="production">Production<span>78</span></button><button type="button" class="tag xl" data-tag="qa">QA<span>75</span></button><button type="button" class="tag xl" data-tag="design">Design<span>64</span></button><button type="button" class="tag l" data-tag="docs">Docs<span>36</span></button><button type="button" class="tag l" data-tag="release">Release<span>33</span></button><button type="button" class="tag l" data-tag="ui">UI<span>26</span></button><button type="button" class="tag l" data-tag="gameplay">Gameplay<span>20</span></button><button type="button" class="tag l" data-tag="assets">Assets<span>14</span></button><button type="button" class="tag l" data-tag="performance">Performance<span>13</span></button><button type="button" class="tag l" data-tag="audio">Audio<span>12</span></button><button type="button" class="tag l" data-tag="accessibility">Accessibility<span>11</span></button><button type="button" class="tag m" data-tag="animation">Animation<span>5</span></button><button type="button" class="tag m" data-tag="ci">CI<span>5</span></button><button type="button" class="tag m" data-tag="localization">Localization<span>5</span></button><button type="button" class="tag m" data-tag="writing">Writing<span>5</span></button><button type="button" class="tag m" data-tag="setup">Setup<span>4</span></button><button type="button" class="tag m" data-tag="diagnostics">Diagnostics<span>3</span></button><button type="button" class="tag s" data-tag="content">Content<span>2</span></button><button type="button" class="tag s" data-tag="data">Data<span>2</span></button><button type="button" class="tag s" data-tag="input">Input<span>2</span></button><button type="button" class="tag s" data-tag="physics">Physics<span>2</span></button><button type="button" class="tag s" data-tag="asana">Asana<span>1</span></button><button type="button" class="tag s" data-tag="clickup">ClickUp<span>1</span></button><button type="button" class="tag s" data-tag="google-calendar">Google Calendar<span>1</span></button><button type="button" class="tag s" data-tag="help">Help<span>1</span></button><button type="button" class="tag s" data-tag="jira">Jira<span>1</span></button><button type="button" class="tag s" data-tag="linear">Linear<span>1</span></button><button type="button" class="tag s" data-tag="microsoft-365">Microsoft 365<span>1</span></button><button type="button" class="tag s" data-tag="monday">Monday<span>1</span></button><button type="button" class="tag s" data-tag="notion">Notion<span>1</span></button><button type="button" class="tag s" data-tag="onboarding">Onboarding<span>1</span></button><button type="button" class="tag s" data-tag="testing">Testing<span>1</span></button><button type="button" class="tag s" data-tag="trello">Trello<span>1</span></button></div></div>
+<script type="application/json" id="tag-data">{"members":[["cl-builder","free"],["cl-scout","free"],["code-reviewer","builder"],["calibrated-review","free"],["cl-router","free"],["dev-review","builder"],["learn","builder"],["project-profile","free"],["scope-check","free"],["scope-guard","free"],["slop-check","free"],["cl-audit","free"],["cl-doctor","free"],["cl-help","free"],["cl-learn","builder"],["cl-port","builder"],["cl-review","builder"],["cl-ship","free"],["cl-start","free"],["cl-guide","free"],["kit-guide","free"],["cl-ask","free"],["web-diagnostics-engineer","builder"],["web-game-developer","builder"],["backend-adapter","builder"],["multi-portal-adapter","builder"],["playable-ad-pack","builder"],["web-3d-scene","builder"],["web-animation-tweens","builder"],["web-audio","builder"],["web-build-pack","builder"],["web-capacitor","builder"],["web-data","builder"],["web-desktop","builder"],["web-diagnostics","builder"],["web-feature-playbook","builder"],["web-game-architecture","free"],["web-game-audit","free"],["web-harness","builder"],["web-input-responsive","builder"],["web-performance-profile","builder"],["web-physics-collisions","builder"],["web-scene-manifest","builder"],["web-services","builder"],["web-setup","builder"],["web-test-hooks","builder"],["web-tilemaps-2d","builder"],["web-ui-layer","builder"],["unity-diagnostics-engineer","builder"],["unity-game-developer","builder"],["unity-addressables","builder"],["unity-animation","builder"],["unity-audio","builder"],["unity-build","builder"],["unity-data","builder"],["unity-dependency-trace","builder"],["unity-failure-isolation","builder"],["unity-feature-playbook","builder"],["unity-harness","builder"],["unity-input-system","builder"],["unity-package-audit","builder"],["unity-physics","builder"],["unity-profiling","builder"],["unity-project-audit","free"],["unity-reorganize","builder"],["unity-scene-manifest","builder"],["unity-services","builder"],["unity-setup","builder"],["unity-test-hooks","builder"],["unity-tilemaps-2d","builder"],["unity-ui","builder"],["unity-ui-toolkit","builder"],["unity-webgl-build","builder"],["unity-world","builder"],["godot-diagnostics-engineer","builder"],["godot-game-developer","builder"],["godot-addons-audit","builder"],["godot-animation","builder"],["godot-audio","builder"],["godot-build","builder"],["godot-data","builder"],["godot-dependency-trace","builder"],["godot-failure-isolation","builder"],["godot-feature-playbook","builder"],["godot-gdscript-style","builder"],["godot-harness","builder"],["godot-input-map","builder"],["godot-physics","builder"],["godot-profiling","builder"],["godot-project-audit","free"],["godot-reorganize","builder"],["godot-scene-manifest","builder"],["godot-services","builder"],["godot-setup","builder"],["godot-test-hooks","builder"],["godot-tilemaps-2d","builder"],["godot-ui-control","builder"],["godot-web-export","builder"],["godot-world","builder"],["game-art-feel-director","builder"],["game-systems-designer","builder"],["game-ui-ux-designer","builder"],["balance-experiment","builder"],["business-model","studio"],["competitor-research","studio"],["competitor-snapshot","free"],["core-loop-design","free"],["design-audit","builder"],["design-blueprint","builder"],["design-hub","builder"],["design-pillars","builder"],["difficulty-curve","builder"],["economy-balance","builder"],["game-brainstorm","free"],["game-juice","builder"],["game-naming","free"],["game-ui-standards","builder"],["gdd-author","builder"],["mechanic-critique","free"],["playtest-synthesis","builder"],["quest-design","builder"],["ui-pitfalls","builder"],["ui-ux-audit","builder"],["cl-brainstorm","free"],["cl-gdd","builder"],["camera-systems","builder"],["dialogue-system","builder"],["game-ai-behaviors","builder"],["gameplay-hub","builder"],["genre-blueprints","free"],["level-blockout","builder"],["procedural-generation","builder"],["game-performance-engineer","builder"],["qa-release-engineer","builder"],["qa-test-plan","builder"],["regression-triage","builder"],["release-hub","builder"],["save-system-check","builder"],["ship-check-lite","free"],["ship-readiness","builder"],["ci-godot-pipeline","builder"],["ci-hub","builder"],["ci-release-tagging","builder"],["ci-unity-pipeline","builder"],["ci-web-pipeline","builder"],["qa-adversary","builder"],["agent-playtest","builder"],["bug-report","builder"],["device-matrix","builder"],["engine-test-scaffold","builder"],["qa-hub","builder"],["qa-report","builder"],["replay-harness","builder"],["soak-runner","builder"],["testability-hooks","builder"],["web-smoke-tests","builder"],["accessibility-pass","builder"],["asset-sources","builder"],["audio-pipeline","builder"],["cc0-asset-library","builder"],["cold-read","studio"],["content-hub","builder"],["genai-asset-services","builder"],["localization-pipeline","builder"],["script-fit-check","studio"],["text-audit","studio"],["texture-atlas-pipeline","builder"],["docs-writer","studio"],["studio-producer","studio"],["calendar-brief","studio"],["code-persona-builder","studio"],["collaborator-brief","studio"],["expense-tracker","studio"],["high-concept-doc","studio"],["milestone-plan","studio"],["next-steps","studio"],["one-pager","studio"],["opportunity-review","studio"],["postmortem","studio"],["project-tracker","studio"],["proto-scoping","studio"],["prototype-retro","studio"],["publisher-pitch-package","studio"],["release-calendar","studio"],["report-writer","studio"],["risk-register","studio"],["studio-hub","studio"],["team-onboarding-doc","studio"],["ticketing-connectors","studio"],["usage-tracker","studio"],["cl-producer","studio"],["roblox-diagnostics-engineer","builder"],["roblox-game-developer","builder"],["roblox-animation","builder"],["roblox-audio","builder"],["roblox-build","builder"],["roblox-data","builder"],["roblox-diagnostics","builder"],["roblox-feature-playbook","builder"],["roblox-harness","builder"],["roblox-input","builder"],["roblox-monetization","builder"],["roblox-open-cloud","builder"],["roblox-performance","builder"],["roblox-physics","builder"],["roblox-project-audit","free"],["roblox-scene-manifest","builder"],["roblox-services","builder"],["roblox-setup","builder"],["roblox-test-hooks","builder"],["roblox-ui","builder"],["roblox-world","builder"],["unreal-diagnostics-engineer","builder"],["unreal-game-developer","builder"],["unreal-animation","builder"],["unreal-audio","builder"],["unreal-build","builder"],["unreal-data","builder"],["unreal-diagnostics","builder"],["unreal-feature-playbook","builder"],["unreal-harness","builder"],["unreal-input","builder"],["unreal-performance","builder"],["unreal-physics","builder"],["unreal-project-audit","free"],["unreal-scene-manifest","builder"],["unreal-services","builder"],["unreal-setup","builder"],["unreal-test-hooks","builder"],["unreal-ui","builder"],["unreal-world","builder"],["cocos-diagnostics-engineer","builder"],["cocos-game-developer","builder"],["cocos-animation","builder"],["cocos-audio","builder"],["cocos-build","builder"],["cocos-data","builder"],["cocos-diagnostics","builder"],["cocos-feature-playbook","builder"],["cocos-harness","builder"],["cocos-input","builder"],["cocos-performance","builder"],["cocos-physics","builder"],["cocos-project-audit","free"],["cocos-scene-manifest","builder"],["cocos-services","builder"],["cocos-setup","builder"],["cocos-test-hooks","builder"],["cocos-ui","builder"],["cocos-world","builder"],["publishing-liveops-engineer","builder"],["app-store","builder"],["console-readiness","builder"],["coolmath-games","builder"],["crazygames-integration","builder"],["epic-games-store","builder"],["gamedistribution-integration","builder"],["gog-galaxy","builder"],["google-play","builder"],["itch-io","free"],["newgrounds","builder"],["os-targets","builder"],["platforms-hub","builder"],["poki-integration","builder"],["portal-directory","builder"],["portal-recon","builder"],["steam-steamworks","builder"],["wavedash","builder"],["youtube-playables-integration","builder"],["monetization-engineer","studio"],["ads-admob","studio"],["ads-applovin-max","studio"],["ads-levelplay","studio"],["ads-network-directory","studio"],["ads-web","studio"],["backend-nakama","studio"],["economy-backend","studio"],["iap-capacitor","studio"],["iap-native","studio"],["iap-revenuecat","studio"],["iap-unity","studio"],["monetization-audit","studio"],["monetization-iap-ads","studio"],["monetize-hub","studio"],["playable-preview-test","studio"],["rewards-and-receipts","studio"],["web-payments","studio"],["analytics-analyst","studio"],["analytics-amplitude","studio"],["analytics-directory","studio"],["analytics-events","studio"],["analytics-firebase","studio"],["analytics-gameanalytics","studio"],["analytics-hub","studio"],["analytics-plan","studio"],["analytics-unity","studio"],["attribution-mmp","studio"],["insights-review","studio"],["metrics-log","studio"],["remote-config-experiments","studio"],["multiplayer-engineer","builder"],["mp-authority","builder"],["mp-fishnet","builder"],["mp-godot","builder"],["mp-lobbies","builder"],["mp-roblox","builder"],["mp-testing","builder"],["mp-transports","builder"],["mp-unity-ngo","builder"],["mp-unreal","builder"],["mp-web","builder"],["multiplayer-hub","builder"],["netcode-choice","builder"],["compliance-reviewer","studio"],["age-ratings","studio"],["compliance-hub","studio"],["consent-management","studio"],["kids-and-coppa","studio"],["monetization-rules","studio"],["privacy-policy","studio"],["store-data-forms","studio"],["marketing-lead","studio"],["community-management","studio"],["content-calendar","studio"],["creator-outreach","studio"],["devlog","studio"],["launch-campaign","studio"],["marketing-hub","studio"],["marketing-metrics","studio"],["post-ideas","studio"],["post-writer","studio"],["press-kit","studio"],["store-capsules","studio"],["store-listing","studio"],["structured-data","studio"],["trailer-plan","studio"],["ua-creatives","studio"],["web-presence-audit","studio"],["cl-market","studio"]],"tags":{"production":[0,1,2,3,4,5,6,7,8,9,11,12,14,15,16,18,19,20,21,30,36,57,64,79,93,103,104,115,142,147,151,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,195,202,219,235,246,251,252,255,257,258,261,264,266,294,297,298,321,323,326,329,332,333,335,336],"gameplay":[0,23,49,75,100,110,120,123,125,126,127,128,129,130,131,137,192,213,232,300],"docs":[1,4,6,7,12,14,19,20,21,100,107,108,117,124,147,151,160,163,164,165,167,170,171,173,176,178,181,182,184,187,319,325,331,333,334,337],"qa":[2,3,5,6,8,9,10,11,16,17,22,34,37,40,42,45,48,55,56,60,63,68,74,82,89,94,119,121,122,132,133,134,135,136,137,138,139,140,143,145,146,147,148,149,150,151,152,153,154,155,156,183,184,191,197,198,202,203,204,205,206,209,212,218,224,228,231,237,243,247,261,281,284,306,322],"design":[6,10,18,35,42,57,65,69,73,83,91,95,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,127,129,130,131,156,164,173,177,180,181,193,198,206,211,219,225,230,238,244,249,287,294,297,301],"analytics":[6,24,43,66,92,102,104,111,119,182,184,201,207,226,245,250,269,281,287,288,289,290,291,292,293,294,295,296,297,298,299,316,320,328,336],"writing":[10,120,126,167,171],"ui":[10,39,47,70,71,96,99,101,116,121,122,146,148,156,157,163,164,165,193,200,205,210,229,240,248,304],"help":[13],"onboarding":[13],"release":[15,17,132,133,134,135,136,138,139,140,141,142,143,144,145,168,174,183,190,250,251,253,255,257,258,259,260,262,264,265,266,267,313],"web":[22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,50,52,54,56,62,68,70,72,73,78,80,88,92,93,97,98,103,116,121,122,144,146,148,152,153,154,155,156,157,158,163,166,234,235,236,237,240,241,242,243,245,246,247,248,249,253,254,256,259,260,263,264,265,267,268,274,275,276,277,279,281,282,284,285,286,288,289,290,291,292,294,295,297,298,299,301,302,303,304,306,307,308,310,312,316,325,326,328,331,334,336,337],"typescript":[22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,144,146,152,154,155,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,274,275,277,286,288,289,290,291,292,299,310,312],"performance":[22,48,50,62,74,132,153,166,191,212,222,230,231],"firebase":[24,43,66,226,276,289,290,291,299],"nakama":[24,43,275,276,285,299],"multiplayer":[24,152,196,198,204,207,223,267,300,301,302,303,304,305,306,307,308,309,310,311,312],"poki":[25,30,32,34,43,97,103,104,263,264,274,298,326,332,333],"crazygames":[25,30,32,34,43,97,103,104,254,264,274,298,326,332,333],"gamedistribution":[25,256,264,274],"youtube-playables":[25,264,268,274,298],"monetization":[25,26,43,66,92,103,112,196,201,205,207,226,245,250,254,256,263,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,285,286,287,294,297,313,316,317,318,336],"playable-ads":[26,284],"applovin-max":[26,43,66,271,273,336],"levelplay":[26,66,272,273,336],"admob":[26,43,66,226,270,273,316,336],"threejs":[27,28,29,35,36,37,42,44,45],"babylonjs":[27,44],"webgl":[27,67],"android":[27,29,31,32,39,40,47,50,52,53,54,56,59,61,62,66,67,68,70,72,73,78,79,80,86,87,88,92,93,96,98,116,121,122,148,154,155,156,194,195,200,203,210,211,214,215,216,217,218,221,222,223,224,226,227,228,229,230,234,235,236,237,240,241,242,243,245,246,248,249,258,261,270,271,272,273,277,278,279,280,282,284,288,289,291,292,295,296,302,303,305,308,310,312,316,320,326,332,336],"ios":[27,29,31,32,39,40,47,50,52,53,54,56,59,61,62,66,67,68,70,72,73,78,79,80,86,87,88,92,93,96,98,116,121,122,148,154,155,156,194,195,200,203,210,211,214,215,216,217,218,221,222,223,224,226,227,228,229,230,234,235,236,237,240,241,242,243,245,246,248,249,251,261,270,271,272,273,277,278,279,280,282,284,288,289,291,292,295,296,305,308,310,312,316,320,326,332,336],"phaser":[28,29,35,36,37,41,42,44,45,46],"pixijs":[28,29,35,36,37,42,44,45,46],"audio":[29,52,78,114,156,157,158,159,162,194,215,234],"capacitor":[29,31,32,34,43,45,122,270,273,274,277,279,281,282,288,289,290,291,310],"electron":[29,32,33,34,43,45],"vite":[30,44],"ipados":[31,116,148,251,261],"google-play":[31,43,53,66,79,92,103,104,105,163,172,216,226,235,245,258,264,270,271,272,275,277,278,279,280,281,282,285,286,297,298,314,317,318,319,320,322,326,332,335,336],"app-store":[31,43,53,66,79,92,103,104,105,163,172,216,226,235,245,251,264,270,271,272,275,277,278,279,280,281,282,285,286,297,298,314,317,318,319,320,322,326,332,335,336],"compliance":[32,43,66,139,157,159,162,185,195,196,201,205,207,226,251,253,258,269,270,271,272,281,285,286,288,290,291,292,294,295,296,313,314,315,316,317,318,319,320],"tauri":[33],"steam":[33,43,53,54,66,79,80,92,103,104,105,162,163,172,216,217,226,227,264,266,282,286,297,298,304,307,309,312,314,318,319,321,322,323,324,325,326,328,329,330,331,332,333,335,338],"steam-deck":[33,53,59,70,79,86,88,96,116,148,156,215,216,221,222,229,261,266],"windows":[33,39,44,52,53,54,56,59,62,67,68,70,73,79,93,98,116,148,149,154,156,194,195,200,208,210,214,215,216,217,218,221,222,223,224,227,228,229,230,235,246,255,257,259,261,266,286,295,302,303,305,306,308,309,312],"macos":[33,39,44,52,53,54,67,68,70,73,79,93,148,149,154,194,195,200,208,210,216,218,224,227,228,235,246,251,255,257,259,261,266,295,305,306],"linux":[33,44,53,67,68,79,93,148,149,154,216,218,224,227,228,257,259,261,266,303,306,309],"itch-io":[33,103,259,264,298,325,326,332,333,335],"playwright":[34,44,45],"chromeos":[39,44,148,258,261],"matter-js":[41],"rapier":[41],"amplitude":[43,288,289,290],"mcp":[44,65,67,197,202,208,209,225,227],"setup":[44,67,208,227],"vitest":[45],"tiled":[46],"ldtk":[46],"unity":[48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,103,116,121,122,143,146,148,149,152,153,154,157,158,163,166,252,260,267,270,271,272,273,275,276,279,280,281,282,286,288,289,290,291,292,294,295,296,299,301,302,304,306,307,308,312,336],"csharp":[49,76,80,82,83,89,92,93,94],"assets":[50,73,99,130,157,158,159,162,166,230,331,332,335,336],"animation":[51,77,114,214,233],"2d":[51,61,69],"data":[54,217],"input":[59,221],"accessibility":[59,71,101,116,121,122,156,164,221,229,330],"physics":[61,223],"unity-gaming-services":[66,304,307,308],"cli":[67],"godot":[74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,103,116,121,122,140,146,148,149,152,153,154,157,158,163,166,252,260,267,270,273,275,276,278,281,282,289,290,292,294,299,301,303,306,307,312],"gdscript":[76,77,78,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98],"diagnostics":[76,81,82],"epic-games-store":[103,216,217,226,255,264,314],"roblox":[103,146,154,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,276,281,282,289,290,292,294,297,298,299,301,304,305,306,312],"unreal":[103,116,121,146,154,157,163,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,252,273,275,276,278,281,282,286,288,289,290,292,294,299,301,306,307,309,312],"market-research":[105],"web-portals":[105],"content":[120,161],"live-ops":[120,293,299],"localization":[126,161,163,164,183],"ci":[140,141,142,143,144],"testing":[150],"cocos-creator":[154,231,232,233,234,235,236,237,238,240,241,242,243,244,245,246,247,248,249,275,276,278,281,282,289,290,292,294,299],"google-calendar":[169],"microsoft-365":[169],"jira":[188],"linear":[188],"trello":[188],"monday":[188],"asana":[188],"github":[188],"clickup":[188],"notion":[188],"claude-code":[189],"codex":[189],"gemini-cli":[189],"github-copilot":[189],"luau":[193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,305],"xbox":[194,195,200,203,210],"playstation":[194,195,200,203,210],"rojo":[195,197,198,202,205,206,208,209,211],"open-cloud":[195,196,202,207,209],"vr":[195,200,210],"wally":[197,208],"rewarded-ads":[201],"immersive-ads":[201],"rokit":[208],"jest-lua":[209],"react-lua":[210],"cpp":[213],"epic-online-services":[226,255,304,307,309],"cocos":[239],"storekit":[251,278,280,285],"game-center":[251],"testflight":[251],"nintendo-switch":[252,314],"nintendo-switch-2":[252],"playstation-5":[252,314],"xbox-series":[252,314],"id-at-xbox":[252],"w4-games":[252],"coolmath-games":[253,264],"html5":[253,254,256,259,260,263,264,265,268],"kids":[253,317,318],"ads":[254,256,263,268,270,271,272,273,274,281,282,284,285,317,320],"gog":[257,264],"gog-galaxy":[257],"play-billing":[258,278,285],"game-jam":[259],"newgrounds":[260,264],"proton":[261],"platforms":[262],"wavedash":[264,267],"kongregate":[264],"armor-games":[264],"y8":[264],"facebook-instant-games":[264,265],"discord-activities":[264,265],"telegram-mini-apps":[264,265],"yandex-games":[264,265],"microsoft-store":[264],"amazon-appstore":[264],"samsung-galaxy-store":[264],"steamworks":[266,304,307],"webgpu":[267],"webassembly":[267],"defold":[267,292],"youtube":[268,324],"ump":[270,316],"applovin":[271,284],"unity-ads":[272,273,284],"mintegral":[273,284],"pangle":[273],"moloco":[273],"liftoff":[273],"inmobi":[273],"meta-audience-network":[273],"adsense":[274],"h5-games-ads":[274],"backend":[275,276,285],"iap":[275,277,278,279,280,281,282,285],"docker":[275],"playfab":[276],"ugs":[276,289,295,299],"supabase":[276],"beamable":[276],"lootlocker":[276],"accelbyte":[276],"cloudflare":[276,302,304,307,310,312],"revenuecat":[277,279,285,286],"ua":[284,296],"meta":[284],"google-ads":[284],"mraid":[284],"payments":[286],"xsolla":[286],"stripe":[286],"gameanalytics":[289,290,292],"posthog":[289,299],"mixpanel":[289],"devtodev":[289],"appmetrica":[289],"google-analytics":[291],"kpi":[294,297,298,328],"attribution":[296],"mmp":[296],"appsflyer":[296],"adjust":[296],"singular":[296],"branch":[296],"kochava":[296],"tenjin":[296],"airbridge":[296],"skadnetwork":[296],"adattributionkit":[296],"att":[296,316],"remote-config":[299],"experiments":[299],"fishnet":[302,312],"webrtc":[302,303,307,310,312],"durable-objects":[304,310],"colyseus":[304,310,312],"netcode-for-gameobjects":[308,312],"networking":[311],"age-ratings":[314],"iarc":[314],"esrb":[314],"pegi":[314,318],"usk":[314],"classind":[314],"acb":[314],"grac":[314],"privacy":[315,316,317,319,320],"gdpr":[316,319],"uk-gdpr":[316,319],"ccpa":[316,319],"iab-tcf":[316],"coppa":[317],"gdpr-k":[317],"uk-aadc":[317],"loot-boxes":[318],"gacha":[318],"virtual-currency":[318],"ftc":[318],"cpra":[319],"data-safety":[320],"privacy-labels":[320],"marketing":[321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338],"social-media":[321,323,328,329,330,338],"devlog":[321,325,329,338],"discord":[321,322,323,329,330,338],"community":[322],"reviews":[322],"x-twitter":[323,329,330],"bluesky":[323,329,330],"threads":[323,330],"linkedin":[323,330],"reddit":[323,325,329,330],"tiktok":[323,324,329,330],"youtube-shorts":[323,329,330],"instagram":[323,330],"influencers":[324],"twitch":[324],"keymailer":[324],"press":[324,331],"wishlists":[326,328],"festivals":[326]}}</script>
+<!-- tags:end -->
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="wrap">
+  <footer>
+    <img src="assets/logo-horizontal-dark.svg" alt="Crunchless" width="149" height="22">
+    <span>Free core under MIT. Builder and Studio under early access terms through GitHub Sponsors.</span>
+    <a href="https://github.com/crunchless-kits/agentic-gamedev">github.com/crunchless-kits/agentic-gamedev</a>
+  </footer>
+</div>
+
+<div id="tip" role="tooltip"></div>
+<script>
+(() => {
+  const run = { codex: "$cl-audit", copilot: "run cl-audit", cursor: "/cl-audit", antigravity: "/cl-audit" };
+  const box = document.getElementById("install");
+  if (box) box.querySelectorAll("[role=tab]").forEach((tab) => tab.addEventListener("click", () => {
+    const a = tab.dataset.agent;
+    box.querySelectorAll("[role=tab]").forEach((t) => t.setAttribute("aria-selected", String(t === tab)));
+    box.querySelector('[data-panel="claude"]').style.display = a === "claude" ? "contents" : "none";
+    box.querySelector('[data-panel="export"]').style.display = a === "claude" ? "none" : "contents";
+    if (a !== "claude") { box.querySelector("[data-target]").textContent = a; box.querySelector("[data-run]").textContent = run[a]; }
+  }));
+})();
+(() => {
+  const tip = document.getElementById("tip");
+  const show = (el, x, y) => {
+    tip.textContent = el.dataset.tip;
+    const r = tip.getBoundingClientRect();
+    tip.style.left = Math.min(Math.max(8, x + 14), innerWidth - r.width - 8) + "px";
+    tip.style.top = (y + 18 + r.height > innerHeight ? y - r.height - 12 : y + 18) + "px";
+    tip.style.opacity = 1;
+  };
+  const hide = () => { tip.style.opacity = 0; };
+  document.querySelectorAll("[data-tip]").forEach((el) => {
+    el.addEventListener("pointermove", (e) => show(el, e.clientX, e.clientY));
+    el.addEventListener("pointerleave", hide);
+    el.addEventListener("focus", () => { const r = el.getBoundingClientRect(); show(el, r.left + r.width / 2, r.bottom - 10); });
+    el.addEventListener("blur", hide);
+  });
+
+  const dataEl = document.getElementById("tag-data");
+  if (!dataEl) return;
+  const data = JSON.parse(dataEl.textContent);
+  const panel = document.getElementById("tag-panel");
+  const chips = [...document.querySelectorAll(".tag")];
+  const tierName = { free: "Free", builder: "Builder", studio: "Studio" };
+  chips.forEach((chip) => chip.setAttribute("aria-pressed", "false"));
+  chips.forEach((chip) => chip.addEventListener("click", () => {
+    const on = chip.getAttribute("aria-pressed") === "true";
+    chips.forEach((c) => c.setAttribute("aria-pressed", "false"));
+    if (on) { panel.textContent = "Pick a tag to list its members."; return; }
+    chip.setAttribute("aria-pressed", "true");
+    const list = (data.tags[chip.dataset.tag] || []).map((i) => data.members[i]);
+    const counts = list.reduce((a, [, t]) => (a[t] = (a[t] || 0) + 1, a), {});
+    const h = document.createElement("h3");
+    h.textContent = `${chip.firstChild.textContent}: ${list.length} member${list.length === 1 ? "" : "s"}`;
+    const wrap = document.createElement("div"); wrap.className = "mem";
+    list.sort((a, b) => a[0].localeCompare(b[0])).forEach(([name, tier]) => {
+      const c = document.createElement("code"); c.className = tier; c.textContent = name; c.title = tierName[tier] || tier; wrap.appendChild(c);
+    });
+    const legend = document.createElement("div"); legend.className = "tag-legend";
+    legend.textContent = Object.entries(counts).map(([t, n]) => `${tierName[t] || t}: ${n}`).join(", ");
+    panel.replaceChildren(h, wrap, legend);
+  }));
+  const search = document.getElementById("tag-search");
+  search.addEventListener("input", () => {
+    const q = search.value.trim().toLowerCase();
+    chips.forEach((c) => { c.hidden = !!q && !(c.textContent.toLowerCase().includes(q) || c.dataset.tag.includes(q)); });
+    document.querySelectorAll(".tag-group").forEach((g) => { g.hidden = !g.querySelector(".tag:not([hidden])"); });
+  });
+})();
+</script>
+</body>
+</html>

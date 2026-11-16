@@ -1,0 +1,13 @@
+{
+  "_comment": "Keep one server. Epic plugin endpoint 8000 is TODO(verify: Epic docs return no body to automated fetch), see skills/unreal-setup/references/versions.md; EngineWire serves 3000.",
+  "mcpServers": {
+    "unreal": {
+      "type": "http",
+      "url": "http://127.0.0.1:8000/mcp"
+    },
+    "unreal-enginewire": {
+      "type": "http",
+      "url": "http://127.0.0.1:3000/mcp"
+    }
+  }
+}

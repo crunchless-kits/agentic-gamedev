@@ -1,0 +1,20 @@
+{
+  "name": "cl-release",
+  "version": "0.15.0",
+  "description": "Free edition of cl-release: ship-check-lite. Builder and Studio add 7 more members.",
+  "author": {
+    "name": "crunchless"
+  },
+  "keywords": [
+    "qa",
+    "release",
+    "publishing",
+    "poki",
+    "crazygames",
+    "gamedistribution",
+    "youtube-playables",
+    "analytics",
+    "remote-config",
+    "monetization"
+  ]
+}

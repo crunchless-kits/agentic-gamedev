@@ -1,0 +1,2154 @@
+{
+  "proUrl": "https://crunchless-kits.github.io/agentic-gamedev/#pricing",
+  "members": [
+    {
+      "name": "code-reviewer",
+      "type": "agent",
+      "plugin": "cl-core",
+      "tier": "builder",
+      "description": "Adversarial in-development reviewer. Tries to break the change, checks the approach can meet the spec on the target devices, and paces the work against its scoped hours. Reports findings with failure paths and never edits code. Use before a merge, at a milestone check, or when a task runs long."
+    },
+    {
+      "name": "dev-review",
+      "type": "skill",
+      "plugin": "cl-core",
+      "tier": "builder",
+      "description": "Adversarial in-development review: correctness, feasibility against spec, pacing against hours. Use before a merge, at a milestone, or when work runs long."
+    },
+    {
+      "name": "learn",
+      "type": "skill",
+      "plugin": "cl-core",
+      "tier": "builder",
+      "description": "Teach the kit your studio's brand, voice, code style, review habits, and lessons in .cl/house/. Use when output doesn't sound, look, or code like you."
+    },
+    {
+      "name": "cl-learn",
+      "type": "command",
+      "plugin": "cl-core",
+      "tier": "builder",
+      "description": "Teach the kit your brand, voice, code style, review habits, and lessons in .cl/house/. Use when output doesn't sound, look, or code like your studio."
+    },
+    {
+      "name": "cl-port",
+      "type": "command",
+      "plugin": "cl-core",
+      "tier": "builder",
+      "description": "Port the game to a web portal or ad network through a game-owned adapter. Use for Poki, CrazyGames, GameDistribution, YouTube Playables, and others."
+    },
+    {
+      "name": "cl-review",
+      "type": "command",
+      "plugin": "cl-core",
+      "tier": "builder",
+      "description": "Adversarial review of the current change: correctness, feasibility against spec, and pacing. Use before a merge or when work runs long."
+    },
+    {
+      "name": "web-diagnostics-engineer",
+      "type": "agent",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Web game diagnostics for unknown causes in TypeScript browser games and their Capacitor and Electron wraps: crashes, black screens, portal-only failures, stalls, memory growth, build failures, and regressions. Read-heavy; locates one cause with evidence before any fix."
+    },
+    {
+      "name": "web-game-developer",
+      "type": "agent",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "TypeScript browser-game developer for the web harness: gameplay, rendering, input, assets, and the Capacitor and desktop wraps (Phaser, PixiJS, Three.js, Babylon.js). Use for multi-system features and design-level bugs; focused web-* skills take bounded work."
+    },
+    {
+      "name": "backend-adapter",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Provider-neutral leaderboards, auth, cloud saves, and rewards behind a game-owned interface. Use when adding online features or switching backend providers."
+    },
+    {
+      "name": "multi-portal-adapter",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "One game on many web portals: Platform interface, NullPlatform, one adapter per portal. Use for more than one portal, leaking SDK calls, or /cl-port."
+    },
+    {
+      "name": "playable-ad-pack",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Package a game slice as a single-file playable ad with MRAID or CTA hooks and size caps. Use for playables, ad creatives, MRAID, or UA builds."
+    },
+    {
+      "name": "web-3d-scene",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Three.js or Babylon.js scenes on a mobile budget: glTF, lighting, LOD, culling. Use when starting a 3D web game or when a 3D scene is slow on phones."
+    },
+    {
+      "name": "web-animation-tweens",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Web game animation: spritesheets, fixed-step frame timing, config tweens, skeletal, pooling. Use when sprites don't animate, timing drifts, or tweens stutter."
+    },
+    {
+      "name": "web-audio",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Web Audio for browser games: buses, autoplay unlock, pause on hide, phone memory. Use when sound is silent, late, or crackles, or to add volume settings."
+    },
+    {
+      "name": "web-build-pack",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Production builds for TypeScript games: strict gate, per-portal variants, size budgets. Use before any submission or when builds are large or inconsistent."
+    },
+    {
+      "name": "web-capacitor",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Wrap a web game for Android and iOS with Capacitor 8: safe areas, signing, builds. Use when shipping a browser game to Google Play or the App Store."
+    },
+    {
+      "name": "web-data",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Browser game saves and config: versioned schema, storage adapters, recovery, typed config. Use when adding saves, when saves break, or before cloud save."
+    },
+    {
+      "name": "web-desktop",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Wrap a web game for desktop and Steam Deck with Electron or Tauri plus Steamworks. Use when shipping a browser game on Steam or another PC store."
+    },
+    {
+      "name": "web-diagnostics",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Isolate browser-game failures: console, network, environment diffs, bisects, one cause. Use for black screens, portal-only or wrap-only bugs, and regressions."
+    },
+    {
+      "name": "web-feature-playbook",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Build one feature in a TypeScript web game the kit's way: spec, config, sim apart from render, tests. Use when asked to add a feature or system in a web game."
+    },
+    {
+      "name": "web-harness",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Web game harness: Vite and TypeScript setup, Phaser, PixiJS, Three.js, input, UI, audio, physics, tilemaps, 3D, saves, profiling, builds, Capacitor, desktop wraps, portal adapters, and playable ads. Use for any browser game task: add a feature, fix, speed up, wrap, or ship."
+    },
+    {
+      "name": "web-input-responsive",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Browser-game input and layout everywhere: touch, gamepad, resize, DPR, safe areas, iframes. Use when controls or scaling break on any device or embed."
+    },
+    {
+      "name": "web-performance-profile",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Measure and fix browser-game performance: frame time, load, draw calls, GC, memory, tiers. Use for stutter, slow loads, mobile frame drops, or portal limits."
+    },
+    {
+      "name": "web-physics-collisions",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Web game physics: arcade or engine, fixed step, layers, queries, debug overlays. Use when objects tunnel, jitter, or collide wrongly, or to add physics."
+    },
+    {
+      "name": "web-scene-manifest",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Describe web game scenes and levels as typed, validated JSON with a check script. Use when adding levels or when content lives in code."
+    },
+    {
+      "name": "web-services",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Hub for SDKs in web games behind one platform interface: portals, payments, ads. Use when adding any SDK to a web, Capacitor, or desktop build."
+    },
+    {
+      "name": "web-setup",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Set up the web game harness: Vite, strict TypeScript, engine choice, primitives, browser MCP. Use when starting a browser game or onboarding an agent."
+    },
+    {
+      "name": "web-test-hooks",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Make a browser game agent-drivable: URL flags, presets, seed, headless Playwright, log contract. Use before agent playtests or when bugs can't be reproduced."
+    },
+    {
+      "name": "web-tilemaps-2d",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Web game tile worlds: Tiled or LDtk import, collision from maps, spawns, chunked rendering. Use when building tile levels or when maps are slow or large."
+    },
+    {
+      "name": "web-ui-layer",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Web game UI layer: DOM or canvas UI, typed view state, menus, HUD, scaling. Use when adding menus, HUD, or settings, or when UI tangles with gameplay."
+    },
+    {
+      "name": "unity-diagnostics-engineer",
+      "type": "agent",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Unity diagnostics for unknown causes: exceptions, crashes, broken references, stalls, memory growth, build failures, regressions. Coordinates isolation, tracing, profiling, and package checks into one located cause with evidence before any fix."
+    },
+    {
+      "name": "unity-game-developer",
+      "type": "agent",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Unity developer for work spanning C#, scenes, prefabs, ScriptableObjects, editor tooling, packages, and build config. Use for multi-system Unity features; the unity-* skills take bounded work. Works with or without a Unity MCP server."
+    },
+    {
+      "name": "unity-addressables",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Unity Addressables: groups, remote content, handle release, content updates. Use when builds are large, loads are slow, or memory grows."
+    },
+    {
+      "name": "unity-animation",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Unity animation: Animator, blend trees, events, root motion, Timeline, 2D sprites. Use when animations glitch, states tangle, or need wiring to gameplay."
+    },
+    {
+      "name": "unity-audio",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Unity audio: Audio Mixer groups, saved volume, import settings, pooling, web unlock, mobile memory. Use when adding sound, volume settings, or for heavy audio."
+    },
+    {
+      "name": "unity-build",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Repeatable Unity builds for desktop, Steam Deck, Android, and iOS via the Unity CLI. Use when making a build, setting up CI, or when builds differ."
+    },
+    {
+      "name": "unity-data",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Unity saves and config: versioned saves, migrations, atomic writes, ScriptableObjects. Use when adding saves or when saves break after updates."
+    },
+    {
+      "name": "unity-dependency-trace",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Trace Unity GUID references through .meta and YAML: missing, unused, and blast radius. Use for Missing (Script) or before moving or deleting assets."
+    },
+    {
+      "name": "unity-failure-isolation",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Reproduce and isolate a Unity failure to its cause from Editor and Player logs and bisects. Use before fixing anything broken in Unity."
+    },
+    {
+      "name": "unity-feature-playbook",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Build one Unity gameplay feature the kit's way, from GDD spec and SO config to tests. Use when asked to add a feature or system in Unity."
+    },
+    {
+      "name": "unity-harness",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Unity harness: setup, input and gamepad rebinding, UI, audio, animation, physics, worlds, tilemaps, saves, Addressables, profiling, builds, WebGL, test hooks, services, and diagnostics. Use for any Unity task: add a feature, fix controls or UI, speed it up, build, or debug a Unity game."
+    },
+    {
+      "name": "unity-input-system",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Unity Input System: action maps, control schemes, device switching, saved rebinding, local MP. Use when adding or fixing controls or when one device fails."
+    },
+    {
+      "name": "unity-package-audit",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Audit Unity packages: versions, editor fit, preview or deprecated, unpinned git, upgrade plan. Use when builds break after updates or before an editor upgrade."
+    },
+    {
+      "name": "unity-physics",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Unity 2D and 3D physics: rigidbodies, fixed step, layer matrix, queries, cost. Use when objects tunnel or jitter, collisions misfire, or physics is slow."
+    },
+    {
+      "name": "unity-profiling",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Measure and fix Unity performance with the Profiler, Frame Debugger, and Memory Profiler. Use for stutter, mobile frame drops, GC allocations, or memory growth."
+    },
+    {
+      "name": "unity-reorganize",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Reorganize a Unity project safely: folders, asmdefs, namespaces, moving assets with .meta files. Use for messy projects, slow compiles, or single-assembly code."
+    },
+    {
+      "name": "unity-scene-manifest",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Describe Unity scenes as data and place objects idempotently via editor script or MCP. Use for generated content, data-built levels, or reproducible setup."
+    },
+    {
+      "name": "unity-services",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Hub for SDKs in Unity behind one platform interface: IAP, ads, analytics, backends. Use when adding any SDK to a Unity game or SDK calls leak into gameplay."
+    },
+    {
+      "name": "unity-setup",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Set up the Unity harness: pinned Editor and Unity CLI, MCP server, primitives, agent-ready project. Use when starting a Unity project or onboarding an agent."
+    },
+    {
+      "name": "unity-test-hooks",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Make a Unity game agent-drivable: launcher flags, presets, seed, headless runs, log contract, tests. Use before automated playtests or CI."
+    },
+    {
+      "name": "unity-tilemaps-2d",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Unity 2D tile worlds: Tilemap, rule tiles, atlases, collision, chunking, editor imports. Use when building tile levels or when tilemaps are slow or show seams."
+    },
+    {
+      "name": "unity-ui",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Unity uGUI: Canvas Scaler, safe areas, TextMeshPro, layouts, focus, game-ui-standards. Use when building or fixing menus, HUD, or popups in Unity."
+    },
+    {
+      "name": "unity-ui-toolkit",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Unity runtime UI with UI Toolkit: UXML, USS, panel scaling, data flow, lists, gamepad focus. Use for UI Toolkit screens or when choosing it over uGUI."
+    },
+    {
+      "name": "unity-webgl-build",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Unity WebGL builds that load fast on phones: compression, memory, template, .jslib portal bridge. Use for any browser or portal target from Unity."
+    },
+    {
+      "name": "unity-world",
+      "type": "skill",
+      "plugin": "cl-unity",
+      "tier": "builder",
+      "description": "Unity worlds: additive scenes, ProBuilder, Terrain, lighting per pipeline, NavMesh, streaming. Use when laying out levels, splitting scenes, or when loads grow."
+    },
+    {
+      "name": "godot-diagnostics-engineer",
+      "type": "agent",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Godot diagnostics for unknown causes: script errors, crashes, broken scene or resource references, stalls, memory growth, export failures, regressions. Coordinates isolation, tracing, profiling, and addon checks into one located cause with evidence before any fix."
+    },
+    {
+      "name": "godot-game-developer",
+      "type": "agent",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Godot 4 developer (GDScript and C#) for work spanning scripts, scenes, resources, autoloads, editor tooling, addons, and export presets. Use for multi-system Godot features; the godot-* skills take bounded work. Reads project.godot before assuming anything."
+    },
+    {
+      "name": "godot-addons-audit",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Audit Godot addons, GDExtensions, and NuGet packages for version and platform fit, with an upgrade plan. Use after an update breaks things or addons conflict."
+    },
+    {
+      "name": "godot-animation",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Godot 4 animation: AnimationPlayer, AnimationTree, blend spaces, tweens, root motion. Use when animations glitch, states tangle, or transitions feel wrong."
+    },
+    {
+      "name": "godot-audio",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Godot 4 audio: bus layout, saved volume, pooling, web and mobile unlock, imports. Use when adding sound, volume sliders, or fixing silent web builds."
+    },
+    {
+      "name": "godot-build",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Command-line Godot 4 exports for desktop, Steam Deck, Android, and iOS with signing and CI. Use when shipping a desktop or mobile build or setting up CI."
+    },
+    {
+      "name": "godot-data",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Godot 4 saves and config: versioned schema in user://, atomic writes, migrations. Use when adding saves, changing the format, or fixing lost progress."
+    },
+    {
+      "name": "godot-dependency-trace",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Trace Godot res:// and uid:// references, broken links, unused assets, blast radius. Use before moving or deleting assets or when scenes fail to load."
+    },
+    {
+      "name": "godot-failure-isolation",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Reproduce and isolate a Godot failure to its cause from logs and bisects. Use before fixing anything broken in Godot."
+    },
+    {
+      "name": "godot-feature-playbook",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Build one gameplay feature in Godot 4 the kit's way, from GDD spec to tests. Use when asked to add a feature or system in Godot."
+    },
+    {
+      "name": "godot-gdscript-style",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "GDScript conventions: static typing, signals up and calls down, autoload discipline, lint. Use when a Godot codebase is inconsistent or fails only at runtime."
+    },
+    {
+      "name": "godot-harness",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Godot 4 harness: setup, GDScript style, input map, UI, audio, animation, physics, worlds, tilemaps, saves, profiling, web export, builds, addons, test hooks, services, and diagnostics. Use for any Godot task: add a feature, fix a bug, speed it up, or export."
+    },
+    {
+      "name": "godot-input-map",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Godot 4 Input Map: intent actions, deadzones, contexts, rebinding, local multiplayer, touch. Use when adding or fixing controls or rebinding."
+    },
+    {
+      "name": "godot-physics",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Godot 4 physics: body types, tick rate, layers and masks, queries, triggers. Use when movement feels wrong, objects tunnel or jitter, or physics is slow."
+    },
+    {
+      "name": "godot-profiling",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Measure and fix Godot 4 performance with the profiler and monitors, before and after. Use for stutter, mobile frame drops, memory growth, or slow loads."
+    },
+    {
+      "name": "godot-reorganize",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Reorganize a Godot project without breaking res:// paths, uids, or exports. Use for messy projects, giant autoloads, or before onboarding others."
+    },
+    {
+      "name": "godot-scene-manifest",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Describe Godot scenes as JSON and place nodes idempotently with a @tool script. Use for data-built levels and reproducible scene setup."
+    },
+    {
+      "name": "godot-services",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Hub for SDKs in Godot 4 via one platform adapter: Android and iOS plugins, GodotSteam, JavaScriptBridge. Use when adding any third-party SDK to a Godot game."
+    },
+    {
+      "name": "godot-setup",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Set up the Godot 4 harness: pinned engine and templates, headless CLI, MCP server, tests, template. Use when starting a Godot project or onboarding an agent."
+    },
+    {
+      "name": "godot-test-hooks",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Make a Godot 4 game agent-testable: headless GUT or gdUnit4, jump-to-state, seeds, log contract. Use when adding tests, CI, or before agent playtests."
+    },
+    {
+      "name": "godot-tilemaps-2d",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Godot 4 tile worlds: tile sets, terrains, TileMapLayer per purpose, imports. Use when building tile levels or when tilemaps show seams or run slowly."
+    },
+    {
+      "name": "godot-ui-control",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Godot 4 Control UI: containers, themes, focus and gamepad navigation, safe areas, scaling. Use for menus, HUD, settings, or UI that breaks on resize."
+    },
+    {
+      "name": "godot-web-export",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Tune a Godot 4 web export for phones and portals: threads, headers, size, memory, iframes. Use whenever a Godot game targets the browser or a web portal."
+    },
+    {
+      "name": "godot-world",
+      "type": "skill",
+      "plugin": "cl-godot",
+      "tier": "builder",
+      "description": "Godot 4 worlds: TileMapLayer, GridMap, CSG blockouts, navigation, streaming, LOD. Use when laying out levels, loading large maps, or when loads stall."
+    },
+    {
+      "name": "game-art-feel-director",
+      "type": "agent",
+      "plugin": "cl-design",
+      "tier": "builder",
+      "description": "Art director and game-feel lead: readability, palette and shape language, UI skin, consistency across surfaces, layered feedback with frame-time budgets, written style guide. Use for visual direction, polish passes, and games that feel flat."
+    },
+    {
+      "name": "game-systems-designer",
+      "type": "agent",
+      "plugin": "cl-design",
+      "tier": "builder",
+      "description": "Systems designer for problems spanning several mechanics: turns a fuzzy goal into an implementable, parameterized design with interactions traced and a simulation. Use for loop plus progression plus economy work; bounded pieces go to design skills."
+    },
+    {
+      "name": "game-ui-ux-designer",
+      "type": "agent",
+      "plugin": "cl-design",
+      "tier": "builder",
+      "description": "Game UI/UX designer: HUD architecture, menus, onboarding, store and offer screens, consent flows, focus and input parity, responsive layout, accessibility. Use to design interfaces and direct their implementation; ui-ux-audit reviews without changing."
+    },
+    {
+      "name": "balance-experiment",
+      "type": "skill",
+      "plugin": "cl-design",
+      "tier": "builder",
+      "description": "Turn a balance complaint into a model, candidate curves, and a playtest plan with stop rules. Use when something feels too easy, too hard, or too grindy."
+    },
+    {
+      "name": "business-model",
+      "type": "skill",
+      "plugin": "cl-design",
+      "tier": "studio",
+      "description": "Choose how a game earns (premium, F2P, ads, hybrid) from audience and competitor numbers. Use after competitor-research, before economy or monetization work."
+    },
+    {
+      "name": "competitor-research",
+      "type": "skill",
+      "plugin": "cl-design",
+      "tier": "studio",
+      "description": "Research up to 5 comparable games: estimated numbers, pricing, reviews, the gap to own. Use before committing to a concept or business model, or for a pitch."
+    },
+    {
+      "name": "design-audit",
+      "type": "skill",
+      "plugin": "cl-design",
+      "tier": "builder",
+      "description": "Audit a concept, prototype, or GDD without changing it: contradictions, gaps, risks, ranked fixes. Use when a design feels shaky or before building from a doc."
+    },
+    {
+      "name": "design-blueprint",
+      "type": "skill",
+      "plugin": "cl-design",
+      "tier": "builder",
+      "description": "Turn a core loop or concept into an engine-agnostic blueprint: systems, data, events, build order. Use after a brainstorm, before GDDs or code."
+    },
+    {
+      "name": "design-hub",
+      "type": "skill",
+      "plugin": "cl-design",
+      "tier": "builder",
+      "description": "Game design: blueprints, GDDs, balance, difficulty, economy, juice, UI standards and audits, playtest synthesis, design audits, competitor research, and business models. Use when designing, specifying, balancing, or reviewing a game, a system, or its interface."
+    },
+    {
+      "name": "design-pillars",
+      "type": "skill",
+      "plugin": "cl-design",
+      "tier": "builder",
+      "description": "Check a concept, prototype, or GDD against six design pillars (fun, loop, curiosity, skill, motivation, progression) and pick the habit that tests the weakest. Use when a game feels flat or before committing to a design."
+    },
+    {
+      "name": "difficulty-curve",
+      "type": "skill",
+      "plugin": "cl-design",
+      "tier": "builder",
+      "description": "Design or diagnose difficulty and pacing: ramp, tension, skill gates, failure, adjustment. Use for quit points, too easy or hard, level order, or wave tuning."
+    },
+    {
+      "name": "economy-balance",
+      "type": "skill",
+      "plugin": "cl-design",
+      "tier": "builder",
+      "description": "Design or balance a game economy: currencies, sources and sinks, pricing, wallet simulation. Use when adding currencies, shops, upgrades, or ad and IAP rewards."
+    },
+    {
+      "name": "game-juice",
+      "type": "skill",
+      "plugin": "cl-design",
+      "tier": "builder",
+      "description": "Add or tune action feedback: hit-stop, shake, tweens, particles, audio layers, within frame budgets. Use when a game feels flat or hits don't register."
+    },
+    {
+      "name": "game-ui-standards",
+      "type": "skill",
+      "plugin": "cl-design",
+      "tier": "builder",
+      "description": "Sourced game UI rules: text size by age, contrast, touch targets, safe areas, labels. Use when building, specifying, or reviewing any game screen, HUD, or menu."
+    },
+    {
+      "name": "gdd-author",
+      "type": "skill",
+      "plugin": "cl-design",
+      "tier": "builder",
+      "description": "Author or retrofit a GDD one system at a time with owned numbers and state tables. Use when a system needs a buildable spec or a GDD is missing sections."
+    },
+    {
+      "name": "playtest-synthesis",
+      "type": "skill",
+      "plugin": "cl-design",
+      "tier": "builder",
+      "description": "Turn playtest notes, surveys, recordings, or telemetry into ranked findings with owners. Use when test results or player feedback arrive, or to plan a playtest."
+    },
+    {
+      "name": "quest-design",
+      "type": "skill",
+      "plugin": "cl-design",
+      "tier": "builder",
+      "description": "Design a quest or mission by choosing its quest type and gameplay type first, then deriving enemies, items, locations, and characters, then the story and dialogue. Use when planning quests, missions, side content, or live events."
+    },
+    {
+      "name": "ui-pitfalls",
+      "type": "skill",
+      "plugin": "cl-design",
+      "tier": "builder",
+      "description": "The game UI mistakes agents make most (tiny phone text, safe areas, hover-only), with fixes. Use before and after an agent builds any game screen."
+    },
+    {
+      "name": "ui-ux-audit",
+      "type": "skill",
+      "plugin": "cl-design",
+      "tier": "builder",
+      "description": "Measured, read-only game UI audit on phone viewports, returning a ranked fix list. Use for UI feedback, player confusion, or before launch."
+    },
+    {
+      "name": "cl-gdd",
+      "type": "command",
+      "plugin": "cl-design",
+      "tier": "builder",
+      "description": "Author or retrofit one system's design doc with named numbers and cross-references. Use when a system needs a buildable spec."
+    },
+    {
+      "name": "camera-systems",
+      "type": "skill",
+      "plugin": "cl-gameplay",
+      "tier": "builder",
+      "description": "Design and tune 2D follow and 3D orbit, third-person, or first-person cameras with collision. Use when the camera nauseates, loses the player, or clips walls."
+    },
+    {
+      "name": "dialogue-system",
+      "type": "skill",
+      "plugin": "cl-gameplay",
+      "tier": "builder",
+      "description": "Design a dialogue system before code: node graph, conditions, choices, localization keys, saves. Use for story games, visual novels, and RPG dialogue."
+    },
+    {
+      "name": "game-ai-behaviors",
+      "type": "skill",
+      "plugin": "cl-gameplay",
+      "tier": "builder",
+      "description": "Plan NPC and enemy AI before code: FSM, behavior tree, utility, or steering. Use when adding enemies or when AI feels dumb, cheap, or unreadable."
+    },
+    {
+      "name": "gameplay-hub",
+      "type": "skill",
+      "plugin": "cl-gameplay",
+      "tier": "builder",
+      "description": "Gameplay systems: enemy and companion AI, procedural generation, dialogue, level blockout, and cameras. Use when building how enemies think, generating levels or loot, writing branching dialogue, greyboxing a level, or rigging a camera."
+    },
+    {
+      "name": "level-blockout",
+      "type": "skill",
+      "plugin": "cl-gameplay",
+      "tier": "builder",
+      "description": "Plan and greybox levels before art: pacing beats, paths, metrics, landmarks, art handoff. Use when building a level or when one feels flat or confusing."
+    },
+    {
+      "name": "procedural-generation",
+      "type": "skill",
+      "plugin": "cl-gameplay",
+      "tier": "builder",
+      "description": "Seeded, constrained, testable generators for levels, dungeons, terrain, loot, and encounters. Use when a game needs variety or generated content feels unfair."
+    },
+    {
+      "name": "game-performance-engineer",
+      "type": "agent",
+      "plugin": "cl-release",
+      "tier": "builder",
+      "description": "Performance campaigns across targets and subsystems: budgets, baselines on real devices, ranked costs, one-variable fixes, quality tiers, records. Use when performance spans several areas or a release has device requirements."
+    },
+    {
+      "name": "qa-release-engineer",
+      "type": "agent",
+      "plugin": "cl-release",
+      "tier": "builder",
+      "description": "QA and release engineer who owns the ship decision with evidence: test plans, gates, known-issue acceptance, release records, post-release watch. Use for release decisions, release testing coordination, and incident ownership."
+    },
+    {
+      "name": "qa-test-plan",
+      "type": "skill",
+      "plugin": "cl-release",
+      "tier": "builder",
+      "description": "Right-sized test plan for a release candidate: scope, device matrix, exit criteria. Use before releases or when changes touch input, saves, builds, or SDKs."
+    },
+    {
+      "name": "regression-triage",
+      "type": "skill",
+      "plugin": "cl-release",
+      "tier": "builder",
+      "description": "Triage a production bug: evidence, repro, impact, containment, bounded fix, prevention. Use when something broke in production."
+    },
+    {
+      "name": "release-hub",
+      "type": "skill",
+      "plugin": "cl-release",
+      "tier": "builder",
+      "description": "Release gates: full ship readiness, QA test plans, regression triage after a release, and save-system checks. Use before shipping a build, when planning tests, when a release breaks something, or when saves may be at risk."
+    },
+    {
+      "name": "save-system-check",
+      "type": "skill",
+      "plugin": "cl-release",
+      "tier": "builder",
+      "description": "Verify and harden saves: schema versions, migrations, atomic writes, cloud sync. Use before releases that change save data or when players lose progress."
+    },
+    {
+      "name": "ship-readiness",
+      "type": "skill",
+      "plugin": "cl-release",
+      "tier": "builder",
+      "description": "Evidence-based ship decision across gameplay, saves, performance, packaging, SDK, policy. Use before any release or submission and when /cl-ship runs."
+    },
+    {
+      "name": "ci-godot-pipeline",
+      "type": "skill",
+      "plugin": "cl-ci",
+      "tier": "builder",
+      "description": "CI for Godot 4: headless export in a container, GUT or gdUnit4 tests, web export, artifacts. Use when a Godot project has no CI or builds on one machine."
+    },
+    {
+      "name": "ci-hub",
+      "type": "skill",
+      "plugin": "cl-ci",
+      "tier": "builder",
+      "description": "Continuous integration for games: Unity, Godot, and web build pipelines, plus release tagging, changelogs, and build naming. Use when setting up CI, automating builds, or tagging a release."
+    },
+    {
+      "name": "ci-release-tagging",
+      "type": "skill",
+      "plugin": "cl-ci",
+      "tier": "builder",
+      "description": "Release mechanics: semver tags, changelogs from commits, versioned artifacts, rollback by tag. Use before a first release or when shipped versions get lost."
+    },
+    {
+      "name": "ci-unity-pipeline",
+      "type": "skill",
+      "plugin": "cl-ci",
+      "tier": "builder",
+      "description": "CI for Unity with GameCI or a self-hosted runner: license secrets, caching, tests, WebGL and other builds. Use when a Unity project has no CI."
+    },
+    {
+      "name": "ci-web-pipeline",
+      "type": "skill",
+      "plugin": "cl-ci",
+      "tier": "builder",
+      "description": "GitHub Actions for a TypeScript web game: type check, variant builds, size budgets, smoke tests. Use when a web game has no CI or builds break on some machines."
+    },
+    {
+      "name": "qa-adversary",
+      "type": "agent",
+      "plugin": "cl-qa",
+      "tier": "builder",
+      "description": "Adversarial QA reviewer: tries to break a change or build through test hooks, edge cases, bad networks, and odd devices, and checks that tests prove what they claim. Pairs with cl-core's code-reviewer; reports findings, never fixes. Use before merging risky work or shipping."
+    },
+    {
+      "name": "agent-playtest",
+      "type": "skill",
+      "plugin": "cl-qa",
+      "tier": "builder",
+      "description": "Agent playtests a build through test hooks: charter, presets, captures, judgments. Use after a feature lands, before a human playtest, or to reproduce a bug."
+    },
+    {
+      "name": "bug-report",
+      "type": "skill",
+      "plugin": "cl-qa",
+      "tier": "builder",
+      "description": "Write one reproducible bug report: build, device, seed, steps, expected vs actual, logs. Use when anyone finds a bug or a vague report needs cleaning up."
+    },
+    {
+      "name": "device-matrix",
+      "type": "skill",
+      "plugin": "cl-qa",
+      "tier": "builder",
+      "description": "Build the device test matrix: sizes, safe areas, inputs, a low-end device, grid. Use before a playtest, store submission, or for screen-specific bugs."
+    },
+    {
+      "name": "engine-test-scaffold",
+      "type": "skill",
+      "plugin": "cl-qa",
+      "tier": "builder",
+      "description": "Scaffold Unity Test Framework or Godot GUT and gdUnit4 tests with headless CI. Use when an engine project has no tests or a fix needs a regression test."
+    },
+    {
+      "name": "qa-hub",
+      "type": "skill",
+      "plugin": "cl-qa",
+      "tier": "builder",
+      "description": "Game QA: testability hooks, agent playtests, bug reports, QA reports, device matrices, smoke tests, deterministic replays, soak runs, and engine test scaffolds. Use when testing a game, writing a bug report, or adding automated tests."
+    },
+    {
+      "name": "qa-report",
+      "type": "skill",
+      "plugin": "cl-qa",
+      "tier": "builder",
+      "description": "One-page QA summary for a build: coverage, results by area, open bugs, ship or hold call. Use at the end of a test cycle or when asked if a build is ready."
+    },
+    {
+      "name": "replay-harness",
+      "type": "skill",
+      "plugin": "cl-qa",
+      "tier": "builder",
+      "description": "Deterministic replay: fixed timestep, seeded RNG, recorded inputs, tick hashes. Use when bugs won't reproduce, before multiplayer work, or for regression tests."
+    },
+    {
+      "name": "soak-runner",
+      "type": "skill",
+      "plugin": "cl-qa",
+      "tier": "builder",
+      "description": "Long automated sessions sampling heap and frame time to catch leaks and decay. Use when memory grows over a session, before releases, or for portal stability."
+    },
+    {
+      "name": "testability-hooks",
+      "type": "skill",
+      "plugin": "cl-qa",
+      "tier": "builder",
+      "description": "Kit standard for agent-drivable games: launcher, presets, seed, headless runs, log contract. Use when a game can only be tested by hand."
+    },
+    {
+      "name": "web-smoke-tests",
+      "type": "skill",
+      "plugin": "cl-qa",
+      "tier": "builder",
+      "description": "Generate Playwright smoke tests for a browser game: boot, input, core loop, resize, portal stub. Use when a web game has no automated checks or before CI."
+    },
+    {
+      "name": "accessibility-pass",
+      "type": "skill",
+      "plugin": "cl-content",
+      "tier": "builder",
+      "description": "Accessibility pass against Xbox and Game Accessibility Guidelines, then ship the top fixes. Use before launch or when players cannot play."
+    },
+    {
+      "name": "asset-sources",
+      "type": "skill",
+      "plugin": "cl-content",
+      "tier": "builder",
+      "description": "Find art, audio, and fonts from CC0 and CC-BY libraries with licenses checked at the source. Use when a game needs assets, placeholders, or credits."
+    },
+    {
+      "name": "audio-pipeline",
+      "type": "skill",
+      "plugin": "cl-content",
+      "tier": "builder",
+      "description": "Game audio pipeline: loudness, formats per platform, buses, ducking, voice limits, web unlock. Use when audio is inconsistent, too large, or being added."
+    },
+    {
+      "name": "cc0-asset-library",
+      "type": "skill",
+      "plugin": "cl-content",
+      "tier": "builder",
+      "description": "Add a CC0 library (Kenney, Poly Haven, Freesound) with a provenance manifest and credits. Use when a game needs art or audio fast or ships third-party assets."
+    },
+    {
+      "name": "cold-read",
+      "type": "skill",
+      "plugin": "cl-content",
+      "tier": "studio",
+      "description": "Test reader-facing text on a zero-context reader, then fix what they missed. Use for store pages, pitches, onboarding, and text leaving the studio."
+    },
+    {
+      "name": "content-hub",
+      "type": "skill",
+      "plugin": "cl-content",
+      "tier": "builder",
+      "description": "Game content: clean-license asset sources, CC0 library, gen AI asset services, audio and texture pipelines, localization, accessibility, script fit, text audits, and cold reads. Use when sourcing assets, localizing, or checking every word a player reads."
+    },
+    {
+      "name": "genai-asset-services",
+      "type": "skill",
+      "plugin": "cl-content",
+      "tier": "builder",
+      "description": "Opt-in generative AI art, 3D, voice, or sound services with rights and store disclosure. Use only when the owner asks for generated assets."
+    },
+    {
+      "name": "localization-pipeline",
+      "type": "skill",
+      "plugin": "cl-content",
+      "tier": "builder",
+      "description": "Game localization: keyed string tables, plurals, pseudo-loc, RTL, fonts, translator handoff. Use when adding a language, text overflows, or before new regions."
+    },
+    {
+      "name": "script-fit-check",
+      "type": "skill",
+      "plugin": "cl-content",
+      "tier": "studio",
+      "description": "Check a game script against text boxes, reading time, age band, glossary, and voices. Use before locking a script or sending it to translators or voice actors."
+    },
+    {
+      "name": "text-audit",
+      "type": "skill",
+      "plugin": "cl-content",
+      "tier": "studio",
+      "description": "Fixed-order pass on reader-facing text: writing rules, cold read, layout, cold read. Use for store copy, UI strings, onboarding, pitches, slides, and print."
+    },
+    {
+      "name": "texture-atlas-pipeline",
+      "type": "skill",
+      "plugin": "cl-content",
+      "tier": "builder",
+      "description": "Texture and atlas pipeline: packing, compression per platform, mipmaps, nine-slices. Use when draw calls are high, builds are large, or textures blur."
+    },
+    {
+      "name": "docs-writer",
+      "type": "agent",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Writes the studio's reader-facing documents in the house voice and brand: one-pagers, high-concept docs, and reports for publishers, partners, players, and the team. Every claim is sourced and true in the current build. Use when a document leaves the working session."
+    },
+    {
+      "name": "studio-producer",
+      "type": "agent",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Studio assistant and producer for founders, leads, and solo developers running one or several games. Tracks projects, says what's next, briefs the calendar, scopes prototypes, keeps milestones and risks honest, and watches agent usage and expenses. Use for what to make, when, and at what cost."
+    },
+    {
+      "name": "calendar-brief",
+      "type": "skill",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Brief the day or week by project from a calendar connector: prep, deadlines, clashes. Read-only. Use at the start of a day or week."
+    },
+    {
+      "name": "code-persona-builder",
+      "type": "skill",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Build a coding persona so agents write like a named developer, from an interview and samples. Use when agent code reads foreign to the team."
+    },
+    {
+      "name": "collaborator-brief",
+      "type": "skill",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Turn what the founder wants said into one paste-ready, actionable collaborator message. Use for team posts, contractor briefs, tester notes, and handoffs."
+    },
+    {
+      "name": "expense-tracker",
+      "type": "skill",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Log studio and per-game expenses in one CSV with monthly totals, renewals, and burn rate. Use when money goes out or before a budget talk."
+    },
+    {
+      "name": "high-concept-doc",
+      "type": "skill",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Write a two-to-four-page high-concept doc: pitch, fantasy, loop, pillars, comparables, risks. Use when an idea needs buy-in before a GDD or spec."
+    },
+    {
+      "name": "milestone-plan",
+      "type": "skill",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Build a milestone plan: deliverables, exit criteria, dependencies, buffered dates, critical path. Use when planning a release or publisher schedule."
+    },
+    {
+      "name": "next-steps",
+      "type": "skill",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Rank at most five next actions across all projects by deadline, unblock value, and owner. Use at the start of a day or week, or when stuck."
+    },
+    {
+      "name": "one-pager",
+      "type": "skill",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Write a one-page game sheet for a publisher, festival, partner, or press, in house voice. Use before a pitch email, meeting, or submission form."
+    },
+    {
+      "name": "opportunity-review",
+      "type": "skill",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Find 10x opportunities, attack them with a refute pass, and rank a plan. Use for roadmap decisions or \"what should we build next\"."
+    },
+    {
+      "name": "postmortem",
+      "type": "skill",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Blameless postmortem: evidence timeline, what helped and hurt, root causes, owned actions. Use after a milestone, release, or incident."
+    },
+    {
+      "name": "project-tracker",
+      "type": "skill",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Keep one sourced register of all game projects: stage, owner, hours, blockers, health. Use to see every project at once or before planning the week."
+    },
+    {
+      "name": "proto-scoping",
+      "type": "skill",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Turn a design into a one-page SPEC: pitch gate, vertical slice, demo snapshot, cut lists. Use before building a prototype or demo."
+    },
+    {
+      "name": "prototype-retro",
+      "type": "skill",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Close a prototype with a RETRO file, a learnings entry, and harvested modules. Use after every playtest gate, launch, or kill decision."
+    },
+    {
+      "name": "publisher-pitch-package",
+      "type": "skill",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Assemble a publisher or investor pitch package: one-pager, deck, KPIs, budget, tracker. Use when seeking funding, a publishing deal, or platform support."
+    },
+    {
+      "name": "release-calendar",
+      "type": "skill",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Build a release calendar backwards from launch: lead times, reviews, events, freeze. Use when a launch date exists or several platforms ship together."
+    },
+    {
+      "name": "report-writer",
+      "type": "skill",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Turn results into a short actionable report: answer first, sourced numbers, decisions. Use when playtest, milestone, or analytics results must reach someone."
+    },
+    {
+      "name": "risk-register",
+      "type": "skill",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Create and keep a risk register ranked by likelihood times impact, with owners and triggers. Use at project start, milestone reviews, or before a pitch."
+    },
+    {
+      "name": "studio-hub",
+      "type": "skill",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Studio production: project tracking, next steps, calendar briefs, usage and expense trackers, prototype scoping, milestones, risks, one-pagers, pitches, postmortems, retros, reports, tickets, and onboarding. Use when planning, tracking, or documenting studio work."
+    },
+    {
+      "name": "team-onboarding-doc",
+      "type": "skill",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Generate a verified onboarding doc from the repo: setup, architecture, conventions, first tasks. Use when someone joins or questions keep repeating."
+    },
+    {
+      "name": "ticketing-connectors",
+      "type": "skill",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Connect Jira, Linear, Trello, GitHub Issues, or others via MCP and map work to tickets. Writes only on yes. Use when setting up or syncing a tracker."
+    },
+    {
+      "name": "usage-tracker",
+      "type": "skill",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Track AI agent token usage and cost per project and week from /usage, ccusage, or OTel. Use weekly or when costs surprise you."
+    },
+    {
+      "name": "cl-producer",
+      "type": "command",
+      "plugin": "cl-studio",
+      "tier": "studio",
+      "description": "Studio producer: status, what's next, the week, tickets, agent usage, expenses, prototype scoping. Use for planning across your games."
+    },
+    {
+      "name": "roblox-diagnostics-engineer",
+      "type": "agent",
+      "plugin": "cl-roblox",
+      "tier": "builder",
+      "description": "Roblox diagnostics for unknown causes: script errors, silent failures, works-in-Studio-fails-live bugs, data loss or duplication, purchase complaints, lag, and regressions. Read-heavy; locates one cause with evidence through files, Studio MCP read tools, and output logs before any fix."
+    },
+    {
+      "name": "roblox-game-developer",
+      "type": "agent",
+      "plugin": "cl-roblox",
+      "tier": "builder",
+      "description": "Roblox developer for the Roblox harness, for work spanning Luau, client-server design, remotes, data, monetization, UI, and publishing. Works through Studio's built-in MCP server, Script Sync, or Rojo. Use for multi-system Roblox features and design decisions; the roblox-* skills take bounded work."
+    },
+    {
+      "name": "roblox-animation",
+      "type": "skill",
+      "plugin": "cl-roblox",
+      "tier": "builder",
+      "description": "Roblox animation: Animator, asset ownership, priorities, replication, TweenService. Use when animations fail for players, desync, or stutter."
+    },
+    {
+      "name": "roblox-audio",
+      "type": "skill",
+      "plugin": "cl-roblox",
+      "tier": "builder",
+      "description": "Roblox modular audio (AudioPlayer, Emitter, Wire): buses, 3D sound, asset privacy, voice. Use when adding sound or when players hear nothing."
+    },
+    {
+      "name": "roblox-build",
+      "type": "skill",
+      "plugin": "cl-roblox",
+      "tier": "builder",
+      "description": "Publish Roblox safely: dev, stable, and live places, Open Cloud CI, rollback. Use before the first release, for every update, or for CI publishing."
+    },
+    {
+      "name": "roblox-data",
+      "type": "skill",
+      "plugin": "cl-roblox",
+      "tier": "builder",
+      "description": "Roblox data: session-locked DataStore saves, retries, migrations, ProfileStore. Use when adding saves, after data loss or duplication, or before launch."
+    },
+    {
+      "name": "roblox-diagnostics",
+      "type": "skill",
+      "plugin": "cl-roblox",
+      "tier": "builder",
+      "description": "Isolate Roblox failures via Studio MCP output, permissions, streaming, remotes, bisects. Use for errors, live-only bugs, and regressions."
+    },
+    {
+      "name": "roblox-feature-playbook",
+      "type": "skill",
+      "plugin": "cl-roblox",
+      "tier": "builder",
+      "description": "Add one Roblox feature the Roblox way: client-server split, typed Luau, validated remotes, tests. Use when asked to add a feature or system in a Roblox game."
+    },
+    {
+      "name": "roblox-harness",
+      "type": "skill",
+      "plugin": "cl-roblox",
+      "tier": "builder",
+      "description": "Roblox harness: setup, Luau features, input, UI, audio, animation, physics, worlds, DataStores, monetization, Open Cloud, performance, builds, test hooks, and diagnostics. Use for any Roblox task: add a feature, fix a bug, save data, sell items, or publish."
+    },
+    {
+      "name": "roblox-input",
+      "type": "skill",
+      "plugin": "cl-roblox",
+      "tier": "builder",
+      "description": "Cross-device Roblox input with the Input Action System, prompts, and rebinding. Use when adding controls or when a control is missing on a device."
+    },
+    {
+      "name": "roblox-monetization",
+      "type": "skill",
+      "plugin": "cl-roblox",
+      "tier": "builder",
+      "description": "Roblox products with idempotent receipts, passes, subscriptions, and ads. Use when adding anything players pay or watch ads for, or after purchase complaints."
+    },
+    {
+      "name": "roblox-open-cloud",
+      "type": "skill",
+      "plugin": "cl-roblox",
+      "tier": "builder",
+      "description": "Automate Roblox with Open Cloud: scoped keys, publishing, Luau Execution tests, data stores. Use when building CI, ops scripts, or support tools for Roblox."
+    },
+    {
+      "name": "roblox-performance",
+      "type": "skill",
+      "plugin": "cl-roblox",
+      "tier": "builder",
+      "description": "Measure and fix Roblox performance: MicroProfiler, join time, heartbeat, phone budgets. Use for frame drops, lag, slow joins, or phone memory crashes."
+    },
+    {
+      "name": "roblox-physics",
+      "type": "skill",
+      "plugin": "cl-roblox",
+      "tier": "builder",
+      "description": "Roblox physics: collision groups, network ownership risks, server validation. Use when parts jitter or fling, clients speedhack, or adding vehicles."
+    },
+    {
+      "name": "roblox-scene-manifest",
+      "type": "skill",
+      "plugin": "cl-roblox",
+      "tier": "builder",
+      "description": "Describe Roblox places, areas, spawns, and models as data with tagged markers and checks. Use when adding areas or levels, or before agent content work."
+    },
+    {
+      "name": "roblox-services",
+      "type": "skill",
+      "plugin": "cl-roblox",
+      "tier": "builder",
+      "description": "Hub for Roblox services: purchases, ads, analytics, data, Open Cloud, policy, teleports. Use when adding or choosing any Roblox platform service."
+    },
+    {
+      "name": "roblox-setup",
+      "type": "skill",
+      "plugin": "cl-roblox",
+      "tier": "builder",
+      "description": "Set up the Roblox harness: Studio MCP, Script Sync or Rojo, Rokit-pinned tools, Git. Use when starting a Roblox game or onboarding an agent."
+    },
+    {
+      "name": "roblox-test-hooks",
+      "type": "skill",
+      "plugin": "cl-roblox",
+      "tier": "builder",
+      "description": "Make a Roblox game agent- and CI-drivable: config launcher, presets, seed, headless runs. Use before agent playtests or CI."
+    },
+    {
+      "name": "roblox-ui",
+      "type": "skill",
+      "plugin": "cl-roblox",
+      "tier": "builder",
+      "description": "Roblox UI across devices: safe areas, Scale layout, flex, styling, gamepad focus. Use when adding menus, HUD, or shops, or when UI breaks on a device."
+    },
+    {
+      "name": "roblox-world",
+      "type": "skill",
+      "plugin": "cl-roblox",
+      "tier": "builder",
+      "description": "Roblox worlds that load fast on phones: streaming, terrain, meshes, budgets. Use when building maps, for slow joins, or for scripts broken by streaming."
+    },
+    {
+      "name": "unreal-diagnostics-engineer",
+      "type": "agent",
+      "plugin": "cl-unreal",
+      "tier": "builder",
+      "description": "Unreal Engine diagnostics for unknown causes: crashes, ensures, compile and link errors, cook and package failures, Blueprint breakage, broken references, hitches, and memory growth. Reads logs, crash folders, and traces, and returns one located cause with evidence before any fix. Read-heavy."
+    },
+    {
+      "name": "unreal-game-developer",
+      "type": "agent",
+      "plugin": "cl-unreal",
+      "tier": "builder",
+      "description": "Unreal Engine 5 developer for features spanning C++, Blueprints, Data Assets, levels, UI, and build config. Decides where code lives in the gameplay framework and builds it. Use for multi-system Unreal features; the unreal-* skills take bounded work. Works with or without an Unreal MCP server."
+    },
+    {
+      "name": "unreal-animation",
+      "type": "skill",
+      "plugin": "cl-unreal",
+      "tier": "builder",
+      "description": "Unreal 5 animation: Anim Blueprints, montages, Motion Matching, Control Rig. Use when animations glitch, states tangle, or need wiring to gameplay."
+    },
+    {
+      "name": "unreal-audio",
+      "type": "skill",
+      "plugin": "cl-unreal",
+      "tier": "builder",
+      "description": "Unreal 5 audio: Submixes, MetaSounds, modulation volume, concurrency, attenuation, memory. Use when adding sound, volume settings, or when audio runs too heavy."
+    },
+    {
+      "name": "unreal-build",
+      "type": "skill",
+      "plugin": "cl-unreal",
+      "tier": "builder",
+      "description": "Repeatable Unreal 5 packaging for desktop, Steam Deck, Android, and iOS via BuildCookRun. Use when packaging, setting up CI, or when packages differ."
+    },
+    {
+      "name": "unreal-data",
+      "type": "skill",
+      "plugin": "cl-unreal",
+      "tier": "builder",
+      "description": "Unreal 5 saves and config: versioned USaveGame, async saves, Data Assets. Use when adding saves or settings or when saves break after a patch."
+    },
+    {
+      "name": "unreal-diagnostics",
+      "type": "skill",
+      "plugin": "cl-unreal",
+      "tier": "builder",
+      "description": "Isolate Unreal failures: crashes, ensures, compile, cook, Blueprint, and reference breaks. Use before fixing anything broken in Unreal."
+    },
+    {
+      "name": "unreal-feature-playbook",
+      "type": "skill",
+      "plugin": "cl-unreal",
+      "tier": "builder",
+      "description": "Build one Unreal 5 feature the kit's way: framework class, C++ base, Blueprint tuning, tests. Use when adding a feature or system to an Unreal project."
+    },
+    {
+      "name": "unreal-harness",
+      "type": "skill",
+      "plugin": "cl-unreal",
+      "tier": "builder",
+      "description": "Unreal Engine 5 harness: setup, C++ and Blueprint features, input, UI, audio, animation, physics, worlds, saves, performance, builds, test hooks, services, and diagnostics. Use for any Unreal task: add a feature, fix a bug, profile, or package a build."
+    },
+    {
+      "name": "unreal-input",
+      "type": "skill",
+      "plugin": "cl-unreal",
+      "tier": "builder",
+      "description": "Unreal 5 Enhanced Input: actions, mapping contexts, modifiers, gamepad, touch, rebinding. Use when adding or fixing controls or when one device fails."
+    },
+    {
+      "name": "unreal-performance",
+      "type": "skill",
+      "plugin": "cl-unreal",
+      "tier": "builder",
+      "description": "Measure and fix Unreal 5 performance: Insights, stat commands, scalability, PSO hitches, Lumen. Use for low frame rates, hitches, or memory growth."
+    },
+    {
+      "name": "unreal-physics",
+      "type": "skill",
+      "plugin": "cl-unreal",
+      "tier": "builder",
+      "description": "Unreal 5 Chaos physics: channels, collision complexity, movement vs simulation, substeps, traces. Use when objects tunnel or jitter or physics costs too much."
+    },
+    {
+      "name": "unreal-scene-manifest",
+      "type": "skill",
+      "plugin": "cl-unreal",
+      "tier": "builder",
+      "description": "Describe Unreal levels as data and place actors idempotently with Editor Python or MCP. Use for generated content, data-built levels, or reproducible setup."
+    },
+    {
+      "name": "unreal-services",
+      "type": "skill",
+      "plugin": "cl-unreal",
+      "tier": "builder",
+      "description": "Hub for SDKs in Unreal: Online Services, EOS, Steamworks, purchases, ads, analytics, backends. Use when adding any SDK or platform service to Unreal."
+    },
+    {
+      "name": "unreal-setup",
+      "type": "skill",
+      "plugin": "cl-unreal",
+      "tier": "builder",
+      "description": "Set up the Unreal 5 harness: pinned engine, toolchain, platform SDKs, MCP server, primitives. Use when starting an Unreal project or onboarding an agent."
+    },
+    {
+      "name": "unreal-test-hooks",
+      "type": "skill",
+      "plugin": "cl-unreal",
+      "tier": "builder",
+      "description": "Make an Unreal game agent-drivable: launcher flags, presets, seed, -nullrhi runs, log contract. Use before automated playtests or CI."
+    },
+    {
+      "name": "unreal-ui",
+      "type": "skill",
+      "plugin": "cl-unreal",
+      "tier": "builder",
+      "description": "Unreal 5 UI with UMG and Common UI: DPI scaling, safe zones, gamepad focus, MVVM. Use when building or fixing menus, HUD, or popups in Unreal."
+    },
+    {
+      "name": "unreal-world",
+      "type": "skill",
+      "plugin": "cl-unreal",
+      "tier": "builder",
+      "description": "Unreal worlds: World Partition, HLODs, Landscape, PCG, Lumen or baked light, Nanite. Use when laying out levels or when cost grows with world size."
+    },
+    {
+      "name": "cocos-diagnostics-engineer",
+      "type": "agent",
+      "plugin": "cl-cocos",
+      "tier": "builder",
+      "description": "Cocos Creator diagnostics for unknown causes: script errors, black screens, crashes, missing asset UUIDs, bundle errors, build-only or host-only bugs, stalls, and memory growth. Read-heavy; returns one located cause with evidence before any fix."
+    },
+    {
+      "name": "cocos-game-developer",
+      "type": "agent",
+      "plugin": "cl-cocos",
+      "tier": "builder",
+      "description": "Cocos Creator 3.x developer in TypeScript for features spanning components, prefabs, scenes, asset bundles, build configs, and platform adapters across web, native, and mini-game targets. Use for multi-system Cocos features; the cocos-* skills take bounded work."
+    },
+    {
+      "name": "cocos-animation",
+      "type": "skill",
+      "plugin": "cl-cocos",
+      "tier": "builder",
+      "description": "Cocos Creator 3.x animation: clips, Marionette graphs, tween(), Spine and DragonBones, events. Use when animations glitch, states tangle, or motion feels wrong."
+    },
+    {
+      "name": "cocos-audio",
+      "type": "skill",
+      "plugin": "cl-cocos",
+      "tier": "builder",
+      "description": "Cocos Creator 3.x audio manager with channels, saved volume, pooling, and web unlock. Use when adding sound, volume settings, or fixing silent web builds."
+    },
+    {
+      "name": "cocos-build",
+      "type": "skill",
+      "plugin": "cl-cocos",
+      "tier": "builder",
+      "description": "Command-line Cocos Creator 3.8 builds for web, mobile, desktop, and mini-games, with signing and CI. Use when shipping any Cocos build or setting up CI."
+    },
+    {
+      "name": "cocos-data",
+      "type": "skill",
+      "plugin": "cl-cocos",
+      "tier": "builder",
+      "description": "Cocos Creator 3.x saves and config: versioned schema, migrations, mini-game storage limits. Use when adding saves, changing the format, or fixing lost progress."
+    },
+    {
+      "name": "cocos-diagnostics",
+      "type": "skill",
+      "plugin": "cl-cocos",
+      "tier": "builder",
+      "description": "Isolate Cocos Creator 3.x failures: logs, source maps, missing UUIDs, bundle errors, bisects. Use before fixing anything broken in Cocos or moving assets."
+    },
+    {
+      "name": "cocos-feature-playbook",
+      "type": "skill",
+      "plugin": "cl-cocos",
+      "tier": "builder",
+      "description": "Build one gameplay feature in Cocos Creator 3.x the kit's way, from GDD spec to tests. Use when asked to add a feature or system to a Cocos project."
+    },
+    {
+      "name": "cocos-harness",
+      "type": "skill",
+      "plugin": "cl-cocos",
+      "tier": "builder",
+      "description": "Cocos Creator 3.x harness: setup, input, UI, audio, animation, physics, worlds, data and saves, performance, builds, test hooks, services, and diagnostics. Use for any Cocos Creator task: add a feature, fix a bug, profile, or build for web, native, or mini-games."
+    },
+    {
+      "name": "cocos-input",
+      "type": "skill",
+      "plugin": "cl-cocos",
+      "tier": "builder",
+      "description": "Cocos Creator 3.x input: action map, touch, on-screen controls, gamepad, rebinding. Use when adding or fixing controls in a Cocos game."
+    },
+    {
+      "name": "cocos-performance",
+      "type": "skill",
+      "plugin": "cl-cocos",
+      "tier": "builder",
+      "description": "Measure and fix Cocos Creator 3.x performance: draw calls, atlases, GC spikes, package size. Use for frame drops, slow loads, or oversized packages."
+    },
+    {
+      "name": "cocos-physics",
+      "type": "skill",
+      "plugin": "cl-cocos",
+      "tier": "builder",
+      "description": "Cocos Creator 3.x physics: backend choice, collision groups, triggers, fixed step, mobile cost. Use when movement misbehaves or physics is too heavy."
+    },
+    {
+      "name": "cocos-scene-manifest",
+      "type": "skill",
+      "plugin": "cl-cocos",
+      "tier": "builder",
+      "description": "Describe Cocos scenes as JSON and build them idempotently via extension, MCP, or runtime. Use for data-built levels and agent-verifiable scene setup."
+    },
+    {
+      "name": "cocos-services",
+      "type": "skill",
+      "plugin": "cl-cocos",
+      "tier": "builder",
+      "description": "Hub for SDKs in Cocos Creator 3.x through one platform adapter (IAP, ads, analytics, backends). Use when adding any third-party SDK to a Cocos game."
+    },
+    {
+      "name": "cocos-setup",
+      "type": "skill",
+      "plugin": "cl-cocos",
+      "tier": "builder",
+      "description": "Set up the Cocos Creator 3.8 harness: pinned editor, CLI builds, MCP server, tests, template. Use when starting a Cocos project or onboarding an agent."
+    },
+    {
+      "name": "cocos-test-hooks",
+      "type": "skill",
+      "plugin": "cl-cocos",
+      "tier": "builder",
+      "description": "Make a Cocos Creator game agent-testable: Vitest, headless Playwright, jump-to-state flags, seeds. Use when adding tests, CI, or before agent playtests."
+    },
+    {
+      "name": "cocos-ui",
+      "type": "skill",
+      "plugin": "cl-cocos",
+      "tier": "builder",
+      "description": "Cocos Creator 3.x UI: design resolution, Widget and Layout, SafeArea, screen stack, scaling. Use for menus, HUD, settings, or UI that breaks on resize."
+    },
+    {
+      "name": "cocos-world",
+      "type": "skill",
+      "plugin": "cl-cocos",
+      "tier": "builder",
+      "description": "Cocos Creator 3.x worlds: TiledMap levels, 3D scenes, bundles on demand, streaming, culling. Use when laying out levels or when level loads stall or bloat."
+    },
+    {
+      "name": "publishing-liveops-engineer",
+      "type": "agent",
+      "plugin": "cl-platforms",
+      "tier": "builder",
+      "description": "Publishing and live operations harness lead: picks targets across stores and portals, runs each platform skill, keeps build variants and submission packets, and wires analytics, remote config, and monetization adapters. Use for any multi-platform release or the live layer after launch."
+    },
+    {
+      "name": "app-store",
+      "type": "skill",
+      "plugin": "cl-platforms",
+      "tier": "builder",
+      "description": "Ship on Apple's App Store: SDK minimums, TestFlight, privacy labels, ATT, StoreKit, App Review. Use when a game targets iPhone, iPad, Mac, or App Store Connect."
+    },
+    {
+      "name": "console-readiness",
+      "type": "skill",
+      "plugin": "cl-platforms",
+      "tier": "builder",
+      "description": "Prepare a PC or mobile game for a console port: platform programs, engine paths, port-friendly code. Use for consoles, Switch 2, PS5, Xbox, or porting."
+    },
+    {
+      "name": "coolmath-games",
+      "type": "skill",
+      "plugin": "cl-platforms",
+      "tier": "builder",
+      "description": "Pitch and prep a browser game for Coolmath Games: family-safe content, no ads or links, SDK. Use when Coolmath is mentioned or for young web players."
+    },
+    {
+      "name": "crazygames-integration",
+      "type": "skill",
+      "plugin": "cl-platforms",
+      "tier": "builder",
+      "description": "Integrate CrazyGames SDK v3 through the platform adapter, verify-first, with QA tool and preflight. Use whenever CrazyGames is mentioned or /cl-port targets it."
+    },
+    {
+      "name": "epic-games-store",
+      "type": "skill",
+      "plugin": "cl-platforms",
+      "tier": "builder",
+      "description": "Self-publish on the Epic Games Store: portal, revenue terms, ratings, EOS, build upload. Use when a game targets Epic or Epic Online Services."
+    },
+    {
+      "name": "gamedistribution-integration",
+      "type": "skill",
+      "plugin": "cl-platforms",
+      "tier": "builder",
+      "description": "Integrate GameDistribution through the platform adapter, verify-first, with preflight. Use whenever GameDistribution or GD is mentioned or /cl-port targets it."
+    },
+    {
+      "name": "gog-galaxy",
+      "type": "skill",
+      "plugin": "cl-platforms",
+      "tier": "builder",
+      "description": "Ship a PC game on GOG: curated submission, DRM-free installers, optional GALAXY SDK. Use when a game targets GOG or GOG GALAXY."
+    },
+    {
+      "name": "google-play",
+      "type": "skill",
+      "plugin": "cl-platforms",
+      "tier": "builder",
+      "description": "Ship on Google Play: account checks, 12-tester closed test, target API, AAB, Data safety, rollout. Use when a game targets Google Play or Android stores."
+    },
+    {
+      "name": "newgrounds",
+      "type": "skill",
+      "plugin": "cl-platforms",
+      "tier": "builder",
+      "description": "Publish a browser game on Newgrounds and wire Newgrounds.io medals, scoreboards, and saves. Use when Newgrounds or NG medals come up."
+    },
+    {
+      "name": "os-targets",
+      "type": "skill",
+      "plugin": "cl-platforms",
+      "tier": "builder",
+      "description": "Choose supported OSes with minimum versions, hardware tiers, and a test matrix. Use when setting supported platforms, system requirements, or a device plan."
+    },
+    {
+      "name": "platforms-hub",
+      "type": "skill",
+      "plugin": "cl-platforms",
+      "tier": "builder",
+      "description": "Store and portal publishing: Steam, GOG, Epic, Google Play, App Store, Poki, CrazyGames, GameDistribution, YouTube Playables, Wavedash, Coolmath, Newgrounds, OS targets, and consoles. Use when shipping to or integrating any store, portal, or device."
+    },
+    {
+      "name": "poki-integration",
+      "type": "skill",
+      "plugin": "cl-platforms",
+      "tier": "builder",
+      "description": "Integrate Poki through the platform adapter, verify-first: lifecycle, ad breaks, Inspector, preflight. Use whenever Poki is mentioned or /cl-port targets poki."
+    },
+    {
+      "name": "portal-directory",
+      "type": "skill",
+      "plugin": "cl-platforms",
+      "tier": "builder",
+      "description": "Pick where to ship across web portals, stores, and social platforms, with live status. Use when asked where to publish or whether a platform takes games."
+    },
+    {
+      "name": "portal-recon",
+      "type": "skill",
+      "plugin": "cl-platforms",
+      "tier": "builder",
+      "description": "Research a platform with no Crunchless skill and scaffold a verify-first integration. Use for Discord Activities, Telegram, Facebook Instant, or Yandex."
+    },
+    {
+      "name": "steam-steamworks",
+      "type": "skill",
+      "plugin": "cl-platforms",
+      "tier": "builder",
+      "description": "Ship on Steam: Steam Direct, store and build review, Steamworks SDK, SteamPipe, Deck checks. Use when a game targets Steam or Steamworks comes up."
+    },
+    {
+      "name": "wavedash",
+      "type": "skill",
+      "plugin": "cl-platforms",
+      "tier": "builder",
+      "description": "Publish a WebAssembly or WebGPU browser game on Wavedash: SDK, sandbox, lobbies, saves. Use when Wavedash comes up or a desktop-class game wants a web home."
+    },
+    {
+      "name": "youtube-playables-integration",
+      "type": "skill",
+      "plugin": "cl-platforms",
+      "tier": "builder",
+      "description": "Integrate YouTube Playables through the platform adapter: signals, saves, ads, tests. Use whenever YouTube Playables is mentioned or /cl-port targets it."
+    },
+    {
+      "name": "monetization-engineer",
+      "type": "agent",
+      "plugin": "cl-monetize",
+      "tier": "studio",
+      "description": "Monetization engineer for games: picks the model and providers, designs catalog, placements, and server grants, and delegates SDK wiring per engine. Use when work spans purchases, ads, web payments, and backends; one provider's wiring alone goes to its skill."
+    },
+    {
+      "name": "ads-admob",
+      "type": "skill",
+      "plugin": "cl-monetize",
+      "tier": "studio",
+      "description": "Wire AdMob rewarded, interstitial, and banner ads with UMP consent in Unity, Godot, or Capacitor. Use when a mobile game monetizes with AdMob."
+    },
+    {
+      "name": "ads-applovin-max",
+      "type": "skill",
+      "plugin": "cl-monetize",
+      "tier": "studio",
+      "description": "Wire AppLovin MAX mediation in Unity behind the Ads interface with the Mediation Debugger. Use when a Unity mobile game monetizes through MAX."
+    },
+    {
+      "name": "ads-levelplay",
+      "type": "skill",
+      "plugin": "cl-monetize",
+      "tier": "studio",
+      "description": "Wire Unity LevelPlay mediation in Unity behind the Ads interface, with adapters and consent. Use when a Unity mobile game uses or leaves LevelPlay."
+    },
+    {
+      "name": "ads-network-directory",
+      "type": "skill",
+      "plugin": "cl-monetize",
+      "tier": "studio",
+      "description": "Directory of ad mediation platforms and networks with a method to pick a stack by engine and region. Use when choosing or reviewing an ad stack."
+    },
+    {
+      "name": "ads-web",
+      "type": "skill",
+      "plugin": "cl-monetize",
+      "tier": "studio",
+      "description": "Ads in HTML5 games via portal SDKs (Poki, CrazyGames, GameDistribution) or H5 Games Ads. Use when a browser game monetizes with ads."
+    },
+    {
+      "name": "backend-nakama",
+      "type": "skill",
+      "plugin": "cl-monetize",
+      "tier": "studio",
+      "description": "Set up Nakama for accounts, wallets, storage, and receipt checks with server grants. Use when economy-backend picks Nakama or a Nakama project needs purchases."
+    },
+    {
+      "name": "economy-backend",
+      "type": "skill",
+      "plugin": "cl-monetize",
+      "tier": "studio",
+      "description": "Choose a backend for accounts, wallets, receipts, and cloud save (Nakama, PlayFab, UGS, Firebase). Use before adding a server-side economy or grants."
+    },
+    {
+      "name": "iap-capacitor",
+      "type": "skill",
+      "plugin": "cl-monetize",
+      "tier": "studio",
+      "description": "Add Play and App Store purchases to a Capacitor-wrapped web game, web build intact. Use when a TypeScript game ships to mobile via Capacitor with IAP."
+    },
+    {
+      "name": "iap-native",
+      "type": "skill",
+      "plugin": "cl-monetize",
+      "tier": "studio",
+      "description": "Wire Play Billing and StoreKit 2 directly or via Godot, Unreal, or Cocos plugins, server-verified. Use when a game skips Unity IAP and RevenueCat."
+    },
+    {
+      "name": "iap-revenuecat",
+      "type": "skill",
+      "plugin": "cl-monetize",
+      "tier": "studio",
+      "description": "Wire purchases and subscriptions through RevenueCat in Unity, Capacitor, web, or native. Use when a game wants cross-store entitlements without its own server."
+    },
+    {
+      "name": "iap-unity",
+      "type": "skill",
+      "plugin": "cl-monetize",
+      "tier": "studio",
+      "description": "Wire Unity IAP v5 behind the Purchases interface: pending orders, restore, server checks. Use when a Unity game needs in-app purchases."
+    },
+    {
+      "name": "monetization-audit",
+      "type": "skill",
+      "plugin": "cl-monetize",
+      "tier": "studio",
+      "description": "Read-only 0 to 100 audit of purchases, ads, grants, and policy, with ranked fixes. Use before launch, after an SDK update, or when revenue drops."
+    },
+    {
+      "name": "monetization-iap-ads",
+      "type": "skill",
+      "plugin": "cl-monetize",
+      "tier": "studio",
+      "description": "Monetization design hub: model, catalog, ad placements, lifecycle, then the provider skill. Use when adding purchases or ads, or when revenue is weak."
+    },
+    {
+      "name": "monetize-hub",
+      "type": "skill",
+      "plugin": "cl-monetize",
+      "tier": "studio",
+      "description": "Game monetization: in-app purchases (Unity, native, RevenueCat, Capacitor), web payments, ads and mediation (AdMob, LevelPlay, AppLovin MAX, web), economy backends, Nakama, receipts, and audits. Use when adding purchases or ads, or reviewing how a game earns."
+    },
+    {
+      "name": "playable-preview-test",
+      "type": "skill",
+      "plugin": "cl-monetize",
+      "tier": "studio",
+      "description": "Test a playable ad in each network's preview tool on a real phone, pass or fail per network. Use after playable-ad-pack or when a network rejects one."
+    },
+    {
+      "name": "rewards-and-receipts",
+      "type": "skill",
+      "plugin": "cl-monetize",
+      "tier": "studio",
+      "description": "Verify receipts and ad rewards server-side and grant once via a ledger, with refunds handled. Use when real money or prizes are granted."
+    },
+    {
+      "name": "web-payments",
+      "type": "skill",
+      "plugin": "cl-monetize",
+      "tier": "studio",
+      "description": "Choose and wire web payments (Xsolla, Stripe, RevenueCat Web) with server grants. Use when a game sells outside Google Play and the App Store."
+    },
+    {
+      "name": "analytics-analyst",
+      "type": "agent",
+      "plugin": "cl-analytics",
+      "tier": "studio",
+      "description": "Analytics analyst for games: writes the analytics plan, picks providers and MMPs per engine, keeps the measured metrics log, and explains results with evidence. Use for measurement design, provider choice, metrics logging, and why-did-this-happen reviews; SDK wiring goes to the provider skill."
+    },
+    {
+      "name": "analytics-amplitude",
+      "type": "skill",
+      "plugin": "cl-analytics",
+      "tier": "studio",
+      "description": "Wire Amplitude analytics in Unity (iOS, Android), Unreal, or web behind the game's analytics interface. Use when a game picks Amplitude."
+    },
+    {
+      "name": "analytics-directory",
+      "type": "skill",
+      "plugin": "cl-analytics",
+      "tier": "studio",
+      "description": "Directory of game analytics services (GameAnalytics, Firebase, Amplitude, PostHog, and more) with SDK paths per engine. Use when choosing or replacing one."
+    },
+    {
+      "name": "analytics-events",
+      "type": "skill",
+      "plugin": "cl-analytics",
+      "tier": "studio",
+      "description": "Typed event taxonomy, provider-neutral track interface, and consent gating. Use when adding analytics or when events are missing or inconsistent."
+    },
+    {
+      "name": "analytics-firebase",
+      "type": "skill",
+      "plugin": "cl-analytics",
+      "tier": "studio",
+      "description": "Wire Google Analytics for Firebase in Unity, web, or Capacitor with consent mode and DebugView checks. Use when a game picks Firebase analytics."
+    },
+    {
+      "name": "analytics-gameanalytics",
+      "type": "skill",
+      "plugin": "cl-analytics",
+      "tier": "studio",
+      "description": "Wire GameAnalytics in any engine by mapping game events to its fixed event types. Use when a game picks GameAnalytics."
+    },
+    {
+      "name": "analytics-hub",
+      "type": "skill",
+      "plugin": "cl-analytics",
+      "tier": "studio",
+      "description": "Game analytics and live ops: analytics plans and events, Firebase, GameAnalytics, Amplitude, Unity Analytics, attribution, metrics logs, insights reviews, remote config, and experiments. Use when measuring players, wiring analytics, or asking why a game succeeds."
+    },
+    {
+      "name": "analytics-plan",
+      "type": "skill",
+      "plugin": "cl-analytics",
+      "tier": "studio",
+      "description": "Write the analytics plan before any SDK: questions, KPIs, events, funnels, consent. Use at project start, before soft launch, or with data but no answers."
+    },
+    {
+      "name": "analytics-unity",
+      "type": "skill",
+      "plugin": "cl-analytics",
+      "tier": "studio",
+      "description": "Wire Unity Analytics (UGS) behind the game's analytics interface with consent and package pitfalls. Use when a Unity game picks Unity Analytics."
+    },
+    {
+      "name": "attribution-mmp",
+      "type": "skill",
+      "plugin": "cl-analytics",
+      "tier": "studio",
+      "description": "Decide on a mobile measurement partner (AppsFlyer, Adjust, Singular) and wire it with ATT and SKAdNetwork. Use when paid user acquisition starts."
+    },
+    {
+      "name": "insights-review",
+      "type": "skill",
+      "plugin": "cl-analytics",
+      "tier": "studio",
+      "description": "Explain why a game is up or down from measured numbers, evidence apart from guesses, into next actions. Use after a launch or release, or when growth stalls."
+    },
+    {
+      "name": "metrics-log",
+      "type": "skill",
+      "plugin": "cl-analytics",
+      "tier": "studio",
+      "description": "Keep a dated log of a game's real numbers per platform in .cl/metrics/, never estimated. Use after a launch, weekly while live, or before insights-review."
+    },
+    {
+      "name": "remote-config-experiments",
+      "type": "skill",
+      "plugin": "cl-analytics",
+      "tier": "studio",
+      "description": "Remote config, feature flags, kill switches, staged rollouts, and A/B tests behind one interface. Use for live tuning, experiments, or turning features off."
+    },
+    {
+      "name": "multiplayer-engineer",
+      "type": "agent",
+      "plugin": "cl-multiplayer",
+      "tier": "builder",
+      "description": "Multiplayer engineer for every engine: picks the netcode stack, writes the authority table, and designs protocol, reconnects, and relays, then hands builds to cl-builder and tests to mp-testing. Default for small web and Unity games: WebRTC P2P with a Cloudflare relay fallback."
+    },
+    {
+      "name": "mp-authority",
+      "type": "skill",
+      "plugin": "cl-multiplayer",
+      "tier": "builder",
+      "description": "Write a multiplayer authority table: owner, prediction, reconciliation, validation. Use when designing a multiplayer feature, or for cheating or rubber-banding."
+    },
+    {
+      "name": "mp-fishnet",
+      "type": "skill",
+      "plugin": "cl-multiplayer",
+      "tier": "builder",
+      "description": "Unity online play with FishNet: rig, spawning, SyncVars, RPCs, prediction, web relay. Use when a Unity game chose FishNet or has FishNet desyncs."
+    },
+    {
+      "name": "mp-godot",
+      "type": "skill",
+      "plugin": "cl-multiplayer",
+      "tier": "builder",
+      "description": "Godot 4 online play with the high-level API: peers, RPCs, authority, spawners, headless servers. Use when a Godot game adds co-op or versus or its sync breaks."
+    },
+    {
+      "name": "mp-lobbies",
+      "type": "skill",
+      "plugin": "cl-multiplayer",
+      "tier": "builder",
+      "description": "Build join flows: room codes, lobbies, invites, quick match, late join, host migration. Use when a multiplayer game needs a way for players to find each other."
+    },
+    {
+      "name": "mp-roblox",
+      "type": "skill",
+      "plugin": "cl-multiplayer",
+      "tier": "builder",
+      "description": "Make a Roblox experience multiplayer-safe: server state, validated remotes, ownership. Use when a Roblox game is exploitable, laggy, or going competitive."
+    },
+    {
+      "name": "mp-testing",
+      "type": "skill",
+      "plugin": "cl-multiplayer",
+      "tier": "builder",
+      "description": "Repeatable multiplayer tests: local clients, bots, simulated lag and loss, peer logs. Use before multiplayer playtests or for hard-to-reproduce netcode bugs."
+    },
+    {
+      "name": "mp-transports",
+      "type": "skill",
+      "plugin": "cl-multiplayer",
+      "tier": "builder",
+      "description": "Choose the transport: WebRTC with TURN and WebSocket fallback, UGS Relay, Steam, EOS. Use when players can't connect, lag is high, or relay cost needs a number."
+    },
+    {
+      "name": "mp-unity-ngo",
+      "type": "skill",
+      "plugin": "cl-multiplayer",
+      "tier": "builder",
+      "description": "Unity online play with Netcode for GameObjects, UGS Sessions, Relay, and Play Mode tests. Use when a Unity game chose NGO or upgrades NGO 2.x to 3.x."
+    },
+    {
+      "name": "mp-unreal",
+      "type": "skill",
+      "plugin": "cl-multiplayer",
+      "tier": "builder",
+      "description": "Unreal 5 online play with replication, RPCs, movement prediction, and Steam or EOS sessions. Use when an Unreal game adds multiplayer or has replication bugs."
+    },
+    {
+      "name": "mp-web",
+      "type": "skill",
+      "plugin": "cl-multiplayer",
+      "tier": "builder",
+      "description": "Browser game online play: WebRTC P2P with a Durable Object relay, Colyseus, or rooms. Use when a web, Capacitor, or desktop-wrapped game needs multiplayer."
+    },
+    {
+      "name": "multiplayer-hub",
+      "type": "skill",
+      "plugin": "cl-multiplayer",
+      "tier": "builder",
+      "description": "Multiplayer: netcode choice, authority and cheating, transports, relays, lobbies, Fish-Net, Netcode for GameObjects, Godot, Unreal, Roblox, and web netcode, and multi-client tests. Use when adding online play, picking netcode, or fixing sync or cheats."
+    },
+    {
+      "name": "netcode-choice",
+      "type": "skill",
+      "plugin": "cl-multiplayer",
+      "tier": "builder",
+      "description": "Pick the multiplayer stack: topology, authority, library per engine, transport, lobbies. Use when a game is about to add online play or outgrows its netcode."
+    },
+    {
+      "name": "compliance-reviewer",
+      "type": "agent",
+      "plugin": "cl-compliance",
+      "tier": "studio",
+      "description": "Read-only compliance pass before a launch or store submission: data inventory, consent gating, kids rules, age rating answers, store data forms, and monetization rules, with each finding marked OK, CHANGE, or LAWYER. Common knowledge, not legal advice. Use before any public release."
+    },
+    {
+      "name": "age-ratings",
+      "type": "skill",
+      "plugin": "cl-compliance",
+      "tier": "studio",
+      "description": "Get each store's age ratings: IARC, Steam survey, Apple questions, console boards. Not legal advice. Use before any store submission."
+    },
+    {
+      "name": "compliance-hub",
+      "type": "skill",
+      "plugin": "cl-compliance",
+      "tier": "studio",
+      "description": "Game compliance: privacy policies, consent, kids and COPPA, age ratings, store data forms, and loot box and monetization rules. Use when a game collects data, targets children, or needs store forms. Common knowledge only, not legal advice."
+    },
+    {
+      "name": "consent-management",
+      "type": "skill",
+      "plugin": "cl-compliance",
+      "tier": "studio",
+      "description": "Gate analytics and ads on consent (GDPR, CCPA, UMP, TCF, ATT) through one service. Not legal advice. Use before any tracking or ads SDK starts."
+    },
+    {
+      "name": "kids-and-coppa",
+      "type": "skill",
+      "plugin": "cl-compliance",
+      "tier": "studio",
+      "description": "Decide if a game targets children and apply COPPA, GDPR-K, UK Children's Code, and store kids rules. Not legal advice. Use when players may be under 16."
+    },
+    {
+      "name": "monetization-rules",
+      "type": "skill",
+      "plugin": "cl-compliance",
+      "tier": "studio",
+      "description": "Check purchases, loot boxes, gacha, and rewarded ads against odds and dark-pattern rules. Not legal advice. Use before any paid feature ships."
+    },
+    {
+      "name": "privacy-policy",
+      "type": "skill",
+      "plugin": "cl-compliance",
+      "tier": "studio",
+      "description": "Draft a plain privacy policy from an SDK-by-SDK data inventory. Not legal advice. Use before a store listing, analytics, ads, or accounts go live."
+    },
+    {
+      "name": "store-data-forms",
+      "type": "skill",
+      "plugin": "cl-compliance",
+      "tier": "studio",
+      "description": "Fill Google Play Data safety and Apple privacy labels from one data inventory. Not legal advice. Use before store submission or after any SDK change."
+    },
+    {
+      "name": "marketing-lead",
+      "type": "agent",
+      "plugin": "cl-marketing",
+      "tier": "studio",
+      "description": "Marketing lead for a game: plans the posting cadence, picks this week's angles from the real work, hands drafting to post-writer, and checks every draft in the house voice with slop-check and text-audit before showing it. Drafts only; never posts. Use for a weekly post plan or a campaign."
+    },
+    {
+      "name": "community-management",
+      "type": "skill",
+      "plugin": "cl-marketing",
+      "tier": "studio",
+      "description": "Run a game's Discord and draft store review replies within each store's rules. Drafts only. Use when opening a Discord, before a demo or launch, or for reviews."
+    },
+    {
+      "name": "content-calendar",
+      "type": "skill",
+      "plugin": "cl-marketing",
+      "tier": "studio",
+      "description": "Set a posting cadence: fixed days, frequency per platform, .cl/marketing/calendar.md. Use when starting to market a game or when posting has gone irregular."
+    },
+    {
+      "name": "creator-outreach",
+      "type": "skill",
+      "plugin": "cl-marketing",
+      "tier": "studio",
+      "description": "Find fitting streamers and YouTubers, plan key distribution, draft outreach. Never sends. Use before a demo, festival, or launch, or when a game needs coverage."
+    },
+    {
+      "name": "devlog",
+      "type": "skill",
+      "plugin": "cl-marketing",
+      "tier": "studio",
+      "description": "Draft a devlog from real work for Steam, itch.io, a blog, or Reddit. Drafts only. Use for a weekly or monthly devlog or a milestone write-up."
+    },
+    {
+      "name": "launch-campaign",
+      "type": "skill",
+      "plugin": "cl-marketing",
+      "tier": "studio",
+      "description": "Plan announce-to-launch beats: wishlists, Next Fest, demo, portal and mobile beats, dates. Use when a store page goes up or a launch date is set."
+    },
+    {
+      "name": "marketing-hub",
+      "type": "skill",
+      "plugin": "cl-marketing",
+      "tier": "studio",
+      "description": "Game marketing: post ideas and drafts, devlogs, content calendar, press kits, creator outreach, launch campaigns, community, store listings, capsules, trailers, UA creatives, web presence, and metrics. Use when promoting a game or writing its store page."
+    },
+    {
+      "name": "marketing-metrics",
+      "type": "skill",
+      "plugin": "cl-marketing",
+      "tier": "studio",
+      "description": "Track wishlists, follows, CTR, and conversion per post and beat via UTM links, never estimated. Use weekly while marketing and after each beat."
+    },
+    {
+      "name": "post-ideas",
+      "type": "skill",
+      "plugin": "cl-marketing",
+      "tier": "studio",
+      "description": "Harvest real work (commits, tickets, captures, playtests) into ranked post ideas. Use before filling the content calendar or when there's nothing to post."
+    },
+    {
+      "name": "post-writer",
+      "type": "skill",
+      "plugin": "cl-marketing",
+      "tier": "studio",
+      "description": "Draft platform-native posts (X, Bluesky, Reddit, TikTok, Discord, Steam) in the house voice. Never posts. Use when a post idea needs words for a platform."
+    },
+    {
+      "name": "press-kit",
+      "type": "skill",
+      "plugin": "cl-marketing",
+      "tier": "studio",
+      "description": "Build a presskit()-style page, a one-page fact sheet, and an asset checklist. Use before a reveal, a festival, creator outreach, or launch."
+    },
+    {
+      "name": "store-capsules",
+      "type": "skill",
+      "plugin": "cl-marketing",
+      "tier": "studio",
+      "description": "Plan and check capsules, key art, icons, and screenshots per store at official sizes. Use before a store page goes live, a sale, or a festival."
+    },
+    {
+      "name": "store-listing",
+      "type": "skill",
+      "plugin": "cl-marketing",
+      "tier": "studio",
+      "description": "Prepare a Steam, itch.io, or portal listing: verified asset specs, search-ready copy, tags, upload steps. Use for store pages, demos, and playtests."
+    },
+    {
+      "name": "structured-data",
+      "type": "skill",
+      "plugin": "cl-marketing",
+      "tier": "studio",
+      "description": "Add or fix JSON-LD (VideoGame, Organization, FAQPage, Event) for game and studio pages. Use when a page needs rich results or reports structured data errors."
+    },
+    {
+      "name": "trailer-plan",
+      "type": "skill",
+      "plugin": "cl-marketing",
+      "tier": "studio",
+      "description": "Plan a gameplay-first trailer: hook, shot list, capture settings, muted cut, store exports. Use before capturing footage for a store, festival, or pitch."
+    },
+    {
+      "name": "ua-creatives",
+      "type": "skill",
+      "plugin": "cl-marketing",
+      "tier": "studio",
+      "description": "Plan and test UA video and playable ads from real gameplay, per network spec. Use when buying installs, testing a concept, or refreshing tired ads."
+    },
+    {
+      "name": "web-presence-audit",
+      "type": "skill",
+      "plugin": "cl-marketing",
+      "tier": "studio",
+      "description": "Audit studio and game web pages for crawlability, content, and trust signals. Use before a launch or wishlist push, or when a page converts poorly."
+    },
+    {
+      "name": "cl-market",
+      "type": "command",
+      "plugin": "cl-marketing",
+      "tier": "studio",
+      "description": "Turn this week's work into a post plan and drafts in your house voice. Drafts only. Use when it is time to plan the week's posts."
+    }
+  ]
+}

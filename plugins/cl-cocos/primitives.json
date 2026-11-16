@@ -1,0 +1,11 @@
+{
+  "engine": "cocos-creator",
+  "primitives": [
+    { "name": "Cocos Dashboard", "kind": "cli", "source": "https://www.cocos.com/en/creator-download", "install": "Download Cocos Dashboard from https://www.cocos.com/en/creator-download, then install the editor version below from it", "license": "Cocos Creator EULA (proprietary, no SPDX identifier)", "required": true, "verified": "2026-11-15" },
+    { "name": "Cocos Creator 3.8.8", "kind": "cli", "source": "https://www.cocos.com/en/creator-download", "install": "Cocos Dashboard > Editor > install 3.8.8 (released 16 Dec 2025). Build headless with: CocosCreator --project <path> --build \"configPath=<build-config.json>\"", "license": "Cocos Creator EULA (proprietary, no SPDX identifier)", "required": true, "verified": "2026-11-15" },
+    { "name": "cocos-creator-mcp (harady)", "kind": "mcp", "source": "https://github.com/harady/cocos-creator-mcp", "install": "Copy into <project>/extensions/cocos-creator-mcp at tag v2.0.0, run npm install && npm run build there, enable in Extension Manager, Start Server, then: claude mcp add --transport http cocos-creator http://127.0.0.1:3000/mcp", "license": "MIT", "required": false, "verified": "2026-11-15" },
+    { "name": "Node.js LTS (for editor extensions and logic tests)", "kind": "cli", "source": "https://nodejs.org/", "install": "Install the current Node.js LTS (TODO(verify: the 3.8 manual names no Node version for the editor's extension toolchain))", "license": "MIT", "required": false, "verified": "2026-11-15" },
+    { "name": "Vitest (logic unit tests outside the editor)", "kind": "package", "source": "https://vitest.dev/", "install": "npm install -D vitest@<pinned version> (current major is 5, 5.1.0 on 2026-11-15, which needs Node 22.12 or later)", "license": "MIT", "required": false, "verified": "2026-11-15" },
+    { "name": "Playwright (drive web builds headless)", "kind": "package", "source": "https://playwright.dev/", "install": "npm install -D @playwright/test@<pinned version> && npx playwright install chromium", "license": "Apache-2.0", "required": false, "verified": "2026-11-15" }
+  ]
+}

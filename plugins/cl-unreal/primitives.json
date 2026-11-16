@@ -1,0 +1,63 @@
+{
+  "engine": "unreal",
+  "primitives": [
+    {
+      "name": "Unreal Engine 5.8 (Editor, UnrealBuildTool, RunUAT)",
+      "kind": "cli",
+      "source": "https://forums.unrealengine.com/t/5-8-4-hotfix-released/2842775",
+      "install": "Epic Games Launcher > Unreal Engine > Library > + > 5.8.4 (or build from source at https://github.com/EpicGames/UnrealEngine after linking a GitHub account to an Epic account)",
+      "license": "LicenseRef-Unreal-Engine-EULA",
+      "version": "5.8.4",
+      "required": true,
+      "verified": "2026-11-15"
+    },
+    {
+      "name": "Unreal MCP (Model Context Protocol plugin, experimental, built in from 5.8)",
+      "kind": "mcp",
+      "source": "https://dev.epicgames.com/documentation/unreal-engine/unreal-engine-5-8-release-notes",
+      "install": "Edit > Plugins > search 'Model Context Protocol' > enable > restart. TODO(verify: Epic docs return no body to automated fetch) plugin id, the Auto Start Server preference, and the default endpoint http://127.0.0.1:8000/mcp (reported by third-party guides only)",
+      "license": "LicenseRef-Unreal-Engine-EULA",
+      "required": false,
+      "verified": "2026-11-15"
+    },
+    {
+      "name": "EngineWire, Unreal MCP server (community)",
+      "kind": "mcp",
+      "source": "https://github.com/ChiR24/Unreal_mcp",
+      "install": "Copy the EngineWire plugin from the v0.6.0 release into <Project>/Plugins/EngineWire, enable it, then point the client at http://127.0.0.1:3000/mcp or run npx unreal-engine-mcp-server@0.6.0 (stdio proxy)",
+      "license": "MIT",
+      "version": "v0.6.0",
+      "required": false,
+      "verified": "2026-11-15"
+    },
+    {
+      "name": "Automation Test Framework and Gauntlet (built in)",
+      "kind": "library",
+      "source": "https://dev.epicgames.com/documentation/en-us/unreal-engine/automation-test-framework-in-unreal-engine",
+      "install": "Built into the engine. Enable the Functional Testing Editor plugin for Functional Tests; Gauntlet runs through RunUAT RunUnreal",
+      "license": "LicenseRef-Unreal-Engine-EULA",
+      "required": true,
+      "verified": "2026-11-15",
+      "source_note": "TODO(verify: Epic docs return no body to automated fetch) the URL resolves; Epic's docs site serves every path as a single-page app, so it could not be checked automatically"
+    },
+    {
+      "name": "C++ toolchain (Visual Studio or Rider on Windows, Xcode on macOS)",
+      "kind": "cli",
+      "source": "https://dev.epicgames.com/documentation/en-us/unreal-engine/setting-up-visual-studio-development-environment-for-cplusplus-projects-in-unreal-engine",
+      "install": "Install the versions listed in the 5.8 release notes' platform SDK table. TODO(verify: the 5.8 release notes page returns no body to automated fetch) exact Visual Studio, Windows SDK, and Xcode versions for 5.8",
+      "license": "NOASSERTION",
+      "required": true,
+      "verified": "2026-11-15",
+      "source_note": "TODO(verify: Epic docs return no body to automated fetch) the URL resolves; Epic's docs site serves every path as a single-page app, so it could not be checked automatically"
+    },
+    {
+      "name": "Android SDK and NDK through Turnkey",
+      "kind": "cli",
+      "source": "https://dev.epicgames.com/documentation/unreal-engine/automated-android-sdk-ndk-and-jdk-setup-in-unreal-engine",
+      "install": "Editor: Platforms > SDK Management > Android > Install SDK, or RunUAT.bat Turnkey -Command=InstallSDK -platform=Android (needs a machine with no earlier Android Studio install or Android environment variables). Required versions: the Android Development Requirements page for 5.8, TODO(verify: Epic docs return no body to automated fetch) the exact NDK",
+      "license": "NOASSERTION",
+      "required": false,
+      "verified": "2026-11-15"
+    }
+  ]
+}

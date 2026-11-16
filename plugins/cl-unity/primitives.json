@@ -1,0 +1,76 @@
+{
+  "engine": "unity",
+  "primitives": [
+    {
+      "name": "Unity CLI",
+      "kind": "cli",
+      "source": "https://docs.unity.com/en-us/unity-cli/use-unity-cli",
+      "install": "Windows PowerShell: $env:UNITY_CLI_VERSION='1.0.0'; irm https://public-cdn.cloud.unity3d.com/hub/prod/cli/install.ps1 | iex   macOS/Linux: curl -fsSL https://public-cdn.cloud.unity3d.com/hub/prod/cli/install.sh | UNITY_CLI_VERSION=1.0.0 bash",
+      "license": "NOASSERTION",
+      "license_note": "Free, separate from Unity AI per the docs; license text TODO(verify: CLI docs state no license, only the Documentation Terms of Use)",
+      "version": "1.0.0",
+      "required": true,
+      "verified": "2026-11-15"
+    },
+    {
+      "name": "Unity Pipeline package (com.unity.pipeline)",
+      "kind": "package",
+      "source": "https://docs.unity.com/en-us/unity-cli/replace-mcp-server-unity-cli",
+      "install": "unity pipeline install   (run from the project root; Unity 6.0 LTS or later)",
+      "license": "NOASSERTION",
+      "license_note": "TODO(verify: no license text on the Unity CLI docs pages)",
+      "required": true,
+      "verified": "2026-11-15"
+    },
+    {
+      "name": "Unity MCP (built into the Unity CLI)",
+      "kind": "mcp",
+      "source": "https://docs.unity.com/en-us/unity-cli/replace-mcp-server-unity-cli",
+      "install": "unity mcp configure claude-code   (list clients: unity mcp configure --list)",
+      "license": "NOASSERTION",
+      "license_note": "Ships inside the Unity CLI binary. Replaces the deprecated MCP server in com.unity.ai.assistant",
+      "required": false,
+      "verified": "2026-11-15"
+    },
+    {
+      "name": "Unity agent plugin (official skill pack)",
+      "kind": "skill-pack",
+      "source": "https://github.com/Unity-Technologies/unity-agent-plugin",
+      "install": "/plugin marketplace add Unity-Technologies/unity-agent-plugin  then  /plugin install unity@unity-agent-plugin",
+      "license": "LicenseRef-Unity-Companion-License",
+      "version": "0.1.9-beta",
+      "required": false,
+      "verified": "2026-11-15"
+    },
+    {
+      "name": "MCP for Unity (community, CoplayDev)",
+      "kind": "mcp",
+      "source": "https://github.com/CoplayDev/unity-mcp",
+      "install": "Package Manager > Add package from git URL: https://github.com/CoplayDev/unity-mcp.git?path=/MCPForUnity#v10.3.0",
+      "license": "MIT",
+      "version": "v10.3.0",
+      "required": false,
+      "verified": "2026-11-15"
+    },
+    {
+      "name": "Unity Test Framework (com.unity.test-framework)",
+      "kind": "package",
+      "source": "https://docs.unity3d.com/Packages/com.unity.test-framework@latest",
+      "install": "Ships with the Editor; confirm it is listed in Packages/manifest.json, or add it in Package Manager by name",
+      "license": "LicenseRef-Unity-Companion-License",
+      "license_note": "TODO(verify: package license page returned 404 to automated fetch)",
+      "required": true,
+      "verified": "2026-11-15"
+    },
+    {
+      "name": "Input System (com.unity.inputsystem)",
+      "kind": "package",
+      "source": "https://docs.unity3d.com/Packages/com.unity.inputsystem@latest",
+      "install": "Package Manager > Unity Registry > Input System (use the version the Editor recommends)",
+      "license": "LicenseRef-Unity-Companion-License",
+      "license_note": "TODO(verify: package license page returned 404 to automated fetch)",
+      "required": false,
+      "verified": "2026-11-15"
+    }
+  ]
+}

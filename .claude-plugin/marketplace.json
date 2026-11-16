@@ -1,0 +1,72 @@
+{
+  "name": "crunchless",
+  "owner": {
+    "name": "crunchless"
+  },
+  "metadata": {
+    "description": "Agents, skills, commands, and scripts that give coding agents a full harness for game development: Unity, web and Capacitor, Roblox, Unreal, Godot, and Cocos Creator, plus design, platforms, monetization, analytics, multiplayer, QA, compliance, and production.",
+    "version": "0.15.0"
+  },
+  "plugins": [
+    {
+      "name": "cl-core",
+      "source": "./plugins/cl-core",
+      "description": "Free edition of cl-core: cl-builder, cl-scout, calibrated-review, cl-router, project-profile, scope-check, scope-guard, slop-check, /cl-audit, /cl-doctor, /cl-help, /cl-ship, and /cl-start. Builder and Studio add 6 more members."
+    },
+    {
+      "name": "cl-assistant",
+      "source": "./plugins/cl-assistant",
+      "description": "The kit's own guide: FAQ, tier and member knowledge generated from the registry, usage paths for Claude Code, vendored repos, Claude Projects, Cowork, and CI, troubleshooting, and the /cl-ask command. Optional; leave it out to turn it off."
+    },
+    {
+      "name": "cl-web",
+      "source": "./plugins/cl-web",
+      "description": "Free edition of cl-web: web-game-architecture and web-game-audit. Builder and Studio add 24 more members."
+    },
+    {
+      "name": "cl-unity",
+      "source": "./plugins/cl-unity",
+      "description": "Free edition of cl-unity: unity-project-audit. Builder and Studio add 25 more members."
+    },
+    {
+      "name": "cl-godot",
+      "source": "./plugins/cl-godot",
+      "description": "Free edition of cl-godot: godot-project-audit. Builder and Studio add 24 more members."
+    },
+    {
+      "name": "cl-design",
+      "source": "./plugins/cl-design",
+      "description": "Free edition of cl-design: competitor-snapshot, core-loop-design, game-brainstorm, game-naming, mechanic-critique, and /cl-brainstorm. Builder and Studio add 20 more members."
+    },
+    {
+      "name": "cl-gameplay",
+      "source": "./plugins/cl-gameplay",
+      "description": "Free edition of cl-gameplay: genre-blueprints. Builder and Studio add 6 more members."
+    },
+    {
+      "name": "cl-release",
+      "source": "./plugins/cl-release",
+      "description": "Free edition of cl-release: ship-check-lite. Builder and Studio add 7 more members."
+    },
+    {
+      "name": "cl-roblox",
+      "source": "./plugins/cl-roblox",
+      "description": "Free edition of cl-roblox: roblox-project-audit. Builder and Studio add 20 more members."
+    },
+    {
+      "name": "cl-unreal",
+      "source": "./plugins/cl-unreal",
+      "description": "Free edition of cl-unreal: unreal-project-audit. Builder and Studio add 18 more members."
+    },
+    {
+      "name": "cl-cocos",
+      "source": "./plugins/cl-cocos",
+      "description": "Free edition of cl-cocos: cocos-project-audit. Builder and Studio add 18 more members."
+    },
+    {
+      "name": "cl-platforms",
+      "source": "./plugins/cl-platforms",
+      "description": "Free edition of cl-platforms: itch-io. Builder and Studio add 18 more members."
+    }
+  ]
+}

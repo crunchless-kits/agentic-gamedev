@@ -1,0 +1,14 @@
+{
+  "name": "cl-cocos",
+  "version": "0.15.0",
+  "description": "Free edition of cl-cocos: cocos-project-audit. Builder and Studio add 18 more members.",
+  "author": {
+    "name": "crunchless"
+  },
+  "keywords": [
+    "game-development",
+    "cocos-creator",
+    "typescript",
+    "mini-games"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "studio": {
+    "name": "<studio name>",
+    "credit": "<credit line shown in game>",
+    "homeRegion": "<country or region>"
+  },
+  "engine": {
+    "name": "unity | godot | web-ts",
+    "version": "<as installed>"
+  },
+  "platforms": [
+    "android",
+    "ios",
+    "web",
+    "pc"
+  ],
+  "orientation": "portrait | landscape | both",
+  "sessionLengthMinutes": [
+    3,
+    5
+  ],
+  "audience": "general-adults | casual-over-50 | children | expert",
+  "referenceDevices": [
+    {
+      "name": "<mid-range Android phone>",
+      "role": "slowest supported"
+    }
+  ],
+  "operatingContext": "solo-bootstrapped | small-funded-team | publisher-backed",
+  "testGate": {
+    "channel": "paid-installs | wishlists | playtest",
+    "budgetUsd": 100,
+    "days": 7,
+    "market": "<country>",
+    "costPerInstallUsdRange": [
+      0.2,
+      0.6
+    ],
+    "dayOneRetentionTarget": 0.35,
+    "minimumInstalls": 250
+  },
+  "aiPolicy": {
+    "internalUse": "allowed | disclosed | none",
+    "jamOrEventException": "none | per-event with the exception recorded in the quality floor",
+    "shipped": "none | disclosed | allowed",
+    "publicAnswer": "<the exact sentence used in store and jam forms>"
+  },
+  "qualityFloor": "docs/QUALITY-FLOOR.md",
+  "houseRules": "docs/house-rules.md",
+  "houseDir": ".cl/house",
+  "studioDir": ".cl/studio",
+  "sharedModuleRepo": "<url or null>",
+  "outputs": {
+    "docs": "docs",
+    "audits": "docs/audits",
+    "releases": "releases",
+    "specHome": "docs/SPEC.md"
+  },
+  "trackClaudeFiles": true,
+  "maxParallelAgents": 5,
+  "usagePlanNote": "Set maxParallelAgents to 1 or 2 on a Claude Pro plan if parallel runs hit the usage window; audits and ship checks checkpoint and resume.",
+  "pitchFormat": {
+    "gate": "fifteen-second-ad | two-minute-video | playable-demo",
+    "note": "proto-scoping uses this as the hard gate"
+  }
+}

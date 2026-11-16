@@ -1,0 +1,14 @@
+{
+  "name": "cl-roblox",
+  "version": "0.15.0",
+  "description": "Free edition of cl-roblox: roblox-project-audit. Builder and Studio add 20 more members.",
+  "author": {
+    "name": "crunchless"
+  },
+  "keywords": [
+    "game-development",
+    "roblox",
+    "luau",
+    "rojo"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "name": "crunchless-gamedev-skills",
+  "version": "0.15.0",
+  "description": "All-in-One Game Development Harness & Studio Assistant for Claude Code, Codex, GitHub Copilot, Cursor, and Gemini: Unity, web, Roblox, Unreal, Godot, and Cocos, with design, platforms, monetization, analytics, multiplayer, QA, marketing, and production. Brand: Crunchless.",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "crunchless": "./scripts/install.mjs"
+  },
+  "scripts": {
+    "registry": "node scripts/registry.mjs && node scripts/guide_knowledge.mjs && node scripts/freshness.mjs && node scripts/llms.mjs && node scripts/site_tags.mjs",
+    "check": "node scripts/registry.mjs --check",
+    "install:dry": "node scripts/install.mjs --dry-run",
+    "smoke": "node scripts/smoke.mjs",
+    "verify-refs": "node scripts/verify_refs.mjs",
+    "verify-refs:fetch": "node scripts/verify_refs.mjs --fetch",
+    "export:agents": "node scripts/export_agents.mjs",
+    "budget": "node scripts/token_budget.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "kit": {
+    "brand": "Crunchless",
+    "slug": "crunchless",
+    "prefix": "cl"
+  },
+  "keywords": [
+    "claude-code",
+    "agent-skills",
+    "claude-skills",
+    "codex",
+    "github-copilot",
+    "cursor",
+    "gemini-cli",
+    "game-development",
+    "gamedev",
+    "game-dev-harness",
+    "unity",
+    "roblox",
+    "unreal-engine",
+    "godot",
+    "cocos-creator",
+    "typescript",
+    "capacitor",
+    "phaser",
+    "threejs",
+    "steam",
+    "google-play",
+    "app-store",
+    "web-portals",
+    "playable-ads",
+    "monetization",
+    "analytics",
+    "multiplayer"
+  ]
+}

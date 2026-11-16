@@ -1,0 +1,92 @@
+{
+  "unity": [
+    "cl-core",
+    "cl-assistant",
+    "cl-unity",
+    "cl-design",
+    "cl-release",
+    "cl-platforms"
+  ],
+  "web": [
+    "cl-core",
+    "cl-assistant",
+    "cl-web",
+    "cl-design",
+    "cl-release",
+    "cl-platforms"
+  ],
+  "roblox": [
+    "cl-core",
+    "cl-assistant",
+    "cl-roblox",
+    "cl-design",
+    "cl-release"
+  ],
+  "unreal": [
+    "cl-core",
+    "cl-assistant",
+    "cl-unreal",
+    "cl-design",
+    "cl-release",
+    "cl-platforms"
+  ],
+  "godot": [
+    "cl-core",
+    "cl-assistant",
+    "cl-godot",
+    "cl-design",
+    "cl-release",
+    "cl-platforms"
+  ],
+  "cocos": [
+    "cl-core",
+    "cl-assistant",
+    "cl-cocos",
+    "cl-design",
+    "cl-release",
+    "cl-platforms"
+  ],
+  "web-portals": [
+    "cl-core",
+    "cl-assistant",
+    "cl-web",
+    "cl-design",
+    "cl-release",
+    "cl-platforms"
+  ],
+  "playables": [
+    "cl-core",
+    "cl-assistant",
+    "cl-web",
+    "cl-release"
+  ],
+  "mobile": [
+    "cl-core",
+    "cl-assistant",
+    "cl-platforms"
+  ],
+  "live-ops": [
+    "cl-core",
+    "cl-assistant"
+  ],
+  "multiplayer": [
+    "cl-core",
+    "cl-assistant"
+  ],
+  "content": [
+    "cl-core",
+    "cl-assistant",
+    "cl-gameplay"
+  ],
+  "studio": [
+    "cl-core",
+    "cl-assistant",
+    "cl-design",
+    "cl-release"
+  ],
+  "marketing": [
+    "cl-core",
+    "cl-assistant"
+  ],
+  "everything": null
+}
