@@ -1,0 +1,23 @@
+{
+ "note": "Wrong-claim counts rechecked on 16 Nov 2026 against developers.poki.com. Claims that Poki blocks or disallows external requests are supported by its External resources policy and no longer count.",
+ "byAnswer": {
+  "364fd8": 0,
+  "3d209f": 0,
+  "43d7e3": 0,
+  "525c0e": 0,
+  "5aa15a": 0,
+  "6b51f5": 1,
+  "7cb20c": 2,
+  "b5c686": 0,
+  "dc059e": 1,
+  "df6278": 11,
+  "eda7f0": 1,
+  "fae966": 0,
+  "0cf604": 1,
+  "cf3978": 0,
+  "dfe2dc": 1,
+  "ea15fe": 0,
+  "f0ed7e": 1,
+  "f43726": 0
+ }
+}

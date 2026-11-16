@@ -1,0 +1,20 @@
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: #0b1020;
+  color: #ccd;
+  font-family: sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Scale to the viewport at 16:9, leaving room for the credit line. */
+canvas {
+  display: block;
+  width: min(100vw, calc((100vh - 24px) * 16 / 9));
+  height: auto;
+  touch-action: none;
+}
+footer { height: 24px; line-height: 24px; text-align: center; font-size: 12px; }

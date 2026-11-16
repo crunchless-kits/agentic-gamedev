@@ -1,0 +1,4 @@
+html, body { height: 100%; overflow: hidden; }
+body { margin: 0; background: #0b1020; color: #ccd; font-family: sans-serif; display: flex; align-items: center; justify-content: center; }
+/* 16:9, scaled proportionally to fill the portal frame */
+canvas { display: block; width: min(100vw, 100vh * 16 / 9); height: auto; aspect-ratio: 16 / 9; }

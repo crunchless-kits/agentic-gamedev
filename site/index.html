@@ -95,6 +95,7 @@ header nav a{color:var(--muted);padding:8px 0}
 .hero{position:relative;z-index:1;padding:48px 24px 190px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:26px}
 .hero .word{width:min(100%,720px);height:auto}
 .hero h1{font-family:Inter,sans-serif;font-weight:500;font-size:30px;line-height:1.25}
+.hero .what{max-width:640px;margin-top:-10px;color:var(--muted);font-size:18px;text-wrap:balance}
 .engines{display:flex;flex-wrap:wrap;justify-content:center}
 .gems{display:flex;flex-wrap:wrap;justify-content:center;padding:0;margin:0;list-style:none;color:var(--muted);font-size:20px}
 .gems li{display:flex;align-items:center}
@@ -203,12 +204,17 @@ th:first-child,td:first-child{text-align:left}
 .tile span{display:block;font-size:13px;color:var(--muted);margin-top:4px}
 #tip{position:fixed;z-index:20;pointer-events:none;max-width:260px;padding:8px 10px;border-radius:8px;background:#eef0f3;color:var(--ink);font-size:13px;line-height:1.4;box-shadow:0 6px 24px rgba(0,0,0,.4);opacity:0;transition:opacity .12s}
 
+.benchgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px}
+.benchgrid figure{justify-content:flex-start}
 .cmp table{font-size:15px;margin-top:0}
 .cmp th{color:var(--muted);font-weight:600;font-size:13px}
 .cmp td,.cmp th{padding:12px 10px}
 .cmp td:first-child{color:var(--text);text-wrap:balance}
 .cmp td b{color:var(--mint)}
+.cmp td:not(:first-child),.cmp th:not(:first-child){white-space:nowrap}
 @media (max-width:640px){.cmp table{font-size:13px}.cmp td,.cmp th{padding:10px 6px}}
+
+.sample{margin:20px 0 0;padding:18px 20px;border-radius:12px;background:var(--ink);border:1px solid var(--line);color:#c9ced8;font:13px/1.6 "JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;max-height:520px;overflow:auto}
 
 /* areas */
 .areas{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:28px}
@@ -272,6 +278,7 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:cen
 footer img{height:22px;width:auto;display:block}
 
 @media (max-width:900px){
+  .benchgrid{grid-template-columns:1fr}
   .bento{grid-template-columns:1fr}
   .cap.k1,.cap.k2,.cap.k3,.cap.k4{grid-column:1/-1;min-height:0}
   .charts{grid-template-columns:1fr}
@@ -283,6 +290,7 @@ footer img{height:22px;width:auto;display:block}
   .h2{font-size:28px}
   .hero{padding-top:32px;padding-bottom:170px}
   .hero h1{font-size:22px}
+  .hero .what{font-size:16px}
   .gems{font-size:17px}
   .engines{flex-direction:column;gap:6px}
   .engines .gems+.gems::before{display:none}
@@ -371,7 +379,7 @@ footer img{height:22px;width:auto;display:block}
       <a class="logo" href="#top" aria-label="Crunchless home"><img src="assets/logo-horizontal-dark.svg" alt="Crunchless" width="210" height="30"></a>
       <nav aria-label="Primary">
         <a href="#who">Who It’s For</a>
-        <a href="#bench">Benchmark</a>
+        <a href="#bench">Benchmarks</a>
         <a href="#pricing">Pricing</a>
         <a href="https://github.com/crunchless-kits/agentic-gamedev">GitHub</a>
       </nav>
@@ -381,6 +389,7 @@ footer img{height:22px;width:auto;display:block}
   <div class="wrap hero" id="top">
     <img class="word" src="assets/logo-horizontal-dark.svg" alt="Crunchless" width="1009" height="149">
     <h1>All-in-One Game Development Harness &amp; Studio Assistant</h1>
+    <p class="what">Skills, agents, commands, and scripts that install into your coding agent and show it how to audit, build, test, and ship your game.</p>
     <div class="engines" aria-label="Engines">
       <ul class="gems"><li>Unity</li><li>Web</li><li>Roblox</li></ul>
       <ul class="gems"><li>Unreal</li><li>Godot</li><li>Cocos</li></ul>
@@ -397,7 +406,7 @@ footer img{height:22px;width:auto;display:block}
   <div class="wrap bento" aria-label="The kit in numbers">
     <div class="cap k1">
       <div class="kmain">
-        <div class="row"><span class="ico"><svg><use href="#i-layers"/></svg></span><p>members in the kit</p></div>
+        <div class="row"><span class="ico"><svg><use href="#i-layers"/></svg></span><div><p>skills, agents, and commands in the full kit</p><small style="display:block">32 free, 221 in Builder, and 86 in Studio</small></div></div>
         <b class="num">339</b>
       </div>
       <ul class="split">
@@ -407,7 +416,7 @@ footer img{height:22px;width:auto;display:block}
       </ul>
     </div>
     <div class="cap k2">
-      <div class="row"><span class="ico"><svg><use href="#i-route"/></svg></span><p>one harness per engine, every target covered</p></div>
+      <div class="row"><span class="ico"><svg><use href="#i-route"/></svg></span><p>engines and release targets, each with its own skills and checks</p></div>
       <ul class="split">
         <li><i class="g"><svg><use href="#i-cube"/></svg></i><b>6</b><span>engines</span></li>
         <li><i class="g"><svg><use href="#i-bag"/></svg></i><b>13</b><span>stores and portals</span></li>
@@ -415,10 +424,10 @@ footer img{height:22px;width:auto;display:block}
       </ul>
     </div>
     <div class="cap k3">
-      <div class="row"><span class="ico"><svg><use href="#i-chart"/></svg></span><p>benchmark in Claude Code, same model with and without the kit</p></div>
-      <div class="bench-big"><b class="num">3 of 3</b><span>kit runs gave every finding evidence, an owner, and a check</span></div>
-      <div class="bench-vs"><span class="pill">Without the kit: <strong>0 of 3</strong></span><span class="pill">Planted bugs found: <strong>6 of 6</strong> both ways</span></div>
-      <small><a href="#bench" style="color:var(--mint)">See the full benchmark</a></small>
+      <div class="row"><span class="ico"><svg><use href="#i-chart"/></svg></span><p>benchmark: getting a web game ready for the Poki portal. Five builds on Sonnet, 24 checks each</p></div>
+      <div class="bench-big"><b class="num">112 of 120</b><span>readiness checks passed by builds made with the kit’s Builder edition</span></div>
+      <div class="bench-vs"><span class="pill">Without the kit: <strong>100 of 120</strong></span><span class="pill">Audits that found every planted problem: <strong>9 of 10</strong> against <strong>4</strong></span></div>
+      <small><a href="#bench" style="color:var(--mint)">See the benchmarks</a></small>
     </div>
     <div class="cap k4">
       <div class="kmain">
@@ -428,7 +437,7 @@ footer img{height:22px;width:auto;display:block}
         <small>The Unity bundle loads 8 of the 21.</small>
       </div>
       <ul class="cats" aria-label="Some of the plugins">
-        <li>Unity</li><li>Unreal</li><li>Godot</li><li>Web</li><li>Design</li><li>QA</li><li>CI/CD</li><li>Monetization</li><li>Analytics and live ops</li><li>Multiplayer</li><li>Marketing</li>
+        <li>Unity</li><li>Unreal</li><li>Godot</li><li>Web</li><li>Design</li><li>QA</li><li>CI/CD</li><li>Monetization</li><li>Analytics and live ops</li><li>Multiplayer</li><li>Marketing</li><li>and 10 more</li>
       </ul>
     </div>
   </div>
@@ -436,7 +445,7 @@ footer img{height:22px;width:auto;display:block}
   <section class="band" id="who">
     <div class="wrap">
       <h2 class="h2">Built for Three Kinds of Developer</h2>
-      <p class="lede">Same kit, different entry points. The router sends each task to the narrowest member that covers it.</p>
+      <p class="lede">One kit, three starting points. Each card shows what you’d use first and the tier it comes in.</p>
       <div class="grid">
         <article class="card">
           <span class="ico"><svg><use href="#i-spark"/></svg></span>
@@ -447,7 +456,7 @@ footer img{height:22px;width:auto;display:block}
             <li><code class="c">/cl-brainstorm</code> returns directions that differ in mechanics, scored against your constraints.</li>
             <li>A competitor snapshot checks the closest game before you build.</li>
             <li>The scope guard stops the agent from building what you didn’t ask for.</li>
-            <li>The lite ship check gets the game onto itch.io.</li>
+            <li>The lite ship check marks the build ready or not ready, and the itch.io steps walk your agent through the upload.</li>
           </ul>
           <span class="fit">Starts on Free</span>
         </article>
@@ -457,10 +466,10 @@ footer img{height:22px;width:auto;display:block}
           <h3>The Solo Developer</h3>
           <p>You can build. You can’t be the designer, QA lead, publishing engineer, and producer at once. The kit fills those seats.</p>
           <ul class="dlist">
-            <li><code class="c">/cl-audit</code> sends scouts through the project and ranks what matters.</li>
+            <li>The free <code class="c">/cl-audit</code> reads the project and ranks what to fix, with file paths.</li>
             <li>Six design pillars check whether the game is fun, deep, and worth returning to.</li>
             <li>Release gates for Steam, Google Play, the App Store, and web portals.</li>
-            <li><code class="c">/cl-market</code> turns the week’s work into posts.</li>
+            <li>QA agents play your build through test hooks, try to break it, and write the bug reports.</li>
           </ul>
           <span class="fit">Fits Builder</span>
         </article>
@@ -470,9 +479,10 @@ footer img{height:22px;width:auto;display:block}
           <h3>The Team With a Process</h3>
           <p>You already have a process. The kit makes it hold across people, agents, and cloud sessions.</p>
           <ul class="dlist">
-            <li>Vendor or export the kit into the repo, so every session and every agent works to the same rules.</li>
-            <li><code class="c">/cl-learn</code> saves your house style, and every member reads it from then on.</li>
+            <li>Copy the kit into the repo, so every session and every agent works to the same rules.</li>
+            <li><code class="c">/cl-learn</code> saves your house style, and every skill and agent reads it from then on.</li>
             <li>The producer tracks milestones, token usage, expenses, and tickets.</li>
+            <li><code class="c">/cl-market</code> turns the week’s work into posts.</li>
           </ul>
           <span class="fit">Fits Studio</span>
         </article>
@@ -482,22 +492,43 @@ footer img{height:22px;width:auto;display:block}
 
   <section id="bench">
     <div class="wrap">
-      <h2 class="h2">The Benchmark, With and Without the Kit</h2>
-      <p class="lede">Claude Code audited the same small canvas game six times on the same model, Sonnet: three runs with the web bundle and three without. The game has six planted bugs. Measured on 16 November 2026, medians of three runs.</p>
-      <figure class="cmp" style="margin-top:28px">
-        <table>
-          <thead><tr><th>Measure</th><th>Without the kit</th><th>With the kit</th></tr></thead>
-          <tbody>
-            <tr><td>Planted bugs found</td><td>6 of 6</td><td>6 of 6</td></tr>
-            <tr><td>Runs where every finding has evidence, an owner, and a check</td><td>0 of 3</td><td><b>3 of 3</b></td></tr>
-            <tr><td>Runs that flagged the missing portal SDK layer</td><td>0 of 3</td><td><b>3 of 3</b></td></tr>
-            <tr><td>Runs that ended with a handoff the next session can act on</td><td>0 of 3</td><td><b>3 of 3</b></td></tr>
-            <tr><td>Tokens per run</td><td>76,246</td><td>117,774</td></tr>
-            <tr><td>Time per run</td><td>19 seconds</td><td>23 seconds</td></tr>
-          </tbody>
-        </table>
-        <p class="fine" style="margin-top:0">Each run got the same brief: audit the game before it goes to web portals and rank the problems with file paths. Findings were scored against a rubric written before any run.</p>
-      </figure>
+      <h2 class="h2">Benchmarks: The Same Agent, With and Without the Kit</h2>
+      <p class="lede">Two tasks on Skyhop, a small web game headed for the Poki portal. Each task ran with and without the kit, on the same model, the same brief, and the same starting code. The kit runs used the Builder edition. The free core wasn’t benchmarked. Measured in Claude Code on Sonnet, 16 November 2026.</p>
+      <div class="benchgrid">
+        <figure class="cmp">
+          <figcaption>
+            <h3>Getting the Game Ready for Poki</h3>
+            <p>The agent was told to get the game ready to submit. Five builds each way, each scored on 24 checks from Poki’s docs, such as staying playable with an ad blocker and working on phones. An automated test runs 20 of the 24, and judges score the rest.</p>
+          </figcaption>
+          <table>
+            <thead><tr><th>Measure</th><th>No kit</th><th>Kit</th></tr></thead>
+            <tbody>
+              <tr><td>Readiness checks passed across five builds</td><td>100 of 120</td><td><b>112 of 120</b></td></tr>
+              <tr><td>Weakest build, of 24 checks</td><td>18</td><td><b>21</b></td></tr>
+              <tr><td>Builds with working touch controls</td><td>0 of 5</td><td><b>4 of 5</b></td></tr>
+              <tr><td>Builds that scale to the player’s screen</td><td>0 of 5</td><td><b>5 of 5</b></td></tr>
+            </tbody>
+          </table>
+        </figure>
+        <figure class="cmp">
+          <figcaption>
+            <h3>Auditing It First</h3>
+            <p>The agent was told to list what to fix. Ten audits each way. The game has 16 planted problems, and a judge model scored each answer without knowing which side wrote it. An unsupported claim is a line number that doesn’t exist, or a Poki rule that Poki’s docs don’t state.</p>
+          </figcaption>
+          <table>
+            <thead><tr><th>Measure</th><th>No kit</th><th>Kit</th></tr></thead>
+            <tbody>
+              <tr><td>Audits that found all 16 planted problems</td><td>4 of 10</td><td><b>9 of 10</b></td></tr>
+              <tr><td>Planted problems found, of 160</td><td>152</td><td><b>159</b></td></tr>
+              <tr><td>Claims the code or Poki’s docs don’t support</td><td>14</td><td><b>4</b></td></tr>
+              <tr><td>Audits with no unsupported claim</td><td>0 of 10</td><td><b>7 of 10</b></td></tr>
+              <tr><td>Audits that caught the hardest planted problem: no pause in a hidden tab</td><td>5 of 10</td><td><b>9 of 10</b></td></tr>
+            </tbody>
+          </table>
+        </figure>
+      </div>
+      <p class="fine">On Haiku, the smaller model: 104 of 120 readiness checks with the kit against 96, and every planted problem found in 6 of 10 audits against 1.</p>
+      <p class="fine" style="margin-top:8px">The full reports list every check and every run, what the kit didn’t improve, and what the runs cost in tokens and time: <a href="https://github.com/crunchless-kits/agentic-gamedev/blob/main/docs/benchmarks/ship-to-poki/REPORT.md" style="color:var(--mint)">getting ready for Poki</a> and <a href="https://github.com/crunchless-kits/agentic-gamedev/blob/main/docs/benchmarks/portal-deep/REPORT.md" style="color:var(--mint)">the audits</a>.</p>
     </div>
   </section>
 
@@ -505,8 +536,8 @@ footer img{height:22px;width:auto;display:block}
     <div class="wrap">
       <div class="start-grid">
         <div>
-          <h2 class="h2">One Command in Any Coding Agent</h2>
-          <p class="lede">Run <code>/cl-audit</code> in your game project and get a ranked list of what to fix, with file paths. That’s the first thing Crunchless does, and the rest works the same way, from the first idea to the store page.</p>
+          <h2 class="h2">Install It, Then Run the Audit</h2>
+          <p class="lede">Install the core and your engine’s plugin, then run the audit in your game’s folder. You get a ranked list of what to fix, with file paths. The rest of the kit works the same way, from the first idea to the store page.</p>
         </div>
         <div class="term" id="install">
           <div class="tabrow" role="tablist" aria-label="Your coding agent">
@@ -519,7 +550,9 @@ footer img{height:22px;width:auto;display:block}
           <div role="tabpanel" data-panel="claude" style="display:contents">
             <code>/plugin marketplace add crunchless-kits/agentic-gamedev</code>
             <code>/plugin install cl-core@crunchless</code>
+            <code>/plugin install cl-unity@crunchless</code>
             <code>/cl-core:cl-audit</code>
+            <span class="note">Swap cl-unity for cl-web, cl-roblox, cl-unreal, cl-godot, or cl-cocos. No game yet? Install cl-design and run /cl-design:cl-brainstorm with your idea.</span>
           </div>
           <div role="tabpanel" data-panel="export" style="display:none">
             <code>git clone https://github.com/crunchless-kits/agentic-gamedev ~/crunchless</code>
@@ -530,16 +563,33 @@ footer img{height:22px;width:auto;display:block}
         </div>
       </div>
       <div class="flow" aria-label="What happens when you run cl-audit">
-        <div class="step"><span class="chip">No model</span><h3>Detect the Engine</h3><p>A script reads the project and picks the matching audit.</p></div>
+        <div class="step"><span class="chip">Plain script</span><h3>Detect the Engine</h3><p>A script reads the project and picks the matching audit.</p></div>
         <div class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></div>
         <div class="step"><span class="chip h">Small model</span><h3>Scouts Gather Facts</h3><div class="scouts" aria-hidden="true"><i></i><i></i><i></i></div><p>Up to three read-only scouts work in parallel.</p></div>
         <div class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></div>
-        <div class="step"><span class="chip o">Top model</span><h3>One Ranker Decides</h3><p>The top model ranks the facts at medium effort.</p></div>
+        <div class="step"><span class="chip o">Top model</span><h3>One Ranker Decides</h3><p>The top model ranks the facts.</p></div>
         <div class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></div>
-        <div class="step"><span class="chip s">You</span><h3>Ten Findings at Most</h3><p>Each with evidence, file paths, and the member that fixes it.</p></div>
+        <div class="step"><span class="chip s">You</span><h3>Ten Findings at Most</h3><p>Each with evidence, file paths, and the skill or agent that fixes it.</p></div>
       </div>
-      <h3 class="h2 sub">How the Kit Stays Light</h3>
-      <p class="lede">These figures come from the kit’s own scripts and checks, and they hold for every coding agent.</p>
+      <h3 class="h2 sub">What Comes Back</h3>
+      <p class="lede">One finding and the closing handoff from a kit audit of the benchmark game, copied as the agent wrote them.</p>
+      <pre class="sample" tabindex="0">3. [blocker] No `gameplayStart`, `gameplayStop` or `gameLoadingFinished` calls.
+   Evidence: `src/sdk.js:1-8` only exposes `init` and `commercialBreak`. A grep of `src/` finds no other Poki calls.
+   Impact: Poki requires these events, and QA will reject a build without them. They also drive ad timing and Poki's metrics.
+   Fix: Call `gameLoadingFinished` after boot. Call `gameplayStart` at run start and `gameplayStop` at game over, and again around ads.
+   Route to: `cl-core:cl-port`.
+
+## Handoff
+Changed: nothing (audit only).
+Evidence: I read all 11 tracked files (`README.md`, `package.json`, `index.html`, `style.css`, `assets/manifest.json` and `src/*.js`).
+Verify: To reproduce finding 2, block `poki-sdk.js` in DevTools and reload. The canvas stays blank and the console shows a `PokiSDK is not defined` error. For finding 5, die and restart three times, then die and press Space once. Several ads fire.
+Open:
+- I did not run the game in a browser, so there are no measured frame rates or load times.
+- I did not check `assets/` on disk. The sizes come from `manifest.json`, and the actual audio files are not in the repo.
+- I could not confirm Poki's current size limit or review rules. The requirements above come from my knowledge of Poki's guidelines, so check them against the current Poki developer docs.
+Next: Fix the four blockers, which are the audio size, SDK init failure, the Poki lifecycle events and the leaderboard fetch. Then do finding 5 (stacked listeners), because it breaks ad pacing.</pre>
+      <h3 class="h2 sub">How It Fits in Your Agent’s Skill List</h3>
+      <p class="lede">These figures come from the kit’s own scripts and checks, measured for Claude Code.</p>
       <div class="charts">
         <figure>
           <figcaption>
@@ -587,8 +637,8 @@ footer img{height:22px;width:auto;display:block}
         </figure>
       </div>
       <div class="tiles">
-        <div class="tile"><span class="ico"><svg><use href="#i-check"/></svg></span><div><b>14 of 14</b><span>install bundles fit the skill menu</span></div></div>
-        <div class="tile"><span class="ico"><svg><use href="#i-layers"/></svg></span><div><b>339</b><span>members validated on every push</span></div></div>
+        <div class="tile"><span class="ico"><svg><use href="#i-check"/></svg></span><div><b>14 of 15</b><span>install bundles fit the skill menu</span></div></div>
+        <div class="tile"><span class="ico"><svg><use href="#i-layers"/></svg></span><div><b>339</b><span>members format-checked on every push</span></div></div>
         <div class="tile"><span class="ico"><svg><use href="#i-shield"/></svg></span><div><b>115</b><span>guard hook tests run on every push</span></div></div>
       </div>
     </div>
@@ -597,7 +647,7 @@ footer img{height:22px;width:auto;display:block}
   <section id="inside">
     <div class="wrap">
       <h2 class="h2">What’s Inside</h2>
-      <p class="lede">Every engine gets the same harness: setup, audit, feature playbook, scenes as data, input, UI, audio, animation, physics, world, data, performance, builds, test hooks, diagnostics, and services. Official CLIs, MCP servers, and libraries install as pinned dependencies from upstream.</p>
+      <p class="lede">Every engine gets the same harness: setup, audit, feature playbook, scenes as data, input, UI, audio, animation, physics, world, data, performance, builds, test hooks, diagnostics, and services. Official CLIs, MCP servers, and libraries install as pinned dependencies from&nbsp;their&nbsp;own&nbsp;sources.</p>
       <div class="areas">
         <div class="area"><span class="ico"><svg><use href="#i-cpu"/></svg></span><h3>Core</h3><code>cl-core, cl-assistant</code><p>Router, scouts and builders, guard hook, the learner, the code reviewer, and help from a full manifest.</p></div>
         <div class="area"><span class="ico"><svg><use href="#i-pad"/></svg></span><h3>Engines</h3><code>cl-unity, cl-web, cl-roblox, cl-unreal, cl-godot, cl-cocos</code><p>The full harness per engine, written against current versions.</p></div>
@@ -626,9 +676,9 @@ footer img{height:22px;width:auto;display:block}
       <h3 class="h2 sub">Straight Answers</h3>
       <div class="faq">
         <div><h3>Does it write my game for me?</h3><p>Your coding agent writes the code. Crunchless gives it the procedures, the audits, the guardrails, and the shipping steps, and checks the work with file paths.</p></div>
-        <div><h3>Which coding agents does it support?</h3><p>Claude Code installs it as plugins. An exporter writes native layouts for Codex, GitHub Copilot, Cursor, and Antigravity, plus an AGENTS.md layout for the rest. All four ran the kit’s compatibility test in November 2026 with no failed checks.</p></div>
-        <div><h3>Do I have to use generative AI?</h3><p>Never. The asset skills point to CC0 and CC-BY libraries and record provenance. Gen AI services connect only if you choose one.</p></div>
-        <div><h3>What happens when an SDK changes?</h3><p>Every platform note carries a verified date. A monthly job re-reads the sources and opens a reviewed update, and anything older than 90 days is re-verified before code is written.</p></div>
+        <div><h3>Which coding agents does it support?</h3><p>Claude Code installs the kit as plugins. For Codex, GitHub Copilot, Cursor, and Antigravity, an export script writes it into your agent’s own folders. All four loaded the kit and ran its scripts in a seven-check test in November 2026.</p></div>
+        <div><h3>Do I have to use generated art or audio?</h3><p>Never. The asset skills point to CC0 and CC-BY libraries and record where each asset came from. Generative art and audio services connect only if you choose one.</p></div>
+        <div><h3>What happens when an SDK changes?</h3><p>Every platform note carries a verified date. A scheduled monthly job re-reads the sources and opens an update for review, and anything older than 90 days is re-verified before code is written.</p></div>
         <div><h3>What do I need?</h3><p>A coding agent, Node.js 22 or newer, Git, and your engine installed for anything that builds or runs.</p></div>
         <div><h3>Where do I get help?</h3><p>GitHub Discussions, answered within three business days. Every version is tagged with release notes.</p></div>
       </div>
@@ -649,7 +699,7 @@ footer img{height:22px;width:auto;display:block}
   <section id="pricing">
     <div class="wrap tiers">
       <h2 class="h2">Start Free, Pay Once</h2>
-      <p class="lede">Free takes you from an idea to a game on itch.io, and every audit names the member that fixes each finding. Builder adds everything you need to make the game. Studio adds everything around it, from money to marketing. Pay once, and you own what you build.</p>
+      <p class="lede">The free core finds problems: it audits your project on any of the six engines, critiques the design, guards the scope, and checks a build for itch.io. Builder adds the procedures that build, test, and ship the game. Studio adds the business side, from monetization to marketing. Each paid tier is a one-time payment.</p>
       <div class="grid">
         <article class="card">
           <h3>Free</h3>
@@ -671,7 +721,7 @@ footer img{height:22px;width:auto;display:block}
             <li>Adversarial QA, agent playtests, and testability hooks</li>
             <li>Release gates for PC stores, mobile stores, and web portals, plus CI</li>
           </ul>
-          <a class="btn primary" href="https://github.com/sponsors/crunchless-kits">Get Builder</a>
+          <a class="btn primary" href="https://github.com/sponsors/crunchless-kits?frequency=one-time">Get Builder</a>
         </article>
         <article class="card inverse">
           <h3>Studio</h3>
@@ -682,7 +732,7 @@ footer img{height:22px;width:auto;display:block}
             <li>Competitor research on five games, and business models</li>
             <li>The producer and the docs writer</li>
           </ul>
-          <a class="btn" href="https://github.com/sponsors/crunchless-kits">Get Studio</a>
+          <a class="btn" href="https://github.com/sponsors/crunchless-kits?frequency=one-time">Get Studio</a>
         </article>
       </div>
       <p class="fine">Early access prices. Pay once through GitHub Sponsors, accept the repository invitation, and install or export the kit. A one-time sponsorship of any amount adds your name to the README as a thank-you.</p>

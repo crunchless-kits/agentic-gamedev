@@ -53,6 +53,7 @@ Swap `codex` for `copilot`, `cursor`, or `antigravity`. In both install commands
 - ROSTER.md lists every skill, agent, and command in this edition.
 - FRESHNESS.md shows when the kit last checked each store's rules and each SDK's current version, since those change often.
 - CHANGELOG.md holds the release notes.
+- docs/benchmarks/ holds the benchmark reports, with every build and score.
 - Ask questions in GitHub Discussions on [crunchless-kits/agentic-gamedev](https://github.com/crunchless-kits/agentic-gamedev).
 
 ## License

@@ -1,0 +1,322 @@
+[
+ {
+  "run": "R1-haiku-A-1",
+  "ok": true,
+  "raw": 120178,
+  "seconds": 45.7,
+  "words": 764,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-haiku-A-10",
+  "ok": true,
+  "raw": 145427,
+  "seconds": 32.3,
+  "words": 560,
+  "tools": "Glob Bash"
+ },
+ {
+  "run": "R1-haiku-A-2",
+  "ok": true,
+  "raw": 216869,
+  "seconds": 58.4,
+  "words": 654,
+  "tools": "Bash WebSearch"
+ },
+ {
+  "run": "R1-haiku-A-3",
+  "ok": true,
+  "raw": 153760,
+  "seconds": 46.5,
+  "words": 642,
+  "tools": "Glob Bash"
+ },
+ {
+  "run": "R1-haiku-A-4",
+  "ok": true,
+  "raw": 115002,
+  "seconds": 35.5,
+  "words": 610,
+  "tools": "Glob Bash"
+ },
+ {
+  "run": "R1-haiku-A-5",
+  "ok": true,
+  "raw": 155162,
+  "seconds": 57.3,
+  "words": 657,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-haiku-A-6",
+  "ok": true,
+  "raw": 120743,
+  "seconds": 39.4,
+  "words": 626,
+  "tools": "Glob Bash"
+ },
+ {
+  "run": "R1-haiku-A-7",
+  "ok": true,
+  "raw": 146263,
+  "seconds": 38.8,
+  "words": 670,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-haiku-A-8",
+  "ok": true,
+  "raw": 167711,
+  "seconds": 61.5,
+  "words": 680,
+  "tools": "Bash WebSearch"
+ },
+ {
+  "run": "R1-haiku-A-9",
+  "ok": true,
+  "raw": 145544,
+  "seconds": 48.3,
+  "words": 769,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-haiku-B-1",
+  "ok": true,
+  "raw": 130392,
+  "seconds": 43.4,
+  "words": 1178,
+  "tools": "Skill:cl-web:web-game-audit Bash"
+ },
+ {
+  "run": "R1-haiku-B-10",
+  "ok": true,
+  "raw": 130301,
+  "seconds": 42,
+  "words": 1262,
+  "tools": "Skill:cl-web:web-game-audit Bash"
+ },
+ {
+  "run": "R1-haiku-B-2",
+  "ok": true,
+  "raw": 136582,
+  "seconds": 48.9,
+  "words": 870,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-haiku-B-3",
+  "ok": true,
+  "raw": 168585,
+  "seconds": 47.9,
+  "words": 880,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-haiku-B-4",
+  "ok": true,
+  "raw": 132559,
+  "seconds": 52.5,
+  "words": 1343,
+  "tools": "Bash Skill:cl-web:web-game-audit"
+ },
+ {
+  "run": "R1-haiku-B-5",
+  "ok": true,
+  "raw": 97405,
+  "seconds": 44.8,
+  "words": 706,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-haiku-B-6",
+  "ok": true,
+  "raw": 139077,
+  "seconds": 58.3,
+  "words": 830,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-haiku-B-7",
+  "ok": true,
+  "raw": 137581,
+  "seconds": 47.8,
+  "words": 879,
+  "tools": "Bash Read"
+ },
+ {
+  "run": "R1-haiku-B-8",
+  "ok": true,
+  "raw": 136864,
+  "seconds": 50.2,
+  "words": 618,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-haiku-B-9",
+  "ok": true,
+  "raw": 140161,
+  "seconds": 51.9,
+  "words": 859,
+  "tools": "Bash Read"
+ },
+ {
+  "run": "R1-sonnet-A-1",
+  "ok": true,
+  "raw": 76373,
+  "seconds": 22.6,
+  "words": 782,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-sonnet-A-10",
+  "ok": true,
+  "raw": 76603,
+  "seconds": 22.3,
+  "words": 853,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-sonnet-A-2",
+  "ok": true,
+  "raw": 104800,
+  "seconds": 48.5,
+  "words": 770,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-sonnet-A-3",
+  "ok": true,
+  "raw": 76876,
+  "seconds": 25.8,
+  "words": 768,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-sonnet-A-4",
+  "ok": true,
+  "raw": 76499,
+  "seconds": 21.9,
+  "words": 830,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-sonnet-A-5",
+  "ok": true,
+  "raw": 77409,
+  "seconds": 28.5,
+  "words": 801,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-sonnet-A-6",
+  "ok": true,
+  "raw": 76667,
+  "seconds": 24.6,
+  "words": 874,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-sonnet-A-7",
+  "ok": true,
+  "raw": 77289,
+  "seconds": 29.9,
+  "words": 749,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-sonnet-A-8",
+  "ok": true,
+  "raw": 76558,
+  "seconds": 22.9,
+  "words": 828,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-sonnet-A-9",
+  "ok": true,
+  "raw": 77465,
+  "seconds": 38.1,
+  "words": 836,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-sonnet-B-1",
+  "ok": true,
+  "raw": 89465,
+  "seconds": 35.8,
+  "words": 874,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-sonnet-B-10",
+  "ok": true,
+  "raw": 121510,
+  "seconds": 37.9,
+  "words": 1144,
+  "tools": "Skill:cl-web:web-game-audit Bash"
+ },
+ {
+  "run": "R1-sonnet-B-2",
+  "ok": true,
+  "raw": 121548,
+  "seconds": 36.1,
+  "words": 1324,
+  "tools": "Skill:cl-web:web-game-audit Bash"
+ },
+ {
+  "run": "R1-sonnet-B-3",
+  "ok": true,
+  "raw": 120487,
+  "seconds": 36.7,
+  "words": 1069,
+  "tools": "Skill:cl-web:web-game-audit Bash"
+ },
+ {
+  "run": "R1-sonnet-B-4",
+  "ok": true,
+  "raw": 120671,
+  "seconds": 33,
+  "words": 1387,
+  "tools": "Skill:cl-web:web-game-audit Bash"
+ },
+ {
+  "run": "R1-sonnet-B-5",
+  "ok": true,
+  "raw": 121180,
+  "seconds": 36.6,
+  "words": 988,
+  "tools": "Skill:cl-web:web-game-audit Bash"
+ },
+ {
+  "run": "R1-sonnet-B-6",
+  "ok": true,
+  "raw": 122419,
+  "seconds": 45.5,
+  "words": 1315,
+  "tools": "Skill:cl-web:web-game-audit Bash"
+ },
+ {
+  "run": "R1-sonnet-B-7",
+  "ok": true,
+  "raw": 89104,
+  "seconds": 34.4,
+  "words": 874,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-sonnet-B-8",
+  "ok": true,
+  "raw": 122645,
+  "seconds": 42.3,
+  "words": 936,
+  "tools": "Bash"
+ },
+ {
+  "run": "R1-sonnet-B-9",
+  "ok": true,
+  "raw": 120701,
+  "seconds": 35.8,
+  "words": 1208,
+  "tools": "Skill:cl-web:web-game-audit Bash"
+ }
+]

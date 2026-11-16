@@ -1,0 +1,8 @@
+{
+  "files": [
+    { "path": "assets/music.wav", "bytes": 54525952, "note": "full soundtrack, uncompressed" },
+    { "path": "assets/jump.wav", "bytes": 88200 },
+    { "path": "assets/gem.wav", "bytes": 61740 },
+    { "path": "assets/sprites.png", "bytes": 412330 }
+  ]
+}

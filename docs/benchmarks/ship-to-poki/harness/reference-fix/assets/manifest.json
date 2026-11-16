@@ -1,0 +1,8 @@
+{
+  "files": [
+    { "path": "assets/music.ogg", "bytes": 1400000, "note": "soundtrack, compressed; replaces the 52 MB wav" },
+    { "path": "assets/jump.wav", "bytes": 88200 },
+    { "path": "assets/gem.wav", "bytes": 61740 },
+    { "path": "assets/sprites.png", "bytes": 412330 }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "skyhop",
+  "version": "0.9.0",
+  "private": true,
+  "description": "Skyhop: hop between floating islands, collect gems, dodge storm clouds.",
+  "scripts": { "start": "npx serve ." }
+}

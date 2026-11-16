@@ -1,0 +1,7 @@
+{
+  "name": "coin-dash",
+  "version": "0.3.0",
+  "private": true,
+  "description": "A small canvas runner: dodge the blocks, grab coins.",
+  "scripts": { "start": "npx serve ." }
+}

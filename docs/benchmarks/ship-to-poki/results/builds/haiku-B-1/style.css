@@ -1,0 +1,7 @@
+html, body { height: 100%; }
+body { margin: 0; background: #0b1020; color: #ccd; font-family: sans-serif; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+/* Scale to fit the viewport and keep 16:9. */
+canvas { display: block; width: min(100vw, calc(100vh * 16 / 9)); height: auto; aspect-ratio: 16 / 9; touch-action: none; }
+#touch { position: fixed; left: 0; right: 0; bottom: 12px; display: flex; justify-content: space-between; padding: 0 16px; pointer-events: none; }
+#touch[hidden] { display: none; }
+#touch button { pointer-events: auto; width: 84px; height: 84px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, 0.25); color: #fff; font-size: 18px; touch-action: none; user-select: none; -webkit-user-select: none; }

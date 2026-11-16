@@ -1,0 +1,12 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: #0b1020; color: #ccd; font-family: sans-serif; }
+body { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+/* Scale to fit the viewport at 16:9, keeping room for the footer line. */
+canvas {
+  display: block;
+  width: min(100vw, calc((100vh - 24px) * 16 / 9));
+  height: auto;
+  aspect-ratio: 16 / 9;
+  touch-action: none;
+  user-select: none;
+}
+footer { height: 24px; line-height: 24px; text-align: center; font-size: 12px; }

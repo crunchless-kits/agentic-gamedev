@@ -153,7 +153,7 @@ Kit repository scripts, run from a clone of the kit (not shipped inside a plugin
 - cl-unreal/unreal-setup/versions.md: verified 2026-11-15
 - cl-platforms/crazygames-integration/crazygames-sdk-notes.md: verified 2026-11-06
 - cl-platforms/gamedistribution-integration/gamedistribution-sdk-notes.md: verified 2026-11-06
-- cl-platforms/poki-integration/poki-sdk-notes.md: verified 2026-11-06
+- cl-platforms/poki-integration/poki-sdk-notes.md: verified 2026-11-16
 - cl-platforms/youtube-playables-integration/youtube-playables-sdk-notes.md: verified 2026-11-06
 - cl-multiplayer/mp-fishnet/fishnet.md: verified 2026-11-15
 - cl-multiplayer/mp-godot/godot-multiplayer.md: verified 2026-11-15

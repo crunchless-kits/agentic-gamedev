@@ -1,0 +1,45 @@
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: #0b1020;
+  color: #ccd;
+  font-family: sans-serif;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Scale the 16:9 canvas to fit the window while keeping its aspect ratio. */
+canvas {
+  display: block;
+  width: min(100vw, calc(100vh * 16 / 9));
+  height: auto;
+  touch-action: none;
+}
+#touch {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 16px;
+  pointer-events: none;
+}
+#touch[hidden] { display: none; }
+#touch .pad { display: flex; gap: 12px; }
+#touch button {
+  pointer-events: auto;
+  width: 84px;
+  height: 84px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-size: 28px;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+#touch .jump { width: 100px; height: 100px; }

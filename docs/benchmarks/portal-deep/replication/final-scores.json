@@ -1,0 +1,742 @@
+[
+ {
+  "run": "R1-haiku-A-1",
+  "found": 15,
+  "poki": 10,
+  "total": 16,
+  "ev": 16,
+  "uns": 1,
+  "missed": [
+   5
+  ],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "Corrupted data, or a null value, throws during load()",
+    "why": "a null getItem result returns the defaults, and a stored \"null\" parses without throwing"
+   }
+  ]
+ },
+ {
+  "run": "R1-haiku-A-2",
+  "found": 13,
+  "poki": 8,
+  "total": 17,
+  "ev": 17,
+  "uns": 3,
+  "missed": [
+   5,
+   7,
+   9
+  ],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "assets/manifest.json:29 describes music.wav",
+    "why": "manifest.json has 8 lines; also cites nonexistent manifest.json:32 for sprites.png"
+   },
+   {
+    "quote": "index.html:22 and style.css:2 fix the canvas",
+    "why": "index.html:22 does not exist; the canvas is on line 10"
+   },
+   {
+    "quote": "index.html:23 opens lumengames.example.com",
+    "why": "line does not exist; the link is on line 11"
+   }
+  ]
+ },
+ {
+  "run": "R1-haiku-A-3",
+  "found": 14,
+  "poki": 10,
+  "total": 17,
+  "ev": 16,
+  "uns": 4,
+  "missed": [
+   1,
+   5
+  ],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "assets/manifest.json:15 lists music.wav",
+    "why": "manifest.json has 8 lines; music.wav is on line 3"
+   },
+   {
+    "quote": "fixed at 960x540 (index.html:30",
+    "why": "index.html has 14 lines; the canvas is on line 10"
+   },
+   {
+    "quote": "index.html:31 links to an external site",
+    "why": "line does not exist; the link is on line 11"
+   },
+   {
+    "quote": "The only SDK call is commercialBreak (src/sdk.js:6-8)",
+    "why": "sdk.js:3 also calls PokiSDK.init()"
+   }
+  ]
+ },
+ {
+  "run": "R1-haiku-A-4",
+  "found": 13,
+  "poki": 9,
+  "total": 17,
+  "ev": 17,
+  "uns": 2,
+  "missed": [
+   1,
+   5,
+   9
+  ],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "manifest.json:24-27 lists them",
+    "why": "manifest.json has 8 lines; also cites nonexistent manifest.json:24 for music.wav"
+   },
+   {
+    "quote": "play() in audio.js:10-12 throws on s.currentTime when a sound is absent",
+    "why": "a missing file still yields an Audio object; setting currentTime does not throw, only an unknown name would"
+   }
+  ]
+ },
+ {
+  "run": "R1-haiku-A-5",
+  "found": 16,
+  "poki": 10,
+  "total": 18,
+  "ev": 16,
+  "uns": 3,
+  "missed": [],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "index.html:15-20 has no viewport meta tag",
+    "why": "index.html has 14 lines"
+   },
+   {
+    "quote": "the fixed 960x540 canvas (index.html:22",
+    "why": "line does not exist; the canvas is on line 10"
+   },
+   {
+    "quote": "index.html:23 links to lumengames.example.com",
+    "why": "line does not exist; the link is on line 11"
+   }
+  ]
+ },
+ {
+  "run": "R1-haiku-A-6",
+  "found": 14,
+  "poki": 9,
+  "total": 20,
+  "ev": 20,
+  "uns": 1,
+  "missed": [
+   5,
+   13
+  ],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "it assumes topScores[0].score exists without validating the response",
+    "why": "main.js:77 uses optional chaining (topScores[0]?.score)"
+   }
+  ]
+ },
+ {
+  "run": "R1-haiku-A-7",
+  "found": 13,
+  "poki": 8,
+  "total": 18,
+  "ev": 16,
+  "uns": 5,
+  "missed": [
+   5,
+   12,
+   13
+  ],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "index.html:23 links \"More games\"",
+    "why": "index.html has 14 lines; the link is on line 11"
+   },
+   {
+    "quote": "the Poki script at index.html:19",
+    "why": "line does not exist; the SDK tag is on index.html:7"
+   },
+   {
+    "quote": "index.html:22 and style.css:2 fix the canvas",
+    "why": "index.html:22 does not exist; the canvas is on line 10"
+   },
+   {
+    "quote": "manifest.json:29 lists the soundtrack",
+    "why": "manifest.json has 8 lines; music.wav is on line 3"
+   },
+   {
+    "quote": "main.js:77 assumes topScores[0].score exists",
+    "why": "line 77 uses optional chaining (topScores[0]?.score), so a missing entry does not throw"
+   }
+  ]
+ },
+ {
+  "run": "R1-haiku-A-8",
+  "found": 14,
+  "poki": 9,
+  "total": 19,
+  "ev": 19,
+  "uns": 3,
+  "missed": [
+   5,
+   13
+  ],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "index.html:22 fixes the canvas at 960x540",
+    "why": "index.html has 14 lines; the canvas is on line 10"
+   },
+   {
+    "quote": "index.html:23 links to lumengames.example.com",
+    "why": "line does not exist; the link is on line 11"
+   },
+   {
+    "quote": "assets/manifest.json:5 lists sprites.png",
+    "why": "line 5 is gem.wav; sprites.png is on line 6"
+   }
+  ]
+ },
+ {
+  "run": "R1-haiku-A-9",
+  "found": 14,
+  "poki": 9,
+  "total": 19,
+  "ev": 19,
+  "uns": 2,
+  "missed": [
+   5,
+   12
+  ],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "The canvas is fixed at 960x540 (index.html:22",
+    "why": "index.html has 14 lines; the canvas is on line 10"
+   },
+   {
+    "quote": "index.html:23 links to lumengames.example.com",
+    "why": "line does not exist; the link is on line 11"
+   }
+  ]
+ },
+ {
+  "run": "R1-haiku-A-10",
+  "found": 12,
+  "poki": 8,
+  "total": 15,
+  "ev": 15,
+  "uns": 2,
+  "missed": [
+   1,
+   5,
+   9,
+   13
+  ],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "assets/manifest.json:15 lists music.wav",
+    "why": "manifest.json has 8 lines; music.wav is on line 3"
+   },
+   {
+    "quote": "style.css:22 centers it with no scaling",
+    "why": "style.css has 3 lines; the canvas rule is on line 2"
+   }
+  ]
+ },
+ {
+  "run": "R1-haiku-B-1",
+  "found": 14,
+  "poki": 8,
+  "total": 18,
+  "ev": 18,
+  "uns": 0,
+  "missed": [
+   9,
+   12
+  ],
+  "skill": true,
+  "unsupported_claims": []
+ },
+ {
+  "run": "R1-haiku-B-2",
+  "found": 13,
+  "poki": 7,
+  "total": 17,
+  "ev": 17,
+  "uns": 0,
+  "missed": [
+   9,
+   10,
+   12
+  ],
+  "skill": false,
+  "unsupported_claims": []
+ },
+ {
+  "run": "R1-haiku-B-3",
+  "found": 16,
+  "poki": 10,
+  "total": 22,
+  "ev": 22,
+  "uns": 5,
+  "missed": [],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "assets/manifest.json:32 lists sprites.png",
+    "why": "manifest.json has 8 lines; also cites nonexistent manifest.json:29 for music.wav"
+   },
+   {
+    "quote": "src/sdk.js:99 throws a ReferenceError on PokiSDK",
+    "why": "sdk.js has 8 lines; init is on line 3"
+   },
+   {
+    "quote": "index.html:22 fixes the canvas at 960x540 and style.css:36 does no scaling",
+    "why": "neither line exists; canvas is index.html:10, rule is style.css:2"
+   },
+   {
+    "quote": "index.html:23 links to lumengames.example.com/more",
+    "why": "line does not exist; the link is on line 11"
+   },
+   {
+    "quote": "package.json:11 only runs npx serve",
+    "why": "package.json has 7 lines; the script is on line 6"
+   }
+  ]
+ },
+ {
+  "run": "R1-haiku-B-4",
+  "found": 15,
+  "poki": 10,
+  "total": 22,
+  "ev": 22,
+  "uns": 5,
+  "missed": [
+   2
+  ],
+  "skill": true,
+  "unsupported_claims": [
+   {
+    "quote": "index.html:14 (synchronous SDK tag in <head>)",
+    "why": "line 14 is </html>; the SDK tag is on line 7"
+   },
+   {
+    "quote": "src/sdk.js:99 (PokiSDK.init() with no guard)",
+    "why": "sdk.js has 8 lines; also cites nonexistent sdk.js:102-103"
+   },
+   {
+    "quote": "src/input.js:21-27 binds only keydown and keyup",
+    "why": "input.js has 11 lines; also cites nonexistent input.js:23 and 25-27"
+   },
+   {
+    "quote": "index.html:17 (width=\"960\" height=\"540\"), style.css:31",
+    "why": "index.html:17 and style.css:31 do not exist; also cites nonexistent index.html:18"
+   },
+   {
+    "quote": "src/save.js:18 (JSON.parse with no try/catch)",
+    "why": "save.js has 10 lines; JSON.parse is on line 5; also cites nonexistent save.js:14-23"
+   }
+  ]
+ },
+ {
+  "run": "R1-haiku-B-5",
+  "found": 16,
+  "poki": 10,
+  "total": 16,
+  "ev": 15,
+  "uns": 0,
+  "missed": [],
+  "skill": false,
+  "unsupported_claims": []
+ },
+ {
+  "run": "R1-haiku-B-6",
+  "found": 16,
+  "poki": 10,
+  "total": 23,
+  "ev": 23,
+  "uns": 0,
+  "missed": [],
+  "skill": false,
+  "unsupported_claims": []
+ },
+ {
+  "run": "R1-haiku-B-7",
+  "found": 16,
+  "poki": 10,
+  "total": 23,
+  "ev": 23,
+  "uns": 0,
+  "missed": [],
+  "skill": false,
+  "unsupported_claims": []
+ },
+ {
+  "run": "R1-haiku-B-8",
+  "found": 16,
+  "poki": 10,
+  "total": 18,
+  "ev": 18,
+  "uns": 0,
+  "missed": [],
+  "skill": false,
+  "unsupported_claims": []
+ },
+ {
+  "run": "R1-haiku-B-9",
+  "found": 14,
+  "poki": 9,
+  "total": 21,
+  "ev": 20,
+  "uns": 0,
+  "missed": [
+   5,
+   12
+  ],
+  "skill": false,
+  "unsupported_claims": []
+ },
+ {
+  "run": "R1-haiku-B-10",
+  "found": 16,
+  "poki": 10,
+  "total": 17,
+  "ev": 17,
+  "uns": 0,
+  "missed": [],
+  "skill": true,
+  "unsupported_claims": []
+ },
+ {
+  "run": "R1-sonnet-A-1",
+  "found": 16,
+  "poki": 10,
+  "total": 17,
+  "ev": 17,
+  "uns": 1,
+  "missed": [],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "Call gameplayStart when a run begins (src/main.js:91, after newRun)",
+    "why": "line 91 runs at boot; Poki requires gameplayStart on the player's first input, not on load"
+   }
+  ]
+ },
+ {
+  "run": "R1-sonnet-A-2",
+  "found": 15,
+  "poki": 10,
+  "total": 17,
+  "ev": 16,
+  "uns": 1,
+  "missed": [
+   5
+  ],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "There is no mute button, which Poki expects.",
+    "why": "Poki's docs require no in-game mute button"
+   }
+  ]
+ },
+ {
+  "run": "R1-sonnet-A-3",
+  "found": 15,
+  "poki": 9,
+  "total": 17,
+  "ev": 16,
+  "uns": 2,
+  "missed": [
+   7
+  ],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "Call gameplayStart() when a run begins (src/main.js:91, and again after a restart)",
+    "why": "line 91 runs at boot; Poki requires gameplayStart on the player's first input, not on load"
+   },
+   {
+    "quote": "Poki expects the game to stop audio and gameplay when the tab loses focus.",
+    "why": "not among Poki's stated rules"
+   }
+  ]
+ },
+ {
+  "run": "R1-sonnet-A-4",
+  "found": 15,
+  "poki": 10,
+  "total": 15,
+  "ev": 15,
+  "uns": 1,
+  "missed": [
+   5
+  ],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "Poki also expects ads only at natural breaks, not necessarily on every restart.",
+    "why": "Poki recommends commercialBreak before every gameplayStart, including each restart, and paces ads itself"
+   }
+  ]
+ },
+ {
+  "run": "R1-sonnet-A-5",
+  "found": 16,
+  "poki": 10,
+  "total": 14,
+  "ev": 13,
+  "uns": 1,
+  "missed": [],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "Poki prohibits external links and branding. Remove the footer.",
+    "why": "Poki has no rule against branding or studio names in general; only outgoing links"
+   }
+  ]
+ },
+ {
+  "run": "R1-sonnet-A-6",
+  "found": 15,
+  "poki": 10,
+  "total": 18,
+  "ev": 18,
+  "uns": 1,
+  "missed": [
+   5
+  ],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "There is no mute control, which Poki expects.",
+    "why": "Poki's docs require no in-game mute button"
+   }
+  ]
+ },
+ {
+  "run": "R1-sonnet-A-7",
+  "found": 14,
+  "poki": 9,
+  "total": 15,
+  "ev": 14,
+  "uns": 1,
+  "missed": [
+   5,
+   7
+  ],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "Poki also recommends its own SDK storage over raw localStorage.",
+    "why": "Poki has no storage or save API; it recommends wrapping localStorage in try/catch"
+   }
+  ]
+ },
+ {
+  "run": "R1-sonnet-A-8",
+  "found": 16,
+  "poki": 10,
+  "total": 19,
+  "ev": 17,
+  "uns": 3,
+  "missed": [],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "A commercial break is shown after every death with no gameplay in between. Poki restricts how often you can call it.",
+    "why": "Poki recommends commercialBreak before every gameplayStart and handles pacing itself; there is also gameplay between deaths"
+   },
+   {
+    "quote": "Poki also offers its own storage options.",
+    "why": "Poki has no storage or save API"
+   },
+   {
+    "quote": "Poki prefers a play-button gate",
+    "why": "not a Poki rule; Poki asks to remove splash screens"
+   }
+  ]
+ },
+ {
+  "run": "R1-sonnet-A-9",
+  "found": 16,
+  "poki": 10,
+  "total": 16,
+  "ev": 16,
+  "uns": 2,
+  "missed": [],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "Poki's size guidance is a few MB for the initial load",
+    "why": "Poki states no numeric file size limit"
+   },
+   {
+    "quote": "There is no mute toggle and no pause when the tab loses focus. Poki expects both.",
+    "why": "Poki's docs require no in-game mute button"
+   }
+  ]
+ },
+ {
+  "run": "R1-sonnet-A-10",
+  "found": 14,
+  "poki": 9,
+  "total": 19,
+  "ev": 18,
+  "uns": 1,
+  "missed": [
+   5,
+   7
+  ],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "No PokiSDK.setDebug setup ... is part of the QA review",
+    "why": "not among Poki's stated rules"
+   }
+  ]
+ },
+ {
+  "run": "R1-sonnet-B-1",
+  "found": 15,
+  "poki": 10,
+  "total": 16,
+  "ev": 16,
+  "uns": 1,
+  "missed": [
+   5
+  ],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "Poki expects audio to pause when the tab loses focus.",
+    "why": "not among Poki's stated rules"
+   }
+  ]
+ },
+ {
+  "run": "R1-sonnet-B-2",
+  "found": 16,
+  "poki": 10,
+  "total": 13,
+  "ev": 13,
+  "uns": 0,
+  "missed": [],
+  "skill": true,
+  "unsupported_claims": []
+ },
+ {
+  "run": "R1-sonnet-B-3",
+  "found": 16,
+  "poki": 10,
+  "total": 16,
+  "ev": 16,
+  "uns": 0,
+  "missed": [],
+  "skill": true,
+  "unsupported_claims": []
+ },
+ {
+  "run": "R1-sonnet-B-4",
+  "found": 16,
+  "poki": 10,
+  "total": 15,
+  "ev": 15,
+  "uns": 0,
+  "missed": [],
+  "skill": true,
+  "unsupported_claims": []
+ },
+ {
+  "run": "R1-sonnet-B-5",
+  "found": 16,
+  "poki": 10,
+  "total": 12,
+  "ev": 12,
+  "uns": 0,
+  "missed": [],
+  "skill": true,
+  "unsupported_claims": []
+ },
+ {
+  "run": "R1-sonnet-B-6",
+  "found": 16,
+  "poki": 10,
+  "total": 14,
+  "ev": 13,
+  "uns": 1,
+  "missed": [],
+  "skill": true,
+  "unsupported_claims": [
+   {
+    "quote": "consider the SDK's storage",
+    "why": "Poki has no storage or save API"
+   }
+  ]
+ },
+ {
+  "run": "R1-sonnet-B-7",
+  "found": 16,
+  "poki": 10,
+  "total": 17,
+  "ev": 17,
+  "uns": 2,
+  "missed": [],
+  "skill": false,
+  "unsupported_claims": [
+   {
+    "quote": "Poki also forbids audio before the first interaction",
+    "why": "not among Poki's stated rules"
+   },
+   {
+    "quote": "Poki also offers its own storage options.",
+    "why": "Poki has no storage or save API"
+   }
+  ]
+ },
+ {
+  "run": "R1-sonnet-B-8",
+  "found": 16,
+  "poki": 10,
+  "total": 15,
+  "ev": 15,
+  "uns": 0,
+  "missed": [],
+  "skill": false,
+  "unsupported_claims": []
+ },
+ {
+  "run": "R1-sonnet-B-9",
+  "found": 16,
+  "poki": 10,
+  "total": 14,
+  "ev": 14,
+  "uns": 0,
+  "missed": [],
+  "skill": true,
+  "unsupported_claims": []
+ },
+ {
+  "run": "R1-sonnet-B-10",
+  "found": 16,
+  "poki": 10,
+  "total": 13,
+  "ev": 12,
+  "uns": 0,
+  "missed": [],
+  "skill": true,
+  "unsupported_claims": []
+ }
+]

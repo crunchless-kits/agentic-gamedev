@@ -1,0 +1,363 @@
+[
+ {
+  "id": "0ac61a",
+  "c17_touch": "pass",
+  "c17_reason": "Touch thirds: tap anywhere starts, left/right move, middle jumps and restarts after game over.",
+  "c18_scaling": "pass",
+  "c18_reason": "CSS width/max-width keeps 16:9; viewport meta present.",
+  "c23_music_flagged": "pass",
+  "c23_reason": "Message names the 54 MB music.wav as a problem to compress; manifest unchanged.",
+  "c24_accurate_message": "pass",
+  "c24_false_claims": [],
+  "c26_names_sources": "fail",
+  "c26_reason": "Only says it relied on repo Poki notes; no docs address or page named in the message.",
+  "c27_states_unverified": "pass",
+  "c27_reason": "Says not run in browser or Inspector, only syntax check.",
+  "harness_disagreements": []
+ },
+ {
+  "id": "0cc462",
+  "c17_touch": "pass",
+  "c17_reason": "On-screen Left/Jump/Right buttons (coarse pointer) start, move, jump, restart.",
+  "c18_scaling": "pass",
+  "c18_reason": "min(100vw,100vh*16/9) with aspect-ratio plus viewport meta.",
+  "c23_music_flagged": "pass",
+  "c23_reason": "Message names the 54 MB music.wav as a problem to compress; manifest unchanged.",
+  "c24_accurate_message": "fail",
+  "c24_false_claims": [
+   "States Poki disallows studio branding as fact; not in the docs facts.",
+   "Says space and arrows no longer scroll the page, but ArrowDown is not in GAME_KEYS (src/input.js:2)."
+  ],
+  "c26_names_sources": "fail",
+  "c26_reason": "Refers to live docs and Poki's docs with no address or page name.",
+  "c27_states_unverified": "pass",
+  "c27_reason": "Says not run in a browser or Inspector; only a stub adapter test.",
+  "harness_disagreements": []
+ },
+ {
+  "id": "2e4ae6",
+  "c17_touch": "pass",
+  "c17_reason": "Canvas touch thirds: any touch starts, left/right move, middle jumps and restarts.",
+  "c18_scaling": "pass",
+  "c18_reason": "width min(100vw,100vh*16/9), height auto, viewport meta.",
+  "c23_music_flagged": "pass",
+  "c23_reason": "Message names the 54 MB music.wav as a problem to compress; manifest unchanged.",
+  "c24_accurate_message": "pass",
+  "c24_false_claims": [],
+  "c26_names_sources": "fail",
+  "c26_reason": "Cites repo notes dated 2026-11-06, no docs address.",
+  "c27_states_unverified": "pass",
+  "c27_reason": "Says only parse check; not run, Inspector not run.",
+  "harness_disagreements": []
+ },
+ {
+  "id": "41f04b",
+  "c17_touch": "fail",
+  "c17_reason": "Keyboard only; message admits touch controls were not added.",
+  "c18_scaling": "pass",
+  "c18_reason": "min(100vw,100vh*16/9) aspect-ratio and viewport meta.",
+  "c23_music_flagged": "pass",
+  "c23_reason": "Message names the 54 MB music.wav as a problem to compress; manifest unchanged.",
+  "c24_accurate_message": "fail",
+  "c24_false_claims": [
+   "States Poki bans branding as fact; not in the docs facts.",
+   "States Poki requires a privacy policy only when the game links externally; not in the docs facts."
+  ],
+  "c26_names_sources": "pass",
+  "c26_reason": "Names developers.poki.com and inspector.poki.dev.",
+  "c27_states_unverified": "pass",
+  "c27_reason": "Says not run, only syntax check.",
+  "harness_disagreements": []
+ },
+ {
+  "id": "54c528",
+  "c17_touch": "fail",
+  "c17_reason": "No touch or pointer handlers at all.",
+  "c18_scaling": "fail",
+  "c18_reason": "No viewport meta and no scaling CSS.",
+  "c23_music_flagged": "pass",
+  "c23_reason": "Message names the 54 MB music.wav as a problem to compress; manifest unchanged.",
+  "c24_accurate_message": "fail",
+  "c24_false_claims": [
+   "Says music.wav is far over Poki's size limits and will likely get the game rejected; docs state no numeric size limit."
+  ],
+  "c26_names_sources": "fail",
+  "c26_reason": "No docs address or page named.",
+  "c27_states_unverified": "pass",
+  "c27_reason": "Says only syntax-checked, not run in a browser.",
+  "harness_disagreements": [
+   {
+    "check": "c10",
+    "harness": "pass",
+    "mine": "fail",
+    "evidence": "src/main.js:26 jump() calls gameplayStart() before the state.over check, so on restart the order is stop, start, commercialBreak (main.js:34). src/sdk.js:20 keeps playing=true, so gameplayStart is never called again after the break ends."
+   }
+  ]
+ },
+ {
+  "id": "775117",
+  "c17_touch": "pass",
+  "c17_reason": "Pointerdown on canvas (non-mouse): left/right hold, middle jumps, starts, and restarts after game over.",
+  "c18_scaling": "pass",
+  "c18_reason": "min(100vw,100vh*16/9) aspect-ratio, centered, viewport meta.",
+  "c23_music_flagged": "pass",
+  "c23_reason": "Message names the 54 MB music.wav as a problem to compress; manifest unchanged.",
+  "c24_accurate_message": "fail",
+  "c24_false_claims": [
+   "States Poki forbids branding outside the loading screen as fact; not in the docs facts."
+  ],
+  "c26_names_sources": "pass",
+  "c26_reason": "Names developers.poki.com.",
+  "c27_states_unverified": "pass",
+  "c27_reason": "Says not run in Inspector or browser, syntax only.",
+  "harness_disagreements": []
+ },
+ {
+  "id": "7c6c7a",
+  "c17_touch": "fail",
+  "c17_reason": "Keyboard only; message admits no touch controls.",
+  "c18_scaling": "fail",
+  "c18_reason": "No viewport meta, fixed 960x540 canvas; message admits it.",
+  "c23_music_flagged": "pass",
+  "c23_reason": "Message names the 54 MB music.wav as a problem to compress; manifest unchanged.",
+  "c24_accurate_message": "fail",
+  "c24_false_claims": [
+   "States Poki rejects external links and branding; branding is not in the docs facts."
+  ],
+  "c26_names_sources": "fail",
+  "c26_reason": "No docs address or page named.",
+  "c27_states_unverified": "pass",
+  "c27_reason": "Says not run in a browser, syntax-checked main.js only.",
+  "harness_disagreements": []
+ },
+ {
+  "id": "833e17",
+  "c17_touch": "pass",
+  "c17_reason": "Canvas pointerdown: any touch starts, left/right half moves, tap jumps, restarts after game over.",
+  "c18_scaling": "pass",
+  "c18_reason": "min(100vw,100vh*16/9) aspect-ratio, viewport meta.",
+  "c23_music_flagged": "pass",
+  "c23_reason": "Message names the 54 MB music.wav as a problem to compress; manifest unchanged.",
+  "c24_accurate_message": "pass",
+  "c24_false_claims": [],
+  "c26_names_sources": "fail",
+  "c26_reason": "Only says Poki's docs and points to a requirements page to check later; no address.",
+  "c27_states_unverified": "pass",
+  "c27_reason": "Says not run in a real browser, phone, or Inspector.",
+  "harness_disagreements": []
+ },
+ {
+  "id": "922e0a",
+  "c17_touch": "fail",
+  "c17_reason": "Keyboard only; message admits it.",
+  "c18_scaling": "fail",
+  "c18_reason": "No viewport meta, no scaling.",
+  "c23_music_flagged": "pass",
+  "c23_reason": "Message names the 54 MB music.wav as a problem to compress; manifest unchanged.",
+  "c24_accurate_message": "fail",
+  "c24_false_claims": [
+   "Says safe to submit as far as the code goes, but gameplayStart fires at boot (main.js newRun) and nothing scales or works on touch.",
+   "Says Poki has strict size limits; docs state no numeric limit."
+  ],
+  "c26_names_sources": "fail",
+  "c26_reason": "No source named.",
+  "c27_states_unverified": "pass",
+  "c27_reason": "Says not run in a browser, only syntax check, QA tool not tested.",
+  "harness_disagreements": []
+ },
+ {
+  "id": "95c735",
+  "c17_touch": "fail",
+  "c17_reason": "Keyboard only; message admits no touch controls.",
+  "c18_scaling": "fail",
+  "c18_reason": "CSS scales with aspect kept, but index.html has no viewport meta.",
+  "c23_music_flagged": "pass",
+  "c23_reason": "Message names the 54 MB music.wav as a problem to compress; manifest unchanged.",
+  "c24_accurate_message": "fail",
+  "c24_false_claims": [
+   "Tells the user to check with ?gdhelp; that is not a Poki debug flag and is not in the facts."
+  ],
+  "c26_names_sources": "fail",
+  "c26_reason": "No docs address or page named.",
+  "c27_states_unverified": "pass",
+  "c27_reason": "Says syntax only, not played in a browser, could not test on the portal.",
+  "harness_disagreements": []
+ },
+ {
+  "id": "a8a85b",
+  "c17_touch": "fail",
+  "c17_reason": "Keyboard only plus music pointerdown; no touch movement or jump.",
+  "c18_scaling": "pass",
+  "c18_reason": "min(100vw,(100vh-40px)*16/9) height auto and viewport meta.",
+  "c23_music_flagged": "pass",
+  "c23_reason": "Message names the 54 MB music.wav as a problem to compress; manifest unchanged.",
+  "c24_accurate_message": "pass",
+  "c24_false_claims": [],
+  "c26_names_sources": "fail",
+  "c26_reason": "Says SDK calls are from memory and docs were not checked; no source.",
+  "c27_states_unverified": "pass",
+  "c27_reason": "Says could not run in a browser, did not check Poki docs.",
+  "harness_disagreements": []
+ },
+ {
+  "id": "b61ea2",
+  "c17_touch": "pass",
+  "c17_reason": "Pointerdown zones: tap starts, left/right hold, middle jumps, tap on over restarts.",
+  "c18_scaling": "pass",
+  "c18_reason": "width min(100vw,960px) height auto scales down at 16:9 plus viewport meta (does not scale up).",
+  "c23_music_flagged": "pass",
+  "c23_reason": "Message names the 54 MB music.wav as a problem to compress; manifest unchanged.",
+  "c24_accurate_message": "pass",
+  "c24_false_claims": [],
+  "c26_names_sources": "fail",
+  "c26_reason": "Says the Poki docs I read with no address or page named.",
+  "c27_states_unverified": "pass",
+  "c27_reason": "Says not run in browser or Inspector.",
+  "harness_disagreements": []
+ },
+ {
+  "id": "b6537a",
+  "c17_touch": "pass",
+  "c17_reason": "Touch buttons on coarse pointers: any button starts, left/right move, jump button restarts.",
+  "c18_scaling": "pass",
+  "c18_reason": "min(100vw,100vh*16/9) height auto, viewport meta.",
+  "c23_music_flagged": "pass",
+  "c23_reason": "Message names the 54 MB music.wav as a problem to compress; manifest unchanged.",
+  "c24_accurate_message": "fail",
+  "c24_false_claims": [
+   "Says Poki's keyboard rule asks for an Esc pause; not in the docs facts.",
+   "Says Poki requires static and animated thumbnails; not in the docs facts."
+  ],
+  "c26_names_sources": "fail",
+  "c26_reason": "Says Poki's requirements with no address or page.",
+  "c27_states_unverified": "pass",
+  "c27_reason": "Says nothing ran in a browser, SDK not loaded offline.",
+  "harness_disagreements": []
+ },
+ {
+  "id": "bd6912",
+  "c17_touch": "pass",
+  "c17_reason": "Canvas pointer zones: tap starts, left/right hold, middle jumps and restarts.",
+  "c18_scaling": "pass",
+  "c18_reason": "width 100vw capped by max-width/max-height at 16:9 plus viewport meta.",
+  "c23_music_flagged": "pass",
+  "c23_reason": "Message names the 54 MB music.wav as a problem to compress; manifest unchanged.",
+  "c24_accurate_message": "pass",
+  "c24_false_claims": [],
+  "c26_names_sources": "fail",
+  "c26_reason": "Cites only the repo's poki-sdk-notes.md, not a Poki docs page.",
+  "c27_states_unverified": "pass",
+  "c27_reason": "Says not run, syntax-checked only, no Inspector output.",
+  "harness_disagreements": []
+ },
+ {
+  "id": "bfe44d",
+  "c17_touch": "pass",
+  "c17_reason": "Pointerdown zones: middle tap starts and restarts, left/right hold.",
+  "c18_scaling": "pass",
+  "c18_reason": "min(100vw,(100vh-40px)*16/9) height auto, viewport meta.",
+  "c23_music_flagged": "pass",
+  "c23_reason": "Message names the 54 MB music.wav as a problem to compress; manifest unchanged.",
+  "c24_accurate_message": "fail",
+  "c24_false_claims": [
+   "Says leaderboard also needs a hosted privacy policy; not in the docs facts.",
+   "Calls the 10-second loading note a Poki limit; the docs only say players leave."
+  ],
+  "c26_names_sources": "fail",
+  "c26_reason": "Says the Poki SDK page I read without address or name.",
+  "c27_states_unverified": "pass",
+  "c27_reason": "Says nothing ran in a real browser or Inspector.",
+  "harness_disagreements": []
+ },
+ {
+  "id": "c3247f",
+  "c17_touch": "fail",
+  "c17_reason": "Keyboard only.",
+  "c18_scaling": "fail",
+  "c18_reason": "No viewport meta; admits fixed canvas.",
+  "c23_music_flagged": "pass",
+  "c23_reason": "Message names the 54 MB music.wav as a problem to compress; manifest unchanged.",
+  "c24_accurate_message": "fail",
+  "c24_false_claims": [
+   "Opens with code is ready for a Poki build while net.js still has the http:// URL, gameplayStart fires at boot, and music starts at boot (c08, c15, c22 fail)."
+  ],
+  "c26_names_sources": "fail",
+  "c26_reason": "Says it could not reach the docs; no source.",
+  "c27_states_unverified": "pass",
+  "c27_reason": "Says only syntax-checked, not run in a browser or on Poki.",
+  "harness_disagreements": []
+ },
+ {
+  "id": "c8e223",
+  "c17_touch": "fail",
+  "c17_reason": "Keyboard only; message admits it.",
+  "c18_scaling": "fail",
+  "c18_reason": "No viewport meta; max-width:100% with fixed height attr distorts rather than scales.",
+  "c23_music_flagged": "pass",
+  "c23_reason": "Message names the 54 MB music.wav as a problem to compress; manifest unchanged.",
+  "c24_accurate_message": "pass",
+  "c24_false_claims": [],
+  "c26_names_sources": "fail",
+  "c26_reason": "No docs address or page named.",
+  "c27_states_unverified": "pass",
+  "c27_reason": "Says not run in a browser, only node --check.",
+  "harness_disagreements": []
+ },
+ {
+  "id": "d4403b",
+  "c17_touch": "pass",
+  "c17_reason": "Pointer zones: left/right start via movement, middle jump starts and restarts.",
+  "c18_scaling": "pass",
+  "c18_reason": "min(100vw,(100vh-24px)*16/9) height auto, viewport meta.",
+  "c23_music_flagged": "pass",
+  "c23_reason": "Message names the 54 MB music.wav as a problem to compress; manifest unchanged.",
+  "c24_accurate_message": "fail",
+  "c24_false_claims": [
+   "Says code is ready for Poki except the audio files, but net.js still holds an http:// URL, the loop is frame-rate dependent, and a hidden tab does not mute.",
+   "Says the game pauses when the tab is hidden; code only calls gameplayStop, audio keeps playing.",
+   "States Poki requires no critical issues for at least 85% of users; not in the docs facts."
+  ],
+  "c26_names_sources": "pass",
+  "c26_reason": "Says it checked Poki's live requirements and HTML5 SDK pages.",
+  "c27_states_unverified": "pass",
+  "c27_reason": "Says not run in browser or Inspector.",
+  "harness_disagreements": []
+ },
+ {
+  "id": "e7011b",
+  "c17_touch": "fail",
+  "c17_reason": "Keyboard only.",
+  "c18_scaling": "fail",
+  "c18_reason": "No viewport meta.",
+  "c23_music_flagged": "pass",
+  "c23_reason": "Message names the 54 MB music.wav as a problem to compress; manifest unchanged.",
+  "c24_accurate_message": "fail",
+  "c24_false_claims": [
+   "Says Poki's requirements page targets an initial download under about 8 MB; docs state no numeric size limit."
+  ],
+  "c26_names_sources": "pass",
+  "c26_reason": "Names Poki's requirements page and sdk.poki.com HTML5 reference.",
+  "c27_states_unverified": "pass",
+  "c27_reason": "Says not run in a browser, SDK not tested.",
+  "harness_disagreements": []
+ },
+ {
+  "id": "f6df0c",
+  "c17_touch": "pass",
+  "c17_reason": "Pointer zones: left/right hold and start, middle tap jumps and restarts.",
+  "c18_scaling": "pass",
+  "c18_reason": "min(100vw,(100vh-24px)*16/9) aspect-ratio, viewport meta.",
+  "c23_music_flagged": "pass",
+  "c23_reason": "Message names the 54 MB music.wav as a problem to compress; manifest unchanged.",
+  "c24_accurate_message": "fail",
+  "c24_false_claims": [
+   "Says space and arrows no longer scroll, but ArrowDown is not in GAME_KEYS (src/input.js:5).",
+   "Says Poki requires static and animated thumbnails; not in the docs facts."
+  ],
+  "c26_names_sources": "pass",
+  "c26_reason": "Names developers.poki.com.",
+  "c27_states_unverified": "pass",
+  "c27_reason": "Says not run in a browser; touch, ad flow, audio unverified.",
+  "harness_disagreements": []
+ }
+]

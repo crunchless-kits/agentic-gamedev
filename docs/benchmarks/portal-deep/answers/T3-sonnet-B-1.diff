@@ -1,0 +1,34 @@
+diff --git a/src/main.js b/src/main.js
+index 0e111e4..7ba79fe 100644
+--- a/src/main.js
++++ b/src/main.js
+@@ -20,7 +20,6 @@ function newRun() {
+     score: 0,
+     over: false,
+   };
+-  bindKeys(jump);
+ }
+ 
+ function jump() {
+@@ -28,9 +27,11 @@ function jump() {
+   if (state.player.grounded) { state.player.vy = -11; state.player.grounded = false; play("jump"); }
+ }
+ 
++let restarting = false;
+ async function restart() {
+-  await showAd();
+-  newRun();
++  if (restarting) return;
++  restarting = true;
++  try { await showAd(); newRun(); } finally { restarting = false; }
+ }
+ 
+ function update() {
+@@ -89,6 +90,7 @@ async function boot() {
+   data = load();
+   topScores = await fetchTopScores();
+   newRun();
++  bindKeys(jump);
+   startMusic();
+   loop();
+ }

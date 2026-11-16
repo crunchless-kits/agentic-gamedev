@@ -1,0 +1,4 @@
+body { margin: 0; background: #0b1020; color: #ccd; font-family: sans-serif; }
+canvas { display: block; margin: 0 auto; width: min(100vw, 960px); height: auto; touch-action: none; }
+footer { text-align: center; padding: 8px; font-size: 12px; }
+footer a { color: #8be; }
