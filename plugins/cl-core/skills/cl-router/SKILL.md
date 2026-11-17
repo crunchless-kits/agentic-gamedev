@@ -10,6 +10,8 @@ tags: ["production", "docs"]
 
 Pick the narrowest member that fully covers the task. Read `references/routing-table.md` only when the right member is not obvious; it maps tasks to members and run profiles for every installed plugin. Reach a member through its plugin's hub (the Hubs table below) unless it is free and listed.
 
+Some jobs belong to agents, not skills, so look in the agent list as well as the skill list. The look of a game (art direction, palette, shapes, lighting, UI skin, or a game that looks flat or generic) goes to the `game-art-feel-director` agent. Interface work goes to `game-ui-ux-designer`, and design across several mechanics goes to `game-systems-designer`.
+
 ## Execution model (how to spend tokens)
 
 - Scout first: `cl-scout` (haiku, low, read-only) gathers evidence for audits, traces, gates, and reports.

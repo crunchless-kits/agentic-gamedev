@@ -92,7 +92,7 @@ Engine-specific extras:
 | Feedback and juice | skill `game-juice` (Builder) | builder medium |
 | UI rules by audience age, platform numbers | skill `game-ui-standards` (Builder) | high |
 | Interface design and review | agent `game-ui-ux-designer` (Builder), skill `ui-ux-audit` (Builder) | opus, medium |
-| Visual direction | agent `game-art-feel-director` (Builder) | opus, medium |
+| Art direction, the look, or a game that looks flat or generic | agent `game-art-feel-director` (Builder), then skill `game-juice` (Builder) for feedback | opus, medium |
 | Several mechanics at once | agent `game-systems-designer` (Builder) | opus, medium |
 
 ## Content (cl-content, hub `content-hub` (Builder))

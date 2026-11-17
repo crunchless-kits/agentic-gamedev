@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.17.1 (2026-11-17)
+
+- Fix: art direction requests now reach the `game-art-feel-director` agent. A test run asked for "the kit's art direction skills", searched only the skill list, found `game-juice`, and said the kit had no art direction. The router now says some jobs are agents and names this one, the routing table row covers "art direction", "the look", and "looks flat or generic", and `game-juice` sends the look to the agent first. A rerun of the same brief read the agent, followed its procedure, and wrote the style guide it asks for.
+
 ## 0.17.0 (2026-11-17)
 
 Planning, from a first-time user's feedback and a review of HumanLayer's plan workflows (`.claude/docs/ai/crunchless/v016/humanlayer-review.md`).

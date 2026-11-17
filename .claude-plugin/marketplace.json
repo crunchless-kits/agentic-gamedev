@@ -5,7 +5,7 @@
   },
   "metadata": {
     "description": "Agents, skills, commands, and scripts that give coding agents a full harness for game development: Unity, web and Capacitor, Roblox, Unreal, Godot, and Cocos Creator, plus design, platforms, monetization, analytics, multiplayer, QA, compliance, and production.",
-    "version": "0.17.0"
+    "version": "0.17.1"
   },
   "plugins": [
     {

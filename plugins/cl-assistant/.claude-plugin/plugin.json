@@ -1,6 +1,6 @@
 {
   "name": "cl-assistant",
-  "version": "0.17.0",
+  "version": "0.17.1",
   "description": "Crunchless assistant: the kit's own guide. Answers how to install and run the kit (Claude Code plugins, vendored repos, Claude Projects, Cowork, CI), what each tier includes, which member fits a task, and how to troubleshoot, from the kit's own files. Turn it off by not installing this plugin.",
   "author": {
     "name": "crunchless"
