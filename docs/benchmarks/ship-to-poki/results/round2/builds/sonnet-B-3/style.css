@@ -1,0 +1,5 @@
+html, body { height: 100%; }
+body { margin: 0; background: #0b1020; color: #ccd; font-family: sans-serif; overflow: hidden; }
+/* Scale the 960x540 (16:9) canvas to fit the frame, keeping the ratio. */
+canvas { display: block; margin: 0 auto; width: 100vw; height: 56.25vw; max-height: 100vh; max-width: 177.78vh; touch-action: none; }
+footer { display: none; }

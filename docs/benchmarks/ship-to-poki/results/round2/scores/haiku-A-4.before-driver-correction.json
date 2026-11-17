@@ -1,0 +1,29 @@
+{
+ "checks": {
+  "c01_boots_normal": "pass",
+  "c02_boots_adblock": "pass",
+  "c03_boots_no_sdk": "pass",
+  "c04_boots_request_blocked": "pass",
+  "c05_boots_no_storage": "pass",
+  "c06_boots_corrupt_save": "pass",
+  "c07_loading_finished": "pass",
+  "c08_start_on_first_input": "pass",
+  "c09_stop_on_death": "fail",
+  "c10_break_on_restart": "fail",
+  "c11_audio_muted_in_break": "pass",
+  "c12_input_held_in_break": "pass",
+  "c13_prevent_default": "pass",
+  "c16_no_frame_logging": "pass",
+  "c19_frame_rate_independent": "fail",
+  "c20_pause_on_hidden": "fail",
+  "c21_no_listener_stacking": "pass",
+  "c22_music_after_gesture": "pass",
+  "c14_no_outgoing_links": "pass",
+  "c15_no_insecure_requests": "pass"
+ },
+ "holdout": {
+  "h1_stop_when_hidden": "fail",
+  "h2_events_paired": "pass",
+  "h3_wheel_prevented": "fail"
+ }
+}

@@ -67,8 +67,15 @@ for (const [p, raw] of Object.entries(text)) {
 }
 checks.c14_no_outgoing_links = P(hits14.length === 0);
 checks.c15_no_insecure_requests = P(hits15.length === 0);
-const result = { gameDir, checks, static: { hits14, hits15, files: shipped.map((p) => p.slice(gameDir.length + 1)) }, obs };
+// Holdout checks: not part of the 24, and not scored by the kit's own preflight.
+const seq = (N.sdk || []).map((x) => x.split("@")[0]).filter((m) => m === "gameplayStart" || m === "gameplayStop");
+const holdout = {
+  h1_stop_when_hidden: P(ran && N.stopOnHidden === true),
+  h2_events_paired: P(ran && seq.length > 0 && seq[0] === "gameplayStart" && seq.every((m, i) => i === 0 || m !== seq[i - 1])),
+  h3_wheel_prevented: P(ran && N.wheelPrevented === true),
+};
+const result = { gameDir, checks, holdout, static: { hits14, hits15, files: shipped.map((p) => p.slice(gameDir.length + 1)) }, obs };
 for (const s of SCENARIOS) if (obs[s] && obs[s].respond) delete obs[s].respond.frame;
 if (outIdx > 0) writeFileSync(process.argv[outIdx + 1], JSON.stringify(result, null, 1));
 const pass = Object.values(checks).filter((v) => v === "pass").length;
-console.log(JSON.stringify({ pass, of: Object.keys(checks).length, unknown: Object.entries(checks).filter(([, v]) => v === "unknown").map(([k]) => k), fail: Object.entries(checks).filter(([, v]) => v === "fail").map(([k]) => k) }));
+console.log(JSON.stringify({ pass, of: Object.keys(checks).length, holdout: Object.values(holdout).filter((v) => v === "pass").length, unknown: Object.entries(checks).filter(([, v]) => v === "unknown").map(([k]) => k), fail: Object.entries(checks).filter(([, v]) => v === "fail").map(([k]) => k) }));

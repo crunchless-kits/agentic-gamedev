@@ -88,7 +88,38 @@ The pilot was one Sonnet run per arm (`sonnet-A-0` and `sonnet-B-0`). It is not 
 1. **Checks 9 and 10 now cover all three deaths and restarts.** The first harness looked only at the first cycle. The pilot's no-kit build sent `gameplayStop()` on the first death only and never sent `gameplayStart()` after a restart, which breaks the stop, break, start order, and the first harness passed it. This is a fix to the instrument. It moved the pilot's scripted scores from 18 and 18 to 16 (no kit) and 18 (kit).
 2. **Checks 25 to 27 were added, as a group scored apart.** The founder asked for scoring that covers what the kit is built to do. In the pilot, the kit run fetched Poki's current docs and the no-kit run worked from memory. These checks were chosen after seeing that, which is why they are kept out of the 24-check readiness score.
 
+## Round 2, Written Before Its Runs
+
+Round 1 showed that no run in either arm ever played the game, so both arms missed what only shows when it runs. Kit v0.16.0 adds `web-portal-preflight`, a script the agent can run to boot the game and check it. Round 2 measures that version.
+
+- **Same task:** the same fixture, brief, models, flags, and five builds per arm per model as round 1.
+- **Arm A, no kit:** five new runs per model, side by side with arm B. Round 1's arm A runs are reported next to them and not pooled.
+- **Arm B, kit:** the Builder edition at v0.16.0, built from the kit source at the commit that adds this section, installed with `--bundle web`.
+- **Scoring:** the same 24 readiness checks and three verification checks, with the same harness and two blind judges.
+
+**What a reader should know about this round.** The preflight shares its fake browser with the scoring harness, and it reports 20 of the 24 readiness checks. The kit agent can run it and the agent without the kit can't. That is the feature being measured: whether an agent that can test its build ships a better one. Three things keep the round honest:
+
+1. **The agent has to do the work.** It must find the tool, write a config that says how to start, move, die, and restart, read the failures, and fix the game. The harness uses its own fixed driver.
+2. **The kit ships no answer for this game.** Its self-test fixtures are a different game.
+3. **Three holdout checks are scored apart.** The preflight doesn't score them, so they show whether the gains reach past what the tool tests.
+
+| # | Holdout check | Passes when | Poki rule |
+|---|---|---|---|
+| H1 | Stop when hidden | `gameplayStop()` is called when the tab is hidden during play | "must fire on any gameplay interruption" |
+| H2 | Events stay paired | Across the whole run, `gameplayStart()` and `gameplayStop()` alternate, starting with a start | The SDK's start and stop metrics |
+| H3 | Wheel doesn't scroll | A `wheel` event is prevented | The "Prevent page jump" snippet. The preflight mentions this one as a note, without scoring it |
+
+**What the site will show from round 2:** the readiness total, how many builds passed all 24 checks, and the holdout total, whatever they turn out to be. The report shows everything, as before.
+
+## Correction After the Round 2 Runs
+
+Both judges flagged one scripted result in round 2. A build without the kit waits for a jump key after the ad break before it starts the new run, and calls `gameplayStart()` then, which fits Poki's first-input rule. The harness's driver never sent that key, so checks 9 and 10 failed for a reason outside the code.
+
+The driver now gives a build that first input once, when no break is pending and no `gameplayStart()` has come since the restart began. All 40 builds from both rounds were rescored with it. Two results changed, both for that one build. The fixture still scores 1 of 20 and the reference fix 20 of 20.
+
 ## Changelog
 
 - 2026-11-16: Written and committed before any run.
 - 2026-11-16: Amended after the pilot, before any scored run (see above).
+- 2026-11-16: Round 2 added before its runs: kit v0.16.0 with the preflight, and three holdout checks.
+- 2026-11-17: Driver correction after the round 2 runs, flagged by both judges (see above).

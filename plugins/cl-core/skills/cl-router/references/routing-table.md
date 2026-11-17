@@ -127,6 +127,7 @@ Engine-specific extras:
 | Google Play, App Store | skills `google-play` (Builder), `app-store` (Builder) | builder medium |
 | Web portals | skills `poki-integration` (Builder), `crazygames-integration` (Builder), `gamedistribution-integration` (Builder), `youtube-playables-integration` (Builder), `wavedash` (Builder), `coolmath-games` (Builder), `itch-io`, `newgrounds` (Builder) | builder medium, parallel per portal |
 | Any other surface, or a portal with no skill | skills `portal-directory` (Builder), `portal-recon` (Builder) | scout low, scaffold high |
+| Check a web build against portal rules by running it | skill `web-portal-preflight` (Builder) (in cl-web) | script, then builder medium for fixes |
 | OS targets, tablets, Steam Deck, ChromeOS | skill `os-targets` (Builder) | medium |
 | Console porting readiness | skill `console-readiness` (Builder) | high |
 | Multi-platform release and live layer | agent `publishing-liveops-engineer` (Builder) | sonnet, high |

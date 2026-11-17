@@ -5,7 +5,7 @@
   },
   "metadata": {
     "description": "Agents, skills, commands, and scripts that give coding agents a full harness for game development: Unity, web and Capacitor, Roblox, Unreal, Godot, and Cocos Creator, plus design, platforms, monetization, analytics, multiplayer, QA, compliance, and production.",
-    "version": "0.15.0"
+    "version": "0.16.0"
   },
   "plugins": [
     {
@@ -21,7 +21,7 @@
     {
       "name": "cl-web",
       "source": "./plugins/cl-web",
-      "description": "Free edition of cl-web: web-game-architecture and web-game-audit. Builder and Studio add 24 more members."
+      "description": "Free edition of cl-web: web-game-architecture and web-game-audit. Builder and Studio add 25 more members."
     },
     {
       "name": "cl-unity",

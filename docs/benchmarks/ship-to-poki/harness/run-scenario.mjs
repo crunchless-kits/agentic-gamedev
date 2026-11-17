@@ -60,6 +60,16 @@ async function restart() {
   if (count("commercialBreak") === b0 && count("gameplayStart") === s0) { await env.tap(); await env.tapAllButtons(); await env.frames(5, F); R.notes.push("restart needed a tap"); }
   return { breakCalled: count("commercialBreak") - b0, pending: env.pendingBreaks() };
 }
+// Some builds wait for the player's first input after the break before they start the new run, and call
+// gameplayStart() then. The driver gives that input once: only when the build has called gameplayStart()
+// before, no break is pending, and no gameplayStart() has come since the restart began.
+async function firstInputOfNewRun(startsBefore) {
+  if (count("gameplayStart") > 0 && count("gameplayStart") === startsBefore && !env.pendingBreaks()) {
+    await press(" ");
+    await env.frames(5, F);
+    R.notes.push("new run needed a second press");
+  }
+}
 
 try {
   await bootAndStart();
@@ -97,6 +107,7 @@ try {
       for (let i = 0; i < 6 && env.pendingBreaks(); i++) { await env.resolveBreaks(); await env.frames(2, F); }
     }
     await env.frames(sec(0.5), F);
+    await firstInputOfNewRun(startsBeforeRestart + (R.startsDuringBreak || 0));
     await press("ArrowRight", 6);
     await env.frames(sec(0.5), F);
     R.startsAfterBreak = count("gameplayStart") - startsBeforeRestart - (R.startsDuringBreak || 0);
@@ -112,6 +123,7 @@ try {
       await env.frames(5, F);
       for (let j = 0; j < 6 && env.pendingBreaks(); j++) { await env.resolveBreaks(); await env.frames(2, F); }
       await env.frames(sec(0.5), F);
+      await firstInputOfNewRun(s0);
       await press("ArrowRight", 6);
       await env.frames(sec(0.5), F);
       R.laterDeaths.push({ stopLogged: d.stopLogged, breakCalled: r.breakCalled, startsAfter: count("gameplayStart") - s0 });
@@ -132,6 +144,10 @@ try {
     const hd = frameDiff(fa, fb);
     R.hiddenJump = { max: hd.max, compared: hd.compared };
     R.drewAfterHidden = await env.frames(10, F);
+    // Holdout probe: does a wheel event get preventDefault()? Dispatched on the canvas, bubbling to window.
+    const wheelEvt = { type: "wheel", bubbles: true, cancelable: true, defaultPrevented: false, deltaY: 100, preventDefault() { this.defaultPrevented = true; }, stopPropagation() { this._stopped = true; }, stopImmediatePropagation() { this._stopped = true; this._stoppedNow = true; } };
+    (globalThis.document.querySelector("canvas") || globalThis.document.body).dispatchEvent(wheelEvt);
+    R.wheelPrevented = wheelEvt.defaultPrevented;
   }
 } catch (e) {
   R.fatal = String((e && e.stack) || e).split("\n").slice(0, 3).join(" | ");

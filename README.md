@@ -42,6 +42,10 @@ node crunchless/scripts/export_agents.mjs --target codex --bundle unity --out /p
 
 Swap `codex` for `copilot`, `cursor`, or `antigravity`. In both install commands, swap `unity` for `web`, `roblox`, `unreal`, `godot`, or `cocos`. Then run the audit: `$cl-audit` in Codex, `/cl-audit` in Cursor and Antigravity, or ask Copilot to "run cl-audit".
 
+## Benchmark
+
+One task, run in Claude Code with and without the kit: get a small web game ready for the Poki portal. Of ten builds made with the Builder edition, nine passed all 24 readiness checks. Of ten made without the kit, none did. The Builder edition's preflight tests 20 of those 24 rules, which is most of the gap, and the report says so. The free core wasn't benchmarked. [Read the report](docs/benchmarks/ship-to-poki/REPORT.md).
+
 ## Get Builder or Studio
 
 1. Sponsor on [GitHub Sponsors](https://github.com/sponsors/crunchless-kits) with a one-time payment: $10 for Builder or $100 for Studio. The repository invitation goes to the GitHub account you sponsor with, so use the one you'll install from.

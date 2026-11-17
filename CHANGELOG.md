@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.16.0 (2026-11-17)
+
+The kit can now run a web game and check it, where before it could only read the code.
+
+- New: `web-portal-preflight` (Builder, in cl-web). A script boots a web game in a fake browser with a mock portal SDK and reports 20 checks as pass, fail, or skipped, each with its evidence and the usual fix: twelve web checks for any portal or embed, and eight Poki checks. It needs Node.js 22 and nothing else, exits 1 on a failed check for CI, and has a self-test that runs in the kit’s own CI.
+- `/cl-port`, the Poki skill, and the router now end portal work with the preflight. `/cl-ship` and `ship-readiness` use its output as gate evidence.
+- Fix: the release gate no longer stops on a web game with no build step. The folder that holds `index.html` is the release candidate.
+- Benchmark: on the ship-to-Poki task, 9 of 10 builds made with this version passed all 24 readiness checks, against 0 of 10 without the kit. The preflight tests 20 of those 24 rules, and the report says what that means: `docs/benchmarks/ship-to-poki/REPORT.md` in the free repository.
+- Site: counts at 340 members, and the benchmark section reports the new round.
+
 ## 0.15.0 (2026-11-15)
 
 A full rebuild: six engine harnesses, five coding agents, and new plugins for platforms, money, analytics, multiplayer, compliance, and marketing.

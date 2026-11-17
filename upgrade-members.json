@@ -244,6 +244,13 @@
       "description": "Web game physics: arcade or engine, fixed step, layers, queries, debug overlays. Use when objects tunnel, jitter, or collide wrongly, or to add physics."
     },
     {
+      "name": "web-portal-preflight",
+      "type": "skill",
+      "plugin": "cl-web",
+      "tier": "builder",
+      "description": "Boot a web game in a fake browser with a mock portal SDK and check 20 portal rules. Use before any portal submission, after /cl-port, or when a portal rejects a build."
+    },
+    {
       "name": "web-scene-manifest",
       "type": "skill",
       "plugin": "cl-web",

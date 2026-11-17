@@ -1,0 +1,22 @@
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: #0b1020;
+  color: #ccd;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+/* 16:9, scaled to the window with room left for the footer. */
+canvas {
+  display: block;
+  width: min(100vw, calc((100vh - 28px) * 16 / 9));
+  height: auto;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+footer { text-align: center; padding: 4px; font-size: 12px; height: 20px; }

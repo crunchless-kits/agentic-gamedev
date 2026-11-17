@@ -13,7 +13,7 @@ Fan-out: evidence by `cl-scout` (one scout per section in parallel, or serially 
 
 ## Procedure
 
-1. Identify the candidate: build path or URL, version or commit, build date. No artifact means stop.
+1. Identify the candidate: build path or URL, version or commit, build date. No artifact means stop. A web game with no build step is its own artifact: when the project has no build script and `index.html` is in the repository, the candidate is that folder at the current commit. Record that and continue; never stop to ask for a zip.
 2. Collect evidence per line, four sections, recording pass or miss with what was seen:
    - It runs: no crash across 15 minutes of play on the slowest device you have; cold start to first input under 10 seconds; frame time measured in the busiest scene; survives backgrounding and a window resize or rotation.
    - It reads in the first minute: a new player understands the core verb within 10 seconds; a first success or failure within 60 seconds; feedback on every interactive element; no clipped text at the largest text setting.

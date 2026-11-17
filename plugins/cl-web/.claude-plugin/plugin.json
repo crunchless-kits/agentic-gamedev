@@ -1,7 +1,7 @@
 {
   "name": "cl-web",
-  "version": "0.15.0",
-  "description": "Free edition of cl-web: web-game-architecture and web-game-audit. Builder and Studio add 24 more members.",
+  "version": "0.16.0",
+  "description": "Free edition of cl-web: web-game-architecture and web-game-audit. Builder and Studio add 25 more members.",
   "author": {
     "name": "crunchless"
   },

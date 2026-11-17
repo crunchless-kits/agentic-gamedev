@@ -1,0 +1,648 @@
+{
+ "checks": {
+  "c01_boots_normal": "pass",
+  "c02_boots_adblock": "pass",
+  "c03_boots_no_sdk": "pass",
+  "c04_boots_request_blocked": "pass",
+  "c05_boots_no_storage": "pass",
+  "c06_boots_corrupt_save": "pass",
+  "c07_loading_finished": "pass",
+  "c08_start_on_first_input": "pass",
+  "c09_stop_on_death": "pass",
+  "c10_break_on_restart": "pass",
+  "c11_audio_muted_in_break": "pass",
+  "c12_input_held_in_break": "pass",
+  "c13_prevent_default": "pass",
+  "c16_no_frame_logging": "pass",
+  "c19_frame_rate_independent": "pass",
+  "c20_pause_on_hidden": "pass",
+  "c21_no_listener_stacking": "pass",
+  "c22_music_after_gesture": "pass",
+  "c14_no_outgoing_links": "pass",
+  "c15_no_insecure_requests": "pass"
+ },
+ "holdout": {
+  "h1_stop_when_hidden": "pass",
+  "h2_events_paired": "pass",
+  "h3_wheel_prevented": "pass"
+ },
+ "static": {
+  "hits14": [],
+  "hits15": [],
+  "files": [
+   "index.html",
+   "src/audio.js",
+   "src/input.js",
+   "src/main.js",
+   "src/net.js",
+   "src/save.js",
+   "src/sdk.js",
+   "src/world.js",
+   "style.css"
+  ]
+ },
+ "observations": {
+  "normal": {
+   "scenario": "normal",
+   "notes": [],
+   "loaded": true,
+   "drewAtBoot": 30,
+   "sdkBeforeInput": [
+    "init",
+    "gameLoadingFinished"
+   ],
+   "musicBeforeInput": 0,
+   "respond": {
+    "moved": 56,
+    "compared": 20,
+    "alive": true
+   },
+   "gameplayStartBeforeInput": false,
+   "loadingFinished": 1,
+   "gameplayStartAfterInput": 1,
+   "prevented": {
+    "ArrowUp": true,
+    "ArrowDown": true,
+    " ": true
+   },
+   "consolePerSecond": 0,
+   "death": {
+    "stopLogged": true,
+    "frames": 53
+   },
+   "listenersAfterFirstRun": 2,
+   "restartSeqs": [
+    [
+     "commercialBreak",
+     "commercialBreak:end",
+     "gameplayStart"
+    ],
+    [
+     "commercialBreak",
+     "commercialBreak:end",
+     "gameplayStart"
+    ],
+    [
+     "commercialBreak",
+     "commercialBreak:end",
+     "gameplayStart"
+    ]
+   ],
+   "breakCalled": 1,
+   "breakPending": 1,
+   "audibleDuringBreak": false,
+   "extraBreaksDuringBreak": 0,
+   "startsDuringBreak": 0,
+   "startsAfterBreak": 1,
+   "audibleAfterBreak": true,
+   "laterDeaths": [
+    {
+     "stopLogged": true,
+     "breakCalled": 1,
+     "startsAfter": 1
+    },
+    {
+     "stopLogged": true,
+     "breakCalled": 1,
+     "startsAfter": 1
+    }
+   ],
+   "listenersAfterThreeRestarts": 2,
+   "audibleWhileHidden": false,
+   "stopOnHidden": true,
+   "hiddenJump": {
+    "max": 9,
+    "compared": 20
+   },
+   "drewAfterHidden": 10,
+   "wheelPrevented": true,
+   "startsWhileBreakPending": 0,
+   "sdk": [
+    "init@0*",
+    "gameLoadingFinished@0*",
+    "gameplayStart@30",
+    "gameplayStop@244",
+    "commercialBreak@305",
+    "commercialBreak:end@356",
+    "gameplayStart@356",
+    "gameplayStop@469",
+    "commercialBreak@530",
+    "commercialBreak:end@542",
+    "gameplayStart@542",
+    "gameplayStop@655",
+    "commercialBreak@716",
+    "commercialBreak:end@728",
+    "gameplayStart@728",
+    "gameplayStop@796",
+    "gameplayStart@796"
+   ],
+   "audioPlays": [
+    {
+     "op": "play",
+     "i": 0,
+     "src": "music.wav",
+     "loop": true,
+     "frame": 30,
+     "beforeInput": false
+    },
+    {
+     "op": "play",
+     "i": 2,
+     "src": "gem.wav",
+     "loop": false,
+     "frame": 38,
+     "beforeInput": false
+    },
+    {
+     "op": "play",
+     "i": 1,
+     "src": "jump.wav",
+     "loop": false,
+     "frame": 117,
+     "beforeInput": false
+    },
+    {
+     "op": "play",
+     "i": 0,
+     "src": "music.wav",
+     "loop": true,
+     "frame": 356,
+     "beforeInput": false
+    },
+    {
+     "op": "play",
+     "i": 0,
+     "src": "music.wav",
+     "loop": true,
+     "frame": 356,
+     "beforeInput": false
+    },
+    {
+     "op": "play",
+     "i": 2,
+     "src": "gem.wav",
+     "loop": false,
+     "frame": 364,
+     "beforeInput": false
+    },
+    {
+     "op": "play",
+     "i": 0,
+     "src": "music.wav",
+     "loop": true,
+     "frame": 542,
+     "beforeInput": false
+    },
+    {
+     "op": "play",
+     "i": 0,
+     "src": "music.wav",
+     "loop": true,
+     "frame": 542,
+     "beforeInput": false
+    },
+    {
+     "op": "play",
+     "i": 2,
+     "src": "gem.wav",
+     "loop": false,
+     "frame": 550,
+     "beforeInput": false
+    },
+    {
+     "op": "play",
+     "i": 0,
+     "src": "music.wav",
+     "loop": true,
+     "frame": 728,
+     "beforeInput": false
+    },
+    {
+     "op": "play",
+     "i": 0,
+     "src": "music.wav",
+     "loop": true,
+     "frame": 728,
+     "beforeInput": false
+    },
+    {
+     "op": "play",
+     "i": 2,
+     "src": "gem.wav",
+     "loop": false,
+     "frame": 736,
+     "beforeInput": false
+    }
+   ],
+   "errors": [],
+   "fetches": [
+    {
+     "url": "https://scores.lumengames.example.com/skyhop/top",
+     "frame": 0,
+     "external": true
+    }
+   ],
+   "envNotes": [],
+   "consoleSample": []
+  },
+  "adblock": {
+   "scenario": "adblock",
+   "notes": [],
+   "loaded": true,
+   "drewAtBoot": 30,
+   "sdkBeforeInput": [
+    "init",
+    "gameLoadingFinished"
+   ],
+   "musicBeforeInput": 0,
+   "respond": {
+    "moved": 56,
+    "compared": 20,
+    "alive": true
+   },
+   "startsWhileBreakPending": 0,
+   "sdk": [
+    "init@0*",
+    "gameLoadingFinished@0*",
+    "gameplayStart@30"
+   ],
+   "audioPlays": [
+    {
+     "op": "play",
+     "i": 0,
+     "src": "music.wav",
+     "loop": true,
+     "frame": 30,
+     "beforeInput": false
+    },
+    {
+     "op": "play",
+     "i": 2,
+     "src": "gem.wav",
+     "loop": false,
+     "frame": 38,
+     "beforeInput": false
+    }
+   ],
+   "errors": [],
+   "fetches": [
+    {
+     "url": "https://scores.lumengames.example.com/skyhop/top",
+     "frame": 0,
+     "external": true
+    }
+   ],
+   "envNotes": [],
+   "consoleSample": []
+  },
+  "nosdk": {
+   "scenario": "nosdk",
+   "notes": [],
+   "loaded": true,
+   "drewAtBoot": 30,
+   "sdkBeforeInput": [],
+   "musicBeforeInput": 0,
+   "respond": {
+    "moved": 56,
+    "compared": 20,
+    "alive": true
+   },
+   "startsWhileBreakPending": 0,
+   "sdk": [],
+   "audioPlays": [
+    {
+     "op": "play",
+     "i": 0,
+     "src": "music.wav",
+     "loop": true,
+     "frame": 30,
+     "beforeInput": false
+    },
+    {
+     "op": "play",
+     "i": 2,
+     "src": "gem.wav",
+     "loop": false,
+     "frame": 38,
+     "beforeInput": false
+    }
+   ],
+   "errors": [],
+   "fetches": [
+    {
+     "url": "https://scores.lumengames.example.com/skyhop/top",
+     "frame": 0,
+     "external": true
+    }
+   ],
+   "envNotes": [],
+   "consoleSample": []
+  },
+  "nofetch": {
+   "scenario": "nofetch",
+   "notes": [],
+   "loaded": true,
+   "drewAtBoot": 30,
+   "sdkBeforeInput": [
+    "init",
+    "gameLoadingFinished"
+   ],
+   "musicBeforeInput": 0,
+   "respond": {
+    "moved": 56,
+    "compared": 20,
+    "alive": true
+   },
+   "startsWhileBreakPending": 0,
+   "sdk": [
+    "init@0*",
+    "gameLoadingFinished@0*",
+    "gameplayStart@30"
+   ],
+   "audioPlays": [
+    {
+     "op": "play",
+     "i": 0,
+     "src": "music.wav",
+     "loop": true,
+     "frame": 30,
+     "beforeInput": false
+    },
+    {
+     "op": "play",
+     "i": 2,
+     "src": "gem.wav",
+     "loop": false,
+     "frame": 38,
+     "beforeInput": false
+    }
+   ],
+   "errors": [],
+   "fetches": [
+    {
+     "url": "https://scores.lumengames.example.com/skyhop/top",
+     "frame": 0,
+     "external": true
+    }
+   ],
+   "envNotes": [],
+   "consoleSample": []
+  },
+  "nostorage": {
+   "scenario": "nostorage",
+   "notes": [],
+   "loaded": true,
+   "drewAtBoot": 30,
+   "sdkBeforeInput": [
+    "init",
+    "gameLoadingFinished"
+   ],
+   "musicBeforeInput": 0,
+   "respond": {
+    "moved": 56,
+    "compared": 20,
+    "alive": true
+   },
+   "startsWhileBreakPending": 0,
+   "sdk": [
+    "init@0*",
+    "gameLoadingFinished@0*",
+    "gameplayStart@30"
+   ],
+   "audioPlays": [
+    {
+     "op": "play",
+     "i": 0,
+     "src": "music.wav",
+     "loop": true,
+     "frame": 30,
+     "beforeInput": false
+    },
+    {
+     "op": "play",
+     "i": 2,
+     "src": "gem.wav",
+     "loop": false,
+     "frame": 38,
+     "beforeInput": false
+    }
+   ],
+   "errors": [],
+   "fetches": [
+    {
+     "url": "https://scores.lumengames.example.com/skyhop/top",
+     "frame": 0,
+     "external": true
+    }
+   ],
+   "envNotes": [],
+   "consoleSample": []
+  },
+  "corrupt": {
+   "scenario": "corrupt",
+   "notes": [],
+   "loaded": true,
+   "drewAtBoot": 30,
+   "sdkBeforeInput": [
+    "init",
+    "gameLoadingFinished"
+   ],
+   "musicBeforeInput": 0,
+   "respond": {
+    "moved": 56,
+    "compared": 20,
+    "alive": true
+   },
+   "startsWhileBreakPending": 0,
+   "sdk": [
+    "init@0*",
+    "gameLoadingFinished@0*",
+    "gameplayStart@30"
+   ],
+   "audioPlays": [
+    {
+     "op": "play",
+     "i": 0,
+     "src": "music.wav",
+     "loop": true,
+     "frame": 30,
+     "beforeInput": false
+    },
+    {
+     "op": "play",
+     "i": 2,
+     "src": "gem.wav",
+     "loop": false,
+     "frame": 38,
+     "beforeInput": false
+    }
+   ],
+   "errors": [],
+   "fetches": [
+    {
+     "url": "https://scores.lumengames.example.com/skyhop/top",
+     "frame": 0,
+     "external": true
+    }
+   ],
+   "envNotes": [],
+   "consoleSample": []
+  },
+  "audioblocked": {
+   "scenario": "audioblocked",
+   "notes": [],
+   "loaded": true,
+   "drewAtBoot": 30,
+   "sdkBeforeInput": [
+    "init",
+    "gameLoadingFinished"
+   ],
+   "musicBeforeInput": 0,
+   "respond": {
+    "moved": 56,
+    "compared": 20,
+    "alive": true
+   },
+   "unhandled": 0,
+   "startsWhileBreakPending": 0,
+   "sdk": [
+    "init@0*",
+    "gameLoadingFinished@0*",
+    "gameplayStart@30"
+   ],
+   "audioPlays": [
+    {
+     "op": "play",
+     "i": 0,
+     "src": "music.wav",
+     "loop": true,
+     "frame": 30,
+     "beforeInput": false
+    },
+    {
+     "op": "play",
+     "i": 2,
+     "src": "gem.wav",
+     "loop": false,
+     "frame": 38,
+     "beforeInput": false
+    }
+   ],
+   "errors": [],
+   "fetches": [
+    {
+     "url": "https://scores.lumengames.example.com/skyhop/top",
+     "frame": 0,
+     "external": true
+    }
+   ],
+   "envNotes": [],
+   "consoleSample": []
+  },
+  "fps60": {
+   "scenario": "fps60",
+   "notes": [],
+   "loaded": true,
+   "drewAtBoot": 30,
+   "sdkBeforeInput": [
+    "init",
+    "gameLoadingFinished"
+   ],
+   "musicBeforeInput": 0,
+   "respond": {
+    "moved": 56,
+    "compared": 20,
+    "alive": true
+   },
+   "startsWhileBreakPending": 0,
+   "sdk": [
+    "init@0*",
+    "gameLoadingFinished@0*",
+    "gameplayStart@30"
+   ],
+   "audioPlays": [
+    {
+     "op": "play",
+     "i": 0,
+     "src": "music.wav",
+     "loop": true,
+     "frame": 30,
+     "beforeInput": false
+    },
+    {
+     "op": "play",
+     "i": 2,
+     "src": "gem.wav",
+     "loop": false,
+     "frame": 38,
+     "beforeInput": false
+    }
+   ],
+   "errors": [],
+   "fetches": [
+    {
+     "url": "https://scores.lumengames.example.com/skyhop/top",
+     "frame": 0,
+     "external": true
+    }
+   ],
+   "envNotes": [],
+   "consoleSample": []
+  },
+  "fps144": {
+   "scenario": "fps144",
+   "notes": [],
+   "loaded": true,
+   "drewAtBoot": 72,
+   "sdkBeforeInput": [
+    "init",
+    "gameLoadingFinished"
+   ],
+   "musicBeforeInput": 0,
+   "respond": {
+    "moved": 60,
+    "compared": 20,
+    "alive": true
+   },
+   "startsWhileBreakPending": 0,
+   "sdk": [
+    "init@0*",
+    "gameLoadingFinished@0*",
+    "gameplayStart@72"
+   ],
+   "audioPlays": [
+    {
+     "op": "play",
+     "i": 0,
+     "src": "music.wav",
+     "loop": true,
+     "frame": 72,
+     "beforeInput": false
+    },
+    {
+     "op": "play",
+     "i": 2,
+     "src": "gem.wav",
+     "loop": false,
+     "frame": 91,
+     "beforeInput": false
+    }
+   ],
+   "errors": [],
+   "fetches": [
+    {
+     "url": "https://scores.lumengames.example.com/skyhop/top",
+     "frame": 0,
+     "external": true
+    }
+   ],
+   "envNotes": [],
+   "consoleSample": []
+  },
+  "fpsDiff": {
+   "max": 4,
+   "compared": 20,
+   "sameShape": true
+  }
+ }
+}

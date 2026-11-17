@@ -1,5 +1,5 @@
 {
-  "version": "0.15.0",
+  "version": "0.16.0",
   "edition": "free",
   "tiers": {
     "free": "Free",
@@ -83,6 +83,7 @@
     {"name":"web-input-responsive","type":"skill","plugin":"cl-web","tier":"builder","summary":"Browser-game input and layout everywhere: touch, gamepad, resize, DPR, safe areas, iframes."},
     {"name":"web-performance-profile","type":"skill","plugin":"cl-web","tier":"builder","summary":"Measure and fix browser-game performance: frame time, load, draw calls, GC, memory, tiers."},
     {"name":"web-physics-collisions","type":"skill","plugin":"cl-web","tier":"builder","summary":"Web game physics: arcade or engine, fixed step, layers, queries, debug overlays."},
+    {"name":"web-portal-preflight","type":"skill","plugin":"cl-web","tier":"builder","summary":"Boot a web game in a fake browser with a mock portal SDK and check 20 portal rules."},
     {"name":"web-scene-manifest","type":"skill","plugin":"cl-web","tier":"builder","summary":"Describe web game scenes and levels as typed, validated JSON with a check script."},
     {"name":"web-services","type":"skill","plugin":"cl-web","tier":"builder","summary":"Hub for SDKs in web games behind one platform interface: portals, payments, ads."},
     {"name":"web-setup","type":"skill","plugin":"cl-web","tier":"builder","summary":"Set up the web game harness: Vite, strict TypeScript, engine choice, primitives, browser MCP."},

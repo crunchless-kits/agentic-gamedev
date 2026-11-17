@@ -1,6 +1,6 @@
 {
   "name": "crunchless",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "counts": {
     "agents": 3,
     "skills": 22,
@@ -21,7 +21,7 @@
     },
     {
       "name": "cl-web",
-      "description": "Free edition of cl-web: web-game-architecture and web-game-audit. Builder and Studio add 24 more members."
+      "description": "Free edition of cl-web: web-game-architecture and web-game-audit. Builder and Studio add 25 more members."
     },
     {
       "name": "cl-unity",

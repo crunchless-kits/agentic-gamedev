@@ -48,7 +48,7 @@ Each engine harness ships its primitives as dependencies pulled from upstream, n
 1. Read before write. Quote file paths as evidence. A fix without a located cause is a guess.
 2. Never guess an SDK, portal, store, or provider API. Read the skill's reference snapshot, then the live official docs; stop at the boundary with `TODO(verify)` when verification is impossible.
 3. Business code (portal SDKs, ads, purchases, analytics, remote config, saves, backends) stays behind game-owned interfaces, one adapter per provider.
-4. Measure before and after any performance or feel change.
+4. Measure before and after any performance or feel change. Before calling a web game ready for a portal or for release, run `web-portal-preflight` when it is installed, fix what fails, and report its result. A game that was never run is unverified.
 5. Protect the player and the build: no destructive git, no deleted assets, no live dashboard changes or rollouts without the user saying so.
 6. Keep outputs tight: ranked top ten for findings, lists capped at five, handoff at most eight lines.
 7. Evidence over description: a gate passes on a recording, a screenshot, a measured number, or a file, never on a statement of what should be true; label findings Measured, Seen, Code, or judgment, and figures [seen], [sourced], [starting value], or estimated. Report readings as measured; never adjust a number to look better.

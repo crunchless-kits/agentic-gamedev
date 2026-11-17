@@ -1,0 +1,7 @@
+{
+  "portal": "poki",
+  "start": [{ "key": " " }],
+  "move": { "key": "ArrowRight", "seconds": 0.25 },
+  "die": { "key": "ArrowLeft", "maxSeconds": 10 },
+  "restart": [{ "key": " " }]
+}

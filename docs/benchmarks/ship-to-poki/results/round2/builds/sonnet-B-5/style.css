@@ -1,0 +1,4 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: #0b1020; }
+body { display: flex; align-items: center; justify-content: center; user-select: none; -webkit-user-select: none; }
+/* Scale proportionally at 16:9 to fit the frame. */
+canvas { display: block; width: min(100vw, calc(100vh * 16 / 9)); height: auto; aspect-ratio: 16 / 9; touch-action: none; }

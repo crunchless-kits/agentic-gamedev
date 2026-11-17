@@ -1,0 +1,12 @@
+html, body { height: 100%; margin: 0; }
+body {
+  background: #0b1020; color: #ccd; font-family: sans-serif;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  overflow: hidden; touch-action: none;
+}
+/* Scale to fill the frame at 16:9, leaving room for the footer. */
+canvas {
+  display: block; width: min(100vw, calc((100vh - 24px) * 16 / 9)); height: auto;
+  aspect-ratio: 16 / 9; touch-action: none;
+}
+footer { text-align: center; height: 24px; line-height: 24px; font-size: 12px; }
