@@ -51,7 +51,7 @@ The kit has 341 skills, agents, and commands, and most days need these eight com
 | Right after installing | `/cl-core:cl-doctor` | Checks Node, the kit version, hooks, and your engine, so setup problems show up before your first real command |
 | New to the kit | `/cl-core:cl-start` | Finds your engine and how far along the game is, says which plugins to add, and names your first commands |
 | A new idea | `/cl-design:cl-brainstorm` | Turns an idea into ranked options that play differently from each other, before any code |
-| A game in progress | `/cl-core:cl-audit` | Ranks up to ten things to fix, each with file paths and the skill that fixes it |
+| A game in progress | `/cl-core:cl-audit` | Ranks the top ten things to fix |
 | Plan a change | `/cl-core:cl-plan` | Writes a plan in phases, each with its checks, plus what the plan leaves out. Then it builds one phase at a time and stops for your checks |
 | Not sure what's next | `/cl-core:cl-help` | Says what the kit can do for your goal, engine, or store, and which command to run next |
 | Before you merge | `/cl-core:cl-review` (Builder) | Checks the change for bugs, for gaps against your spec or plan, and for work outside the plan |
@@ -61,7 +61,7 @@ A hub is one entry per plugin, such as `web-harness` for `cl-web`, that points t
 
 ## Benchmark
 
-One task, run in Claude Code with and without the kit: get a small web game ready for the Poki portal. Of ten builds made with the Builder edition, nine passed all 24 readiness checks. Of ten made without the kit, none did. In the version benchmarked, the Builder edition's preflight tested 20 of those 24 rules, which is most of the gap, and the report says so. The free core wasn't benchmarked. [Read the report](docs/benchmarks/ship-to-poki/REPORT.md).
+Get a small web game ready for the Poki portal, ten times with the Builder edition and ten times without the kit, in Claude Code. With the kit, 10 of 10 builds passed every automated Poki check and 9 of 10 passed all 24 checks. Without it, none did either. Without the kit no agent ran the game; the kit's preflight runs the same 20 automated checks. The free core wasn't tested. [Rubric](docs/benchmarks/ship-to-poki/RUBRIC.md) and [report](docs/benchmarks/ship-to-poki/REPORT.md).
 
 ## Get Builder or Studio
 

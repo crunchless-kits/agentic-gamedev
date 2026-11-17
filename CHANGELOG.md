@@ -7,7 +7,7 @@ Planning, from a first-time user's feedback and a review of HumanLayer's plan wo
 - New: `/cl-plan` (free, in cl-core). Researches the code with scouts, settles open decisions with you one at a time, and writes `.cl/plans/YYYY-MM-DD-<topic>.md` in phases. Each phase lists its changes, automated checks taken from the repo, and manual checks, and the plan has a Not Doing list. `--iterate <plan> <feedback>` edits it, and `--next <plan>` builds one phase through `cl-builder`, runs its checks, and stops for yours.
 - `/cl-review --plan <plan>` (Builder) reviews against the plan: each check passed, failed, or not run; changed files the phase doesn't list; and anything on the Not Doing list as blocking. Without the flag it uses the plan in progress that matches the diff.
 - Game feel references, in the kit's own words: `melee-feel.md` in `game-juice` (layers of a close-range hit with starting numbers), `camera-techniques.md` in `camera-systems` (follow, framing, visibility, and feel), and `telegraphs.md` in `game-ai-behaviors` (enemy warnings). The art director agent gains a step on stylizing mixed assets into one look.
-- Site and READMEs: a Start Here block with eight commands, a plain definition of hubs, and the benchmark's Skyhop and Poki explained with links. Counts at 341 members.
+- Site rebuilt around visuals and fewer words: real before-and-after frames from one kit art and juice pass (`docs/benchmarks/juice-pass/`), benchmark bars (all 20 automated Poki checks: 10 of 10 with the kit, 0 of 10 without), new-game and in-progress paths, and a roster of the 30 agents. Cut: the sample audit output, the "why the gap" section, and the benchmark tables. Counts at 341 members.
 
 ## 0.16.1 (2026-11-17)
 
