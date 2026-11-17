@@ -5,13 +5,13 @@
   },
   "metadata": {
     "description": "Agents, skills, commands, and scripts that give coding agents a full harness for game development: Unity, web and Capacitor, Roblox, Unreal, Godot, and Cocos Creator, plus design, platforms, monetization, analytics, multiplayer, QA, compliance, and production.",
-    "version": "0.16.1"
+    "version": "0.17.0"
   },
   "plugins": [
     {
       "name": "cl-core",
       "source": "./plugins/cl-core",
-      "description": "Free edition of cl-core: cl-builder, cl-scout, calibrated-review, cl-router, project-profile, scope-check, scope-guard, slop-check, /cl-audit, /cl-doctor, /cl-help, /cl-ship, and /cl-start. Builder and Studio add 6 more members."
+      "description": "Free edition of cl-core: cl-builder, cl-scout, calibrated-review, cl-router, project-profile, scope-check, scope-guard, slop-check, /cl-audit, /cl-doctor, /cl-help, /cl-plan, /cl-ship, and /cl-start. Builder and Studio add 6 more members."
     },
     {
       "name": "cl-assistant",

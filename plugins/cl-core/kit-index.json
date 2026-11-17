@@ -1,5 +1,5 @@
 {
-  "version": "0.16.1",
+  "version": "0.17.0",
   "edition": "free",
   "tiers": {
     "free": "Free",
@@ -36,6 +36,7 @@
     {"name":"cl-audit","type":"command","plugin":"cl-core","tier":"free","tags":["qa","production"],"summary":"Audit this game project with parallel scouts and route ranked findings to specialists."},
     {"name":"cl-doctor","type":"command","plugin":"cl-core","tier":"free","tags":["production","docs"],"summary":"Check the first-run environment: Node, Claude Code, hooks, kit version, description load, engine."},
     {"name":"cl-help","type":"command","plugin":"cl-core","tier":"free","tags":["help","onboarding"],"summary":"Say what the kit can do for a goal, engine, platform, or service, and the next command."},
+    {"name":"cl-plan","type":"command","plugin":"cl-core","tier":"free","tags":["production","design"],"summary":"Turn a task into a phased plan with checks per phase and a Not Doing list, then refine it or build it one phase at a time."},
     {"name":"cl-ship","type":"command","plugin":"cl-core","tier":"free","tags":["release","qa"],"summary":"One documented ship or no-ship decision from gate evidence gathered in parallel."},
     {"name":"cl-start","type":"command","plugin":"cl-core","tier":"free","tags":["production","design"],"summary":"First-hour onboarding: detect engine and stage, recommend plugins, run the audit script, name next commands."},
     {"name":"cl-guide","type":"agent","plugin":"cl-assistant","tier":"free","tags":["docs","production"],"summary":"The Crunchless assistant."},

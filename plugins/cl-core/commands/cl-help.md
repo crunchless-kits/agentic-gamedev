@@ -28,6 +28,7 @@ Run profile: router. No subagents. Read files, don't guess.
    - `/cl-start` when you're unsure where to begin.
    - `/cl-brainstorm` for a new idea.
    - `/cl-audit` for an existing project.
+   - `/cl-plan` for a change that spans files or sessions.
    - `/cl-ship` before release.
    - `/cl-producer` for planning.
    - `/cl-market` to turn this week's work into posts.

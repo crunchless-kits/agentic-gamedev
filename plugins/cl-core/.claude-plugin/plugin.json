@@ -1,7 +1,7 @@
 {
   "name": "cl-core",
-  "version": "0.16.1",
-  "description": "Free edition of cl-core: cl-builder, cl-scout, calibrated-review, cl-router, project-profile, scope-check, scope-guard, slop-check, /cl-audit, /cl-doctor, /cl-help, /cl-ship, and /cl-start. Builder and Studio add 6 more members.",
+  "version": "0.17.0",
+  "description": "Free edition of cl-core: cl-builder, cl-scout, calibrated-review, cl-router, project-profile, scope-check, scope-guard, slop-check, /cl-audit, /cl-doctor, /cl-help, /cl-plan, /cl-ship, and /cl-start. Builder and Studio add 6 more members.",
   "author": {
     "name": "crunchless"
   },

@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.17.0 (2026-11-17)
+
+Planning, from a first-time user's feedback and a review of HumanLayer's plan workflows (`.claude/docs/ai/crunchless/v016/humanlayer-review.md`).
+
+- New: `/cl-plan` (free, in cl-core). Researches the code with scouts, settles open decisions with you one at a time, and writes `.cl/plans/YYYY-MM-DD-<topic>.md` in phases. Each phase lists its changes, automated checks taken from the repo, and manual checks, and the plan has a Not Doing list. `--iterate <plan> <feedback>` edits it, and `--next <plan>` builds one phase through `cl-builder`, runs its checks, and stops for yours.
+- `/cl-review --plan <plan>` (Builder) reviews against the plan: each check passed, failed, or not run; changed files the phase doesn't list; and anything on the Not Doing list as blocking. Without the flag it uses the plan in progress that matches the diff.
+- Game feel references, in the kit's own words: `melee-feel.md` in `game-juice` (layers of a close-range hit with starting numbers), `camera-techniques.md` in `camera-systems` (follow, framing, visibility, and feel), and `telegraphs.md` in `game-ai-behaviors` (enemy warnings). The art director agent gains a step on stylizing mixed assets into one look.
+- Site and READMEs: a Start Here block with eight commands, a plain definition of hubs, and the benchmark's Skyhop and Poki explained with links. Counts at 341 members.
+
 ## 0.16.1 (2026-11-17)
 
 Fixes from the second ship-to-Poki benchmark round, all in `web-portal-preflight`.

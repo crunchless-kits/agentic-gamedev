@@ -42,17 +42,19 @@ node crunchless/scripts/export_agents.mjs --target codex --bundle unity --out /p
 
 Swap `codex` for `copilot`, `cursor`, or `antigravity`. In both install commands, swap `unity` for `web`, `roblox`, `unreal`, `godot`, or `cocos`. Then run the audit: `$cl-audit` in Codex, `/cl-audit` in Cursor and Antigravity, or ask Copilot to "run cl-audit".
 
-## Start Here: Six Commands
+## Start Here: Eight Commands
 
-The kit has 340 skills, agents, and commands, and most days need these six commands you type. All come with `cl-core` except the brainstorm, which comes with `cl-design`. Each one ends by naming the next command to run. In other coding agents, drop the plugin prefix: `$cl-audit` in Codex.
+The kit has 341 skills, agents, and commands, and most days need these eight commands you type. All come with `cl-core` except the brainstorm, which comes with `cl-design`. Each one ends by naming the next command to run. In Codex, type `$cl-audit` for `/cl-core:cl-audit`, and the same for the others.
 
 | When | Command | What it does |
 | --- | --- | --- |
+| Right after installing | `/cl-core:cl-doctor` | Checks Node, the kit version, hooks, and your engine, so setup problems show up before your first real command |
 | New to the kit | `/cl-core:cl-start` | Finds your engine and how far along the game is, says which plugins to add, and names your first commands |
 | A new idea | `/cl-design:cl-brainstorm` | Turns an idea into ranked options that play differently from each other, before any code |
 | A game in progress | `/cl-core:cl-audit` | Ranks up to ten things to fix, each with file paths and the skill that fixes it |
+| Plan a change | `/cl-core:cl-plan` | Writes a plan in phases, each with its checks, plus what the plan leaves out. Then it builds one phase at a time and stops for your checks |
 | Not sure what's next | `/cl-core:cl-help` | Says what the kit can do for your goal, engine, or store, and which command to run next |
-| Before you merge | `/cl-core:cl-review` (Builder) | Checks the change for bugs, for gaps against the design, and for work that grew past the plan |
+| Before you merge | `/cl-core:cl-review` (Builder) | Checks the change for bugs, for gaps against your spec or plan, and for work outside the plan |
 | Before you release | `/cl-core:cl-ship` | Checks saves, performance, packaging, and store rules, then gives one answer: ship or don't ship |
 
 A hub is one entry per plugin, such as `web-harness` for `cl-web`, that points the agent to the right skill inside it. Your agent's skill list holds only the hubs, so it stays short.
