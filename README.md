@@ -42,6 +42,21 @@ node crunchless/scripts/export_agents.mjs --target codex --bundle unity --out /p
 
 Swap `codex` for `copilot`, `cursor`, or `antigravity`. In both install commands, swap `unity` for `web`, `roblox`, `unreal`, `godot`, or `cocos`. Then run the audit: `$cl-audit` in Codex, `/cl-audit` in Cursor and Antigravity, or ask Copilot to "run cl-audit".
 
+## Start Here: Six Commands
+
+The kit has 340 skills, agents, and commands, and most days need these six commands you type. All come with `cl-core` except the brainstorm, which comes with `cl-design`. Each one ends by naming the next command to run. In other coding agents, drop the plugin prefix: `$cl-audit` in Codex.
+
+| When | Command | What it does |
+| --- | --- | --- |
+| New to the kit | `/cl-core:cl-start` | Finds your engine and how far along the game is, says which plugins to add, and names your first commands |
+| A new idea | `/cl-design:cl-brainstorm` | Turns an idea into ranked options that play differently from each other, before any code |
+| A game in progress | `/cl-core:cl-audit` | Ranks up to ten things to fix, each with file paths and the skill that fixes it |
+| Not sure what's next | `/cl-core:cl-help` | Says what the kit can do for your goal, engine, or store, and which command to run next |
+| Before you merge | `/cl-core:cl-review` (Builder) | Checks the change for bugs, for gaps against the design, and for work that grew past the plan |
+| Before you release | `/cl-core:cl-ship` | Checks saves, performance, packaging, and store rules, then gives one answer: ship or don't ship |
+
+A hub is one entry per plugin, such as `web-harness` for `cl-web`, that points the agent to the right skill inside it. Your agent's skill list holds only the hubs, so it stays short.
+
 ## Benchmark
 
 One task, run in Claude Code with and without the kit: get a small web game ready for the Poki portal. Of ten builds made with the Builder edition, nine passed all 24 readiness checks. Of ten made without the kit, none did. In the version benchmarked, the Builder edition's preflight tested 20 of those 24 rules, which is most of the gap, and the report says so. The free core wasn't benchmarked. [Read the report](docs/benchmarks/ship-to-poki/REPORT.md).

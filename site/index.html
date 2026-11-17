@@ -224,6 +224,7 @@ th:first-child,td:first-child{text-align:left}
 .area h3{font-size:17px}
 .area code{font-size:12.5px;color:var(--mint)}
 .area p{font-size:14px;color:var(--muted)}
+.starts{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
 
 /* tags */
 .tag-tools{display:flex;margin-top:24px}
@@ -493,12 +494,12 @@ footer img{height:22px;width:auto;display:block}
   <section id="bench">
     <div class="wrap">
       <h2 class="h2">Benchmarks: The Same Agent, With and Without the Kit</h2>
-      <p class="lede">Two tasks on Skyhop, a small web game headed for Poki, a web game portal with published technical requirements. Each task ran with and without the kit, on the same model, the same brief, and the same starting code. The kit runs used the Builder edition. The free core wasn’t benchmarked. No build was submitted to Poki, so a pass here isn’t Poki’s approval. Measured in Claude Code only, 16 and 17 November 2026. The tables show Sonnet, with&nbsp;Haiku&nbsp;below&nbsp;them.</p>
+      <p class="lede">Two tasks on Skyhop, a small sample web game written for these benchmarks. The tasks get it ready for <a href="https://poki.com" style="color:var(--mint)">Poki</a>, a site that hosts browser games and publishes <a href="https://developers.poki.com/guide/requirements-quality" style="color:var(--mint)">technical requirements</a> for them. Each task ran with and without the kit, on the same model, the same brief, and the same starting code. The kit runs used the Builder edition. The free core wasn’t benchmarked. No build was submitted to Poki, so a pass here isn’t Poki’s approval. Measured in Claude Code only, 16 and 17 November 2026. The tables show Sonnet,&nbsp;with&nbsp;Haiku&nbsp;below&nbsp;them.</p>
       <div class="benchgrid">
         <figure class="cmp">
           <figcaption>
             <h3>Getting the Game Ready for Poki</h3>
-            <p>The agent was told to get the game ready to submit. Five builds each way on kit version 0.16, each scored on 24 checks from Poki’s requirements, such as staying playable with an ad blocker and working on phones. A script runs 20 of the 24. Two judge models score the other four: touch controls, scaling to the screen, flagging an oversized music file, and an&nbsp;accurate&nbsp;final&nbsp;message.</p>
+            <p>The agent was told to get the game ready to submit. Five builds each way on kit version 0.16, each scored on 24 checks from <a href="https://developers.poki.com/guide/sdk-html5" style="color:var(--mint)">Poki’s developer guide</a>, such as staying playable with an ad blocker and working on phones. A script runs 20 of the 24. Two judge models score the other four: touch controls, scaling to the screen, flagging an oversized music file, and an&nbsp;accurate&nbsp;final&nbsp;message.</p>
           </figcaption>
           <table>
             <thead><tr><th>Measure</th><th>No kit</th><th>Kit</th></tr></thead>
@@ -611,13 +612,23 @@ Open:
 - I did not check `assets/` on disk. The sizes come from `manifest.json`, and the actual audio files are not in the repo.
 - I could not confirm Poki's current size limit or review rules. The requirements above come from my knowledge of Poki's guidelines, so check them against the current Poki developer docs.
 Next: Fix the four blockers, which are the audio size, SDK init failure, the Poki lifecycle events and the leaderboard fetch. Then do finding 5 (stacked listeners), because it breaks ad pacing.</pre>
+      <h3 class="h2 sub">Start Here: Six Commands</h3>
+      <p class="lede">The kit has 340 skills, agents, and commands, and most days need these six commands you type. Five are free, and the review needs Builder. All six come with cl-core except the brainstorm, which comes with cl-design. Each one ends by naming the next command to run, so the rest of the kit comes to you when a step needs it. In the other coding agents, drop the plugin prefix: <code>$cl-audit</code>&nbsp;in&nbsp;Codex.</p>
+      <div class="areas starts">
+        <div class="area"><span class="chip">Free</span><h3>New to the Kit</h3><code>/cl-core:cl-start</code><p>Finds your engine and how far along the game is, says which plugins to add, and names your first commands.</p></div>
+        <div class="area"><span class="chip">Free</span><h3>A New Idea</h3><code>/cl-design:cl-brainstorm</code><p>Turns an idea into ranked options that play differently from each other, before any code.</p></div>
+        <div class="area"><span class="chip">Free</span><h3>A Game in Progress</h3><code>/cl-core:cl-audit</code><p>Ranks up to ten things to fix, each with file paths and the skill that fixes it.</p></div>
+        <div class="area"><span class="chip">Free</span><h3>Not Sure What’s Next</h3><code>/cl-core:cl-help</code><p>Says what the kit can do for your goal, engine, or store, and which command to run next.</p></div>
+        <div class="area"><span class="chip h">Builder</span><h3>Before You Merge</h3><code>/cl-core:cl-review</code><p>Checks the change for bugs, for gaps against the design, and for work that grew past the plan.</p></div>
+        <div class="area"><span class="chip">Free</span><h3>Before You Release</h3><code>/cl-core:cl-ship</code><p>Checks saves, performance, packaging, and store rules, then gives one answer: ship or don’t ship.</p></div>
+      </div>
       <h3 class="h2 sub">How It Fits in Your Agent’s Skill List</h3>
       <p class="lede">These figures come from the kit’s own scripts and checks, measured for Claude Code.</p>
       <div class="charts">
         <figure>
           <figcaption>
             <h3>Hubs Shrink the Skill Menu by Up to 72 Percent</h3>
-            <p>Each plugin lists one hub that reaches the rest, so your agent’s skill list stays short.</p>
+            <p>A hub is one entry per plugin, such as web-harness for cl-web, that points the agent to the right skill inside it. The agent’s skill list holds only the hubs, so it&nbsp;stays&nbsp;short.</p>
           </figcaption>
           <div class="legend"><span><i class="sw before"></i>Every description listed</span><span><i class="sw after"></i>With hubs</span><span><i class="sw budget"></i>Listing budget</span></div>
           <div class="bars" role="img" aria-label="Estimated skill listing tokens per bundle, before and after hubs, against a 2,000 token budget. Unity 4,004 to 1,300. Web 4,009 to 1,341. Roblox 2,898 to 1,153. Unreal 3,727 to 1,297. Godot 3,947 to 1,294. Cocos 3,539 to 1,250. Web portals 5,313 to 1,501.">
