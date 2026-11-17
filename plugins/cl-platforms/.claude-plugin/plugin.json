@@ -1,6 +1,6 @@
 {
   "name": "cl-platforms",
-  "version": "0.16.0",
+  "version": "0.16.1",
   "description": "Free edition of cl-platforms: itch-io. Builder and Studio add 18 more members.",
   "author": {
     "name": "crunchless"

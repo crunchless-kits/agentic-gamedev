@@ -174,7 +174,7 @@
       "type": "skill",
       "plugin": "cl-web",
       "tier": "builder",
-      "description": "Boot a web game in a fake browser with a mock portal SDK and check 20 portal rules. Use before any portal submission, after /cl-port, or when a portal rejects a build."
+      "description": "Boot a web game in a fake browser with a mock portal SDK and check 22 portal rules. Use before any portal submission, after /cl-port, or when a portal rejects a build."
     },
     {
       "name": "web-scene-manifest",

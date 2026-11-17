@@ -149,6 +149,14 @@ Median raw tokens per run: Sonnet 165,755 without the kit and 404,873 with it; H
 - **Eleven sessions were cut off by the account's usage limit** before doing any work: one Sonnet kit run and all ten Haiku runs. Each returned the limit message and nothing else, and was rerun the next morning. No session that did work was rerun.
 - As in round 1, the runs used a subscription login, not an isolated API key.
 
+### After Round 2: Kit v0.16.1
+
+Version 0.16.1 fixed what round 2 found in the preflight. The numbers above are from 0.16.0 and stay as measured. These changes matter for the next round:
+
+- **H1 is now a preflight check** (`stop-when-hidden`). Run on the 20 round 2 builds, it agrees with H1's scores on all 20. H1 can't be a held-back rule again, so the next round needs a new one.
+- **Touch is now a Poki check** (`touch-input`). It passes when the game listens for touch. On the 20 round 2 builds it agrees with the judges' check 17 on 17. It passed three no-kit builds whose touch controls the judges found incomplete, and it failed none they passed.
+- **The preflight now gives one input after an ad break** when a game waits for it, as this harness does since its correction. On haiku-A-4 that turns two false failures into passes.
+
 ## Round 1: Kit v0.15.0, 16 Nov 2026
 
 The first run of this benchmark, before the kit had the preflight. Kept as first reported, apart from the heading levels.
@@ -277,3 +285,4 @@ Median raw tokens per run: Sonnet 164,812 without the kit and 336,420 with it; H
 
 - 2026-11-16: First run and report.
 - 2026-11-17: Round 2 added, on kit v0.16.0. The harness driver was corrected and all 40 builds were rescored.
+- 2026-11-17: What kit v0.16.1 changed for the next round.

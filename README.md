@@ -44,7 +44,7 @@ Swap `codex` for `copilot`, `cursor`, or `antigravity`. In both install commands
 
 ## Benchmark
 
-One task, run in Claude Code with and without the kit: get a small web game ready for the Poki portal. Of ten builds made with the Builder edition, nine passed all 24 readiness checks. Of ten made without the kit, none did. The Builder edition's preflight tests 20 of those 24 rules, which is most of the gap, and the report says so. The free core wasn't benchmarked. [Read the report](docs/benchmarks/ship-to-poki/REPORT.md).
+One task, run in Claude Code with and without the kit: get a small web game ready for the Poki portal. Of ten builds made with the Builder edition, nine passed all 24 readiness checks. Of ten made without the kit, none did. In the version benchmarked, the Builder edition's preflight tested 20 of those 24 rules, which is most of the gap, and the report says so. The free core wasn't benchmarked. [Read the report](docs/benchmarks/ship-to-poki/REPORT.md).
 
 ## Get Builder or Studio
 

@@ -530,26 +530,27 @@ footer img{height:22px;width:auto;display:block}
       </div>
       <h3 class="h2 sub">Why the Gap: The Kit Runs the Game</h3>
       <p class="lede">Without the kit, the agent had no way to run the game short of building one, and none did. Each one read the code, fixed what it saw, and said it hadn’t tested the result.</p>
-      <p class="lede" style="margin-top:12px">The kit’s preflight is a script that boots a web game in a fake browser with a stand-in for the portal’s SDK, then tests it under ten conditions, such as an ad blocker, blocked storage, and a hidden tab. Twelve of its 20 checks apply to any web game that runs inside another site’s page, and eight are Poki’s. This is its report on the benchmark game before any fix, cut&nbsp;to&nbsp;six&nbsp;checks.</p>
-      <pre class="sample" tabindex="0">Portal preflight: Poki  |  1 of 20 passed
+      <p class="lede" style="margin-top:12px">The kit’s preflight is a script that boots a web game in a fake browser with a stand-in for the portal’s SDK, then tests it under ten conditions, such as an ad blocker, blocked storage, and a hidden tab. The current version, 0.16.1, has 22 checks: twelve for any web game that runs inside another site’s page, and ten for Poki. This is what 0.16.1 shows the agent on the benchmark game before any fix, cut&nbsp;to&nbsp;six&nbsp;checks.</p>
+      <pre class="sample" tabindex="0">Portal preflight: Poki  |  1 of 22 passed, 1 skipped
+Rules as of 2026-11-16, from Poki's developer guide, https://developers.poki.com/guide/sdk-html5 and its requirements pages. Name this source and date in your report.
 
-PASS  plays                      the picture moved 60 px when the move input was held
 FAIL  plays-with-ad-blocker      with PokiSDK.init() rejecting: nothing was drawn: Error: PokiSDK: blocked by an ad blocker
       Fix: Catch a rejected PokiSDK.init() and start the game anyway.
 FAIL  start-on-first-input       gameplayStart() was never called
       Fix: Call PokiSDK.gameplayStart() on the player's first input, not at load.
+FAIL  touch-input                the game registered no pointer, touch, or click listeners
+      Fix: Add a pointer or touch control for every action the keyboard has, such as tapping the left or right half to steer.
 FAIL  frame-rate-independent     after the same play sequence the picture differs by up to 300 px between 60 and 144 fps
       Fix: Scale movement by elapsed time, or step the simulation on a fixed timestep.
 FAIL  pauses-when-hidden         sound was still audible with the tab hidden; after 5 s hidden the picture moved 9 px
       Fix: On visibilitychange, pause the simulation and the audio, and reset the frame clock on return.
-FAIL  no-stacked-listeners       key listeners: 2 after the first run, 32 after three restarts
-      Fix: Add input listeners once at boot, not on every new run.
+PASS  plays
 
-19 check(s) failed. Fix them and run the preflight again. This tool does not replace the portal's own test tool.</pre>
-      <p class="fine">In all ten kit runs, the agent set the preflight up for the game, fixed what it reported, and ended on 20 of 20. The preflight tests the same 20 rules as the benchmark’s script, so an agent with the kit could check its build against most of what was scored. That is what the kit adds, and it&nbsp;is&nbsp;most&nbsp;of&nbsp;the&nbsp;gap.</p>
-      <p class="fine" style="margin-top:8px">The three more rules are ones the preflight doesn’t test: telling Poki that play stopped when the tab is hidden, keeping start and stop events paired, and keeping the mouse wheel from scrolling the page. On the first of them, a rule the kit’s Poki notes state, kit&nbsp;builds&nbsp;passed&nbsp;4&nbsp;of&nbsp;5&nbsp;against&nbsp;0&nbsp;of&nbsp;5.</p>
+20 check(s) failed. Fix them and run the preflight again. This tool does not replace the portal's own test tool.</pre>
+      <p class="fine">In all ten kit runs, the agent set the preflight up for the game, fixed what it reported, and ended on 20 of 20. The version benchmarked, 0.16, had 20 checks, twelve for any web game and eight for Poki. They are the same 20 rules the benchmark’s script tests, so an agent with the kit could check its build against most of what was scored. That is what the kit adds, and it&nbsp;is&nbsp;most&nbsp;of&nbsp;the&nbsp;gap.</p>
+      <p class="fine" style="margin-top:8px">The three more rules are ones the 0.16 preflight didn’t test: telling Poki that play stopped when the tab is hidden, keeping start and stop events paired, and keeping the mouse wheel from scrolling the page. On the first of them, a rule the kit’s Poki notes state, kit builds passed 4 of 5 against 0 of 5. Version 0.16.1 adds that rule to the preflight, along with a Poki check for touch input. A later round will test the kit on rules the preflight still&nbsp;doesn’t&nbsp;cover.</p>
       <p class="fine" style="margin-top:8px">On Haiku, the smaller model: all five kit builds passed all 24 checks, and none of the five without the kit did. That is 120 of 120 checks against 98, the same total Sonnet reached without the kit. In the audits, every planted problem was found in 6 of 10 against 1.</p>
-      <p class="fine" style="margin-top:8px">The preflight arrived in version 0.16, the current one. An earlier round on version 0.15 scored 112 of 120 against 100 and showed that no agent on either side had run the game. Each round used new runs on both sides.</p>
+      <p class="fine" style="margin-top:8px">The preflight arrived in version 0.16. An earlier round on version 0.15 scored 112 of 120 against 100 and showed that no agent on either side had run the game. Each round used new runs on both sides.</p>
       <p class="fine" style="margin-top:8px">These benchmarks cover one web game and one portal, and the kit’s author wrote them. The other engines and stores haven’t been benchmarked. The game, its planted problems, the scoring script, every build, and the judges’ verdicts are public, with full reports on what the kit didn’t improve and what the runs cost in tokens and time: <a href="https://github.com/crunchless-kits/agentic-gamedev/blob/main/docs/benchmarks/ship-to-poki/REPORT.md" style="color:var(--mint)">getting ready for Poki</a> and <a href="https://github.com/crunchless-kits/agentic-gamedev/blob/main/docs/benchmarks/portal-deep/REPORT.md" style="color:var(--mint)">the audits</a>.</p>
     </div>
   </section>
@@ -740,7 +741,7 @@ Next: Fix the four blockers, which are the audio size, SDK init failure, the Pok
           <ul class="dlist">
             <li>Every engine harness and gameplay system</li>
             <li>Design pillars, GDDs, balance, and economy</li>
-            <li>A preflight that boots your web game and tests 20 portal rules</li>
+            <li>A preflight that boots your web game and tests 22 portal rules</li>
             <li>Adversarial QA, agent playtests, and testability hooks</li>
             <li>Release gates for PC stores, mobile stores, and web portals, plus CI</li>
           </ul>

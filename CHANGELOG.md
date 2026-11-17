@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.16.1 (2026-11-17)
+
+Fixes from the second ship-to-Poki benchmark round, all in `web-portal-preflight`.
+
+- New Poki check `stop-when-hidden`: `gameplayStop()` when the tab hides during play. Three of ten kit builds in the benchmark missed it. On the twenty benchmark builds it agrees with the judges' scoring of that rule on all twenty.
+- New Poki check `touch-input`: the game must listen for touch. A Poki build that fails it is a blocker in `/cl-port` and the Poki skill. `"phones": false` in the config skips it. It can't tell whether every action has a touch control, so the agent still checks that by reading.
+- Fix: a game that waits for one more input after an ad break no longer fails `stop-on-death` and `break-on-restart` by mistake. The run gives that input once, from the new `afterBreak` config steps or the `start` steps.
+- Sources: the output names the date the rules were checked and the docs they come from, says when they are over 90 days old, and the report must name both.
+- Shorter output: passing checks print on one line (`--verbose` shows their evidence), repeated SDK calls fold into one entry, and long evidence is cut. On the ten kit builds from the benchmark, the output is 55 to 68 percent shorter.
+- 22 checks in all: twelve web and ten Poki. The benchmark report keeps the 0.16 numbers. Its first held-back rule is now a preflight check, so the next round needs new ones.
+
 ## 0.16.0 (2026-11-17)
 
 The kit can now run a web game and check it, where before it could only read the code.
