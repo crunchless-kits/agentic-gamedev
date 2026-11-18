@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.18.1 (2026-11-18)
+
+- New: a Steam launch checklist in `steam-steamworks` (`references/launch-checklist.md`), 22 checks in five groups: Foundations, Store Page, Audience, Demo and Next Fest, and Launch Mechanics. `/cl-ship` and `ship-readiness` gate a Steam release on three of the groups and report the other two. `steamworks-facts.md` gains Next Fest, discount, wishlist email, and demo rules, checked against Steamworks on 18 November 2026.
+
 ## 0.18.0 (2026-11-18)
 
 - New: `/cl-suggest` (free, in cl-core). Logs an idea for changing the kit to `.cl/suggestions.md` and, on your yes, files it as an issue labeled `suggestion` on the public repo. It leaves out game names, code, and people's names unless you say to keep one. `/cl-suggest list` shows the log and the open suggestions. The router sends "the kit should..." here.
