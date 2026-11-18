@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.18.2 (2026-11-18)
+
+- Fix: `/cl-suggest` writes a fixed log format (`## YYYY-MM-DD: <title>`, then `Status: logged`). A test run wrote an em dash into the heading.
+
 ## 0.18.1 (2026-11-18)
 
 - New: a Steam launch checklist in `steam-steamworks` (`references/launch-checklist.md`), 22 checks in five groups: Foundations, Store Page, Audience, Demo and Next Fest, and Launch Mechanics. `/cl-ship` and `ship-readiness` gate a Steam release on three of the groups and report the other two. `steamworks-facts.md` gains Next Fest, discount, wishlist email, and demo rules, checked against Steamworks on 18 November 2026.

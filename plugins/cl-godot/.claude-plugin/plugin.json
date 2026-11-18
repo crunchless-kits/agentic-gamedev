@@ -1,6 +1,6 @@
 {
   "name": "cl-godot",
-  "version": "0.18.1",
+  "version": "0.18.2",
   "description": "Free edition of cl-godot: godot-project-audit. Builder and Studio add 24 more members.",
   "author": {
     "name": "crunchless"
