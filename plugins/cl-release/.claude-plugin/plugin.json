@@ -1,6 +1,6 @@
 {
   "name": "cl-release",
-  "version": "0.17.1",
+  "version": "0.18.0",
   "description": "Free edition of cl-release: ship-check-lite. Builder and Studio add 7 more members.",
   "author": {
     "name": "crunchless"

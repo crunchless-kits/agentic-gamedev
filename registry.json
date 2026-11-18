@@ -1,19 +1,19 @@
 {
   "name": "crunchless",
-  "version": "0.17.1",
+  "version": "0.18.0",
   "counts": {
     "agents": 3,
     "skills": 22,
-    "commands": 8,
-    "total": 33,
-    "free": 33,
+    "commands": 9,
+    "total": 34,
+    "free": 34,
     "builder": 0,
     "studio": 0
   },
   "plugins": [
     {
       "name": "cl-core",
-      "description": "Free edition of cl-core: cl-builder, cl-scout, calibrated-review, cl-router, project-profile, scope-check, scope-guard, slop-check, /cl-audit, /cl-doctor, /cl-help, /cl-plan, /cl-ship, and /cl-start. Builder and Studio add 6 more members."
+      "description": "Free edition of cl-core: cl-builder, cl-scout, calibrated-review, cl-router, project-profile, scope-check, scope-guard, slop-check, /cl-audit, /cl-doctor, /cl-help, /cl-plan, /cl-ship, /cl-start, and /cl-suggest. Builder and Studio add 6 more members."
     },
     {
       "name": "cl-assistant",
@@ -244,6 +244,19 @@
       "tags": [
         "production",
         "design"
+      ]
+    },
+    {
+      "id": "command:cl-suggest",
+      "type": "command",
+      "plugin": "cl-core",
+      "name": "cl-suggest",
+      "description": "Suggest a change to the kit itself: a missing skill, a wrong step, or a rule it should know. Logs it and, on your yes, files it on GitHub for the next update.",
+      "tier": "free",
+      "path": "plugins/cl-core/commands/cl-suggest.md",
+      "tags": [
+        "help",
+        "production"
       ]
     },
     {

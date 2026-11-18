@@ -69,6 +69,8 @@ for (const [bundle, plugins] of Object.entries(sets)) {
   const listed = members.filter((m) => !truthy(m.fm["disable-model-invocation"]));
   const chars = listed.reduce((a, m) => a + (m.fm.description ?? "").length + (m.fm.when_to_use ?? "").length, 0);
   const tokens = Math.ceil(chars / CHARS_PER_TOKEN);
+  // Without hubs: every member lists its description (the site's "every description listed" bar).
+  const allChars = members.reduce((a, m) => a + (m.fm.description ?? "").length + (m.fm.when_to_use ?? "").length, 0);
   rows.push({
     bundle,
     plugins: withCore.length,
@@ -80,6 +82,7 @@ for (const [bundle, plugins] of Object.entries(sets)) {
     descriptionChars: chars,
     avgChars: listed.length ? Math.round(chars / listed.length) : 0,
     estTokens: tokens,
+    allListedTokens: Math.ceil(allChars / CHARS_PER_TOKEN),
     budgetTokens: BUDGET_TOKENS,
     fits: tokens <= BUDGET_TOKENS,
   });

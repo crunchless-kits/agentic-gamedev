@@ -1,6 +1,6 @@
 # Coverage and freshness
 
-Kit v0.17.1. Every release carries notes in CHANGELOG.md and on the GitHub Releases page. Snapshots older than 90 days are re-verified before any member writes code against them; a monthly job opens a pull request when a source changes.
+Kit v0.18.0. Every release carries notes in CHANGELOG.md and on the GitHub Releases page. Snapshots older than 90 days are re-verified before any member writes code against them; a monthly job opens a pull request when a source changes.
 
 | Engine or platform | Written against |
 | --- | --- |

@@ -1,6 +1,6 @@
 {
   "name": "cl-design",
-  "version": "0.17.1",
+  "version": "0.18.0",
   "description": "Free edition of cl-design: competitor-snapshot, core-loop-design, game-brainstorm, game-naming, mechanic-critique, and /cl-brainstorm. Builder and Studio add 20 more members.",
   "author": {
     "name": "crunchless"

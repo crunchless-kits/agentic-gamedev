@@ -1,5 +1,5 @@
 {
-  "version": "0.17.1",
+  "version": "0.18.0",
   "edition": "free",
   "tiers": {
     "free": "Free",
@@ -39,6 +39,7 @@
     {"name":"cl-plan","type":"command","plugin":"cl-core","tier":"free","tags":["production","design"],"summary":"Turn a task into a phased plan with checks per phase and a Not Doing list, then refine it or build it one phase at a time."},
     {"name":"cl-ship","type":"command","plugin":"cl-core","tier":"free","tags":["release","qa"],"summary":"One documented ship or no-ship decision from gate evidence gathered in parallel."},
     {"name":"cl-start","type":"command","plugin":"cl-core","tier":"free","tags":["production","design"],"summary":"First-hour onboarding: detect engine and stage, recommend plugins, run the audit script, name next commands."},
+    {"name":"cl-suggest","type":"command","plugin":"cl-core","tier":"free","tags":["help","production"],"summary":"Suggest a change to the kit itself: a missing skill, a wrong step, or a rule it should know."},
     {"name":"cl-guide","type":"agent","plugin":"cl-assistant","tier":"free","tags":["docs","production"],"summary":"The Crunchless assistant."},
     {"name":"kit-guide","type":"skill","plugin":"cl-assistant","tier":"free","tags":["docs","production"],"summary":"Crunchless product knowledge: tiers, FAQ, install and usage paths, troubleshooting."},
     {"name":"cl-ask","type":"command","plugin":"cl-assistant","tier":"free","tags":["docs","production"],"summary":"Ask the Crunchless guide about the kit: install, tiers, which member fits, troubleshooting."},

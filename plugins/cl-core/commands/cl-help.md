@@ -39,7 +39,7 @@ Run profile: router. No subagents. Read files, don't guess.
 
    For a vibe coder, define any game dev term on first use.
 4. **Command form.** Plugin installs are namespaced (`/cl-core:cl-audit`). Vendored installs are bare (`/cl-audit`). Name the kit version from `kit-index.json`.
-5. **Hand-offs.** If the request is a task rather than a question, name the member and command, and offer to run it. Hand kit questions beyond the manifest (pricing, licensing, troubleshooting) to `/cl-ask`.
+5. **Hand-offs.** If the request is a task rather than a question, name the member and command, and offer to run it. Hand kit questions beyond the manifest (pricing, licensing, troubleshooting) to `/cl-ask`, and ideas for changing the kit to `/cl-suggest`.
 
 ## Output
 

@@ -31,6 +31,7 @@ Plugin installs namespace commands by plugin (`/cl-core:cl-audit`). Vendored ins
 | What can the kit do, or which member fits | `/cl-help` | low, read-only |
 | Plan a change in phases, refine the plan, or build it one phase at a time | `/cl-plan`, then `/cl-review --plan` | plan medium, review high |
 | Questions about the kit itself (tiers, install, licensing) | `/cl-ask`, agent `cl-guide` | haiku, low |
+| The kit itself should change: a missing skill, a wrong step, or "the kit should..." | `/cl-suggest` | haiku, low |
 | Gather facts, run a bundled script, fill a checklist | agent `cl-scout` | haiku, low, parallel per question |
 | Execute one bounded skill on known files | agent `cl-builder` | sonnet, medium, parallel on disjoint files |
 | Check the environment before a first run | `/cl-doctor` | script |

@@ -44,7 +44,7 @@ Swap `codex` for `copilot`, `cursor`, or `antigravity`. In both install commands
 
 ## Start Here: Eight Commands
 
-The kit has 341 skills, agents, and commands, and most days need these eight commands you type. All come with `cl-core` except the brainstorm, which comes with `cl-design`. Each one ends by naming the next command to run. In Codex, type `$cl-audit` for `/cl-core:cl-audit`, and the same for the others.
+The kit has 342 skills, agents, and commands, and most days need these eight commands you type. All come with `cl-core` except the brainstorm, which comes with `cl-design`. Each one ends by naming the next command to run. In Codex, type `$cl-audit` for `/cl-core:cl-audit`, and the same for the others.
 
 | When | Command | What it does |
 | --- | --- | --- |
@@ -76,6 +76,7 @@ Get a small web game ready for the Poki portal, ten times with the Builder editi
 - CHANGELOG.md holds the release notes.
 - docs/benchmarks/ holds the benchmark reports, with every build and score.
 - Ask questions in GitHub Discussions on [crunchless-kits/agentic-gamedev](https://github.com/crunchless-kits/agentic-gamedev).
+- Suggest a change to the kit with `/cl-core:cl-suggest`. It logs the idea and, on your yes, files it as a GitHub issue.
 
 ## License
 
