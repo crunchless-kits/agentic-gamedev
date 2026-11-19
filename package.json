@@ -1,6 +1,6 @@
 {
   "name": "crunchless-gamedev-skills",
-  "version": "0.18.2",
+  "version": "0.18.3",
   "description": "All-in-One Game Development Harness & Studio Assistant for Claude Code, Codex, GitHub Copilot, Cursor, and Gemini: Unity, web, Roblox, Unreal, Godot, and Cocos, with design, platforms, monetization, analytics, multiplayer, QA, marketing, and production. Brand: Crunchless.",
   "type": "module",
   "private": true,

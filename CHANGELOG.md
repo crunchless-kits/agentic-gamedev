@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.18.3 (2026-11-19)
+
+- New: `publisher-pitch-package` finds investors through `references/investor-sources.md`, starting with Immutable's Gaming Investor Database (1,057 records, filtered by stage, region, cheque size, and focus). It links to the list and never copies it, and turns it into a target list of 15 to 20 funds in the outreach tracker.
+
 ## 0.18.2 (2026-11-18)
 
 - Fix: `/cl-suggest` writes a fixed log format (`## YYYY-MM-DD: <title>`, then `Status: logged`). A test run wrote an em dash into the heading.
